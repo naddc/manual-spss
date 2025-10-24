@@ -1,0 +1,25 @@
+---
+title: "Manual de Procesamiento de Datos en SPSS"
+author: "Nadia Duffó"
+format: html
+theme: cosmo
+toc: true
+navbar:
+  left:
+    - text: "1. Procesamiento de bases"
+      href: procesamiento.qmd
+    - text: "2. Estadística univariada"
+      href: univariada.qmd
+    - text: "3. Estadística bivariada"
+      href: bivariada.qmd
+    - text: "4. Gráficos"
+      href: graficos.qmd
+---
+
+# Bienvenida
+
+Este sitio te guiará paso a paso para **aprender a procesar bases de datos y realizar análisis en SPSS**,
+siguiendo la estructura utilizada en nuestras prácticas del curso.
+
+Cada sección reproduce las operaciones que normalmente harías en SPSS (no en R),
+acompañadas de **explicaciones, ejemplos y capturas de pantalla.**

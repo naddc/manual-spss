@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Manual de SPSS"
+  navbar:
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "1. Procesamiento de bases"
+        href: procesamiento.qmd
+      - text: "2. Estadística univariada"
+        href: univariada.qmd
+      - text: "3. Estadística bivariada"
+        href: bivariada.qmd
+      - text: "4. Gráficos"
+        href: graficos.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
