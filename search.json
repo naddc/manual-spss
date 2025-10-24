@@ -2,71 +2,71 @@
   {
     "objectID": "procesamiento.html",
     "href": "procesamiento.html",
-    "title": "1. Procesamiento de bases",
+    "title": "Procesamiento de bases",
     "section": "",
-    "text": "En SPSS:\nArchivo &gt; Importar datos &gt; Excel…\n\nAbre SPSS\n\nVe al menú Archivo &gt; Importar datos &gt; Excel…\n\nSelecciona el archivo descargado de Google Forms (.xlsx o .csv)\n\nRevisa que SPSS identifique correctamente las variables y tipos\n\n\n\n\nImportar Excel en SPSS"
+    "text": "TL;DR\n\n\n\nRuta en SPSS: Archivo &gt; Importar datos &gt; Excel…\n\n\n\nDesde Google Sheets, descarga las respuestas en formato Excel (.xlsx)\nEn SPSS, abre la ruta Archivo &gt; Importar datos &gt; Excel…\n\nUbica en el buscados tu archivo descargado con las respuestas de Google Forms (.xlsx)\n\nRevisa la configuración automática identificada por SPSS y haz click en Aceptar.\n\n\n\nVideo\nImportar Excel en SPSS\n\n\nEn unos segundos, verás tu conjunto de datos…\n\n\n\nImportar Excel en SPSS"
   },
   {
     "objectID": "procesamiento.html#importar-base-desde-google-forms-o-excel",
     "href": "procesamiento.html#importar-base-desde-google-forms-o-excel",
-    "title": "1. Procesamiento de bases",
+    "title": "Procesamiento de bases",
     "section": "",
-    "text": "En SPSS:\nArchivo &gt; Importar datos &gt; Excel…\n\nAbre SPSS\n\nVe al menú Archivo &gt; Importar datos &gt; Excel…\n\nSelecciona el archivo descargado de Google Forms (.xlsx o .csv)\n\nRevisa que SPSS identifique correctamente las variables y tipos\n\n\n\n\nImportar Excel en SPSS"
+    "text": "TL;DR\n\n\n\nRuta en SPSS: Archivo &gt; Importar datos &gt; Excel…\n\n\n\nDesde Google Sheets, descarga las respuestas en formato Excel (.xlsx)\nEn SPSS, abre la ruta Archivo &gt; Importar datos &gt; Excel…\n\nUbica en el buscados tu archivo descargado con las respuestas de Google Forms (.xlsx)\n\nRevisa la configuración automática identificada por SPSS y haz click en Aceptar.\n\n\n\nVideo\nImportar Excel en SPSS\n\n\nEn unos segundos, verás tu conjunto de datos…\n\n\n\nImportar Excel en SPSS"
   },
   {
     "objectID": "procesamiento.html#identificar-variables",
     "href": "procesamiento.html#identificar-variables",
-    "title": "1. Procesamiento de bases",
-    "section": "Identificar variables",
-    "text": "Identificar variables\nUna vez importada la base, revisa la vista de variables:\n\nNombre: cómo se llamará la variable\n\nTipo: cadena o numérica\n\nMedida: nominal, ordinal, escala\n\nValores: etiquetas de categorías\n\n\n\n\nVista de variables"
+    "title": "Procesamiento de bases",
+    "section": "2. Identificar variables",
+    "text": "2. Identificar variables\n\n\n\n\n\n\nOJO\n\n\n\nAl importar una base desde Google Forms o Excel, revisa que todo haya sido leído correctamente:\n\nLas respuestas se suelen importar como texto\nGoogle Forms guarda las alternativas como palabras, no como números.\n➜ Deberás transformar estas variables a numéricas antes de analizarlas.\nLos nombres de variables provienen de los encabezados\nSuelen ser largos y poco legibles pues se borran los espacios. ➜ Revisa la Vista de variables para ajustar los nombres (cortos, sin espacios, tildes ni signos).\nVerifica las etiquetas de valores y el formato de variables\nSPSS no asigna etiquetas de valores ni siempre reconoce el tipo de dato correcto.\n➜ Corrige estos aspectos como parte del procesamiento.\n\n\n\nUna vez importada la base, revisa la vista de variables:\n\nNombre: cómo se llaman las variables\n\nTipo: son cadena o numéricas\nMedida: nominal, ordinal, escala\n\nValores: etiquetas de categorías\n\n\n\n\nVista de variables"
   },
   {
     "objectID": "procesamiento.html#recodificación-automática",
     "href": "procesamiento.html#recodificación-automática",
-    "title": "1. Procesamiento de bases",
-    "section": "Recodificación automática",
-    "text": "Recodificación automática\nRuta en SPSS:\nTransformar &gt; Recodificación automática…\nEsta opción sirve para transformar variables con pocas respuestas (por ejemplo Sí/No).\n\nSelecciona la variable\n\nHaz clic en la flecha para incluirla\n\nEscribe el nuevo nombre de variable\n\nPulsa “Aceptar”\n\nVerás la nueva variable numérica creada automáticamente\n\n\n\n\nRecodificación automática"
+    "title": "Procesamiento de bases",
+    "section": "3. Recodificación automática",
+    "text": "3. Recodificación automática\nEsta opción sirve para transformar variables con pocas respuestas (por ejemplo Sí/No).\n\n\n\n\n\n\nTL;DR\n\n\n\nRuta en SPSS: Transformar &gt; Recodificación automática…\n\n\n\nVe a la ruta Transformar &gt; Recodificación automática…\n\nSelecciona la variable que deseas recodificar.\n\nHaz clic en la flecha para moverla al cuadro de variables seleccionadas.\n\nEn la parte inferior, escribe el nombre de la nueva variable y pulsa “Añadir nuevo nombre”.\n\nSi vas a trabajar con más de una variable, repite los pasos 2 a 4 para cada una.\n\nRevisa la opción “Ordenar por valor”:\n\nDe menor a mayor → SPSS asignará los números según el orden alfabético de las respuestas (por ejemplo: “A veces” = 1, “Siempre” = 3).\n\nDe mayor a menor → invertirá ese orden.\n\n\nSi todas las variables tienen las mismas alternativas de respuesta, marca\n“Utilizar el mismo esquema de recodificación para todas las variables”\npara aplicar el mismo patrón en un solo paso.\n\nFinalmente, pulsa “Aceptar” para ejecutar la recodificación.\n\n\n\nVideo\nRecodificación automática\n\n\nVerás la(s) nueva(s) variable(s) numérica(s) creada(s) automáticamente\n\n\nVideo\nRecodificación automática"
   },
   {
     "objectID": "procesamiento.html#recodificar-en-distintas-variables",
     "href": "procesamiento.html#recodificar-en-distintas-variables",
-    "title": "1. Procesamiento de bases",
-    "section": "Recodificar en distintas variables",
-    "text": "Recodificar en distintas variables\nRuta en SPSS:\nTransformar &gt; Recodificar en distintas variables…\nÚsala cuando: - No estás seguro de que todas las respuestas aparezcan - Deseas crear categorías nuevas\nEjemplo: recodificar niveles de satisfacción.\n\nSelecciona variable\n\nClic en “Valores antiguos y nuevos…”\n\nDefine equivalencias\n\nMarca la casilla “Convertir a numérico”\n\nPulsa “Continuar” &gt; “Aceptar”\n\n\n\n\nRecodificar en distintas variables"
+    "title": "Procesamiento de bases",
+    "section": "4. Recodificar en distintas variables",
+    "text": "4. Recodificar en distintas variables\nÚsala cuando:\n\nNo estás segura de que todas las respuestas aparezcan\nDeseas crear categorías nuevas\n\n\n\n\n\n\n\nTL;DR\n\n\n\nRuta en SPSS: Transformar &gt; Recodificar en distintas variables…\n\n\n\nVe a la ruta Transformar &gt; Recodificar en distintas variables….\n\nSelecciona la variable que deseas recodificar.\n\nHaz clic en la flecha para moverla al cuadro de variables seleccionadas.\n\nEn la parte inferior, escribe el nombre de la nueva variable (por ejemplo, entusiasmo) y agrega una etiqueta de variable descriptiva (por ejemplo, Nivel de entusiasmo declarado).\n\nPulsa “Valores antiguos y nuevos…” para abrir la ventana donde definirás las equivalencias.\n\nEn esa ventana, asigna correspondencias entre los valores originales (texto) y los nuevos valores numéricos.\n\nEjemplo: “Nada entusiasmado” → 1, “Poco entusiasmado” → 2, “…” → 3, “…” → 4, “…” → 5.\n\n\nPulsa “Continuar” y luego “Aceptar” para aplicar la recodificación.\n\n\n\nVideo\nRecodificar en distintas variables\n\n\n\n\n\n\n\n\nOJO\n\n\n\nEsta opción crea una nueva variable sin modificar la original. Asegúrate de asignarle un nombre claro y una etiqueta descriptiva, ya que SPSS la añadirá al final de la base de datos.\nLas categorías de texto se transformarán en valores numéricos según las equivalencias que definas. Falta añadir etiquetas de valores para que esos números tengan sentido en tus análisis."
   },
   {
-    "objectID": "procesamiento.html#calcular-nueva-variable",
-    "href": "procesamiento.html#calcular-nueva-variable",
-    "title": "1. Procesamiento de bases",
-    "section": "Calcular nueva variable",
-    "text": "Calcular nueva variable\nRuta: Transformar &gt; Calcular variable…\nSirve para crear índices o separar preguntas múltiples.\nEjemplo: crear un índice de actitudes o separar respuestas de texto.\n\n\n\nCalcular variable"
+    "objectID": "procesamiento.html#definir-etiquetas-de-valores-para-recodificaciones-no-automáticas",
+    "href": "procesamiento.html#definir-etiquetas-de-valores-para-recodificaciones-no-automáticas",
+    "title": "Procesamiento de bases",
+    "section": "5. Definir etiquetas de valores (para recodificaciones no automáticas)",
+    "text": "5. Definir etiquetas de valores (para recodificaciones no automáticas)\nUna vez creadas tus nuevas variables numéricas, asigna las etiquetas de valores para que cada número corresponda al texto de la categoría original.\n\n\n\n\n\n\nTL;DR\n\n\n\nVista de variables → Columna \"Valores\" → Definir etiquetas\n\n\n\nCambia a la Vista de variables.\n\nEn la columna “Valores” de la nueva variable, haz clic en el botón con los tres puntos […].\n\nEn la ventana que se abre, define cada correspondencia:\n\nValor: número asignado (por ejemplo, 1)\n\nEtiqueta de valor: texto asociado (por ejemplo, “Muy insatisfecho”)\n\n\nPulsa “Añadir” después de cada par valor–etiqueta.\n\nAl finalizar, presiona “Aceptar” y verifica que todas las etiquetas estén registradas correctamente.\n\n\n\n\n\n\n\n📘 Usar sintaxis para definir etiquetas\n\n\n\nTambién puedes definir las etiquetas de valores mediante sintaxis SPSS,\nlo que resulta útil para documentar tus pasos o aplicarlos a varias variables a la vez.\nRuta: Archivo &gt; Nuevo &gt; Sintaxis\nEjemplo con la variable entusiasmo:\nVALUE LABELS entusiasmo\n  1 'Nada de entusiasmo'\n  2 'Poco entusiasmo'\n  3 'Algo de entusiasmo'\n  4 'Bastante entusiasmo'\n  5 'Mucho entusiasmo'.\nLo que hicimos fue usar la función o comando VALUE LABELS luego poner el nombre de la variable, luego los valores numéricos seguidos de la etiqueta que queremos entre comillas (’’). Al final, cerramos con .\n💡 Ejecuta el bloque (click en el botón ▶️ verde) para aplicar las etiquetas automáticamente. La sintaxis te permite repetir el mismo procedimiento sin usar menús y mantener registro de cómo definiste tus valores.\nA continuación, un video de ejemplo…\n\n\n\n\nVideo\nAñadir etiquetas con sintaxis"
   },
   {
-    "objectID": "procesamiento.html#buscar-texto-dentro-de-una-respuesta-char.index",
-    "href": "procesamiento.html#buscar-texto-dentro-de-una-respuesta-char.index",
-    "title": "1. Procesamiento de bases",
-    "section": "Buscar texto dentro de una respuesta (CHAR.INDEX)",
-    "text": "Buscar texto dentro de una respuesta (CHAR.INDEX)\nExpresión en SPSS:\nCHAR.INDEX([variable], ‘texto’) &gt; 0\nEsto devuelve: - 1 si encuentra el texto - 0 si no lo encuentra\nEjemplo: identificar si alguien mencionó “Facebook” en una respuesta.\n\n\n\nEjemplo de CHAR.INDEX"
+    "objectID": "procesamiento.html#lógica-de-las-preguntas-con-respuestas-múltiples",
+    "href": "procesamiento.html#lógica-de-las-preguntas-con-respuestas-múltiples",
+    "title": "Procesamiento de bases",
+    "section": "6. Lógica de las preguntas con respuestas múltiples",
+    "text": "6. Lógica de las preguntas con respuestas múltiples\n\n\n\n\n\n\nTL;DR\n\n\n\n\nGoogle Forms almacena las respuestas múltiples como texto separado por comas, no como variables independientes.\n\nPara analizarlas, debes crear una nueva variable por cada alternativa, usando CHAR.INDEX.\n\nAsegúrate de que las palabras entre comillas coincidan exactamente con las de la base (mayúsculas, tildes, espacios, etc.).\n\n\n\nCuando exportamos una base desde Google Forms, las preguntas de tipo selección múltiple (donde las personas pueden marcar más de una opción) se guardan en una sola columna, como texto (cadena).\nCada respuesta seleccionada aparece separada por comas, por ejemplo:\n\n\n\nID\n¿qué redes sociales usas?\n\n\n\n\n1\nFacebook, Instagram\n\n\n2\nTikTok\n\n\n3\nFacebook, TikTok, YouTube\n\n\n\nEsto genera un problema para el análisis, ya que SPSS no reconoce cada alternativa por separado:\ntodas están dentro de una misma celda.\nPara poder analizar cada alternativa individualmente, debemos crear variables dicotómicas (0/1) —una columna por cada red social— donde:\n\n1 significa que la persona marcó esa opción.\n\n0 significa que no la marcó.\n\n💡 En otras palabras, convertimos una columna de texto en varias columnas binarias que indican la presencia o ausencia de cada alternativa.\n\n\n6.1. Procedimiento con Calcular variable\n\n\n\n\n\n\nTL;DR\n\n\n\nUsa Transformar → Calcular variable… con\nCHAR.INDEX([variable], 'texto') &gt; 0\npara convertir una respuesta múltiple en varias variables dicotómicas (0/1).\n\n\n\nVe a la ruta Transformar &gt; Calcular variable…\n\nEn “Nombre de variable destino”, escribe el nombre de la nueva variable (por ejemplo, usa_facebook).\n\nEn “Expresión numérica”, usaremos una función que busque si el texto “Facebook” aparece en la respuesta.\n\nPulsa el botón “Cadena” (para ver las funciones de texto).\n\nSelecciona CHAR.INDEX y haz clic en la flecha azul para insertarla en el cuadro de expresión.\n\nEscribe la siguiente fórmula, adaptando el nombre de tu variable original: CHAR.INDEX(redes_sociales, 'Facebook') &gt; 0\nPulsa Aceptar.\nSPSS creará una nueva variable donde:\n\n1 indica que la palabra “Facebook” aparece en la respuesta.\n\n0 indica que no aparece.\n\n\n\n\n\n\n\n\n🧠 Cómo funciona CHAR.INDEX\n\n\n\n\nCHAR.INDEX(campo, 'texto') busca una cadena específica dentro de otra.\n\nSi la encuentra, devuelve la posición del primer carácter donde aparece.\n\nSi no la encuentra, devuelve 0.\n\nAl agregar &gt; 0, la expresión se convierte en una condición lógica que devuelve:\n\n1 si el texto está presente.\n\n0 si no está presente.\n\n\nEjemplo:\n\n\n\n\n\n\n\n\n\n\n¿qué redes sociales usas?\nusa_facebook\nusa_tiktok\nusa_instagram\nusa_youtube\n\n\n\n\nFacebook, Instagram\n1\n0\n1\n0\n\n\nTikTok\n0\n1\n0\n0\n\n\nFacebook, TikTok, YouTube\n1\n1\n0\n1"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Manual de Procesamiento de Datos en SPSS",
     "section": "",
-    "text": "Bienvenida\nEste sitio te guiará paso a paso para aprender a procesar bases de datos y realizar análisis en SPSS, siguiendo la estructura utilizada en nuestras prácticas del curso.\nCada sección reproduce las operaciones que normalmente harías en SPSS (no en R), acompañadas de explicaciones, ejemplos y capturas de pantalla."
+    "text": "Bienvenida\nEste sitio te guiará paso a paso para aprender a procesar bases de datos y realizar análisis en SPSS, siguiendo la estructura utilizada en nuestras prácticas del curso.\nCada sección reproduce las operaciones que normalmente harías en SPSS, acompañadas de explicaciones, ejemplos y capturas de pantalla."
   },
   {
     "objectID": "univariada.html",
     "href": "univariada.html",
-    "title": "2. Estadística univariada",
+    "title": "Estadística univariada",
     "section": "",
-    "text": "Ruta SPSS:\nAnalizar &gt; Estadísticos descriptivos &gt; Frecuencias…\nPermite obtener tablas de frecuencias, porcentajes y gráficos de barras.\n\n\n\nFrecuencias"
+    "text": "TL;DR\n\n\n\n1️⃣ Crea un conjunto de respuestas múltiples con\nAnalizar → Tablas → Conjunto de respuestas múltiples…\n2️⃣ Luego, úsalo en\nAnalizar → Tablas → Tablas personalizadas…\npara obtener frecuencias y porcentajes de cada alternativa.\n\n\n\n\n\nVe a Analizar → Tablas → Conjunto de respuestas múltiples…\n\nEn la lista de variables, selecciona todas las variables que correspondan a las alternativas de la misma pregunta (ejem. usa_facebook, usa_instagram, usa_tiktok, usa_youtube).\nEn “Valores contado”, especifica que el valor 1 indica respuesta seleccionada.\n\nMarca la opción Variables dicotómicas.\n\nEn “Nombre del conjunto”, escribe un nombre corto sin espacios (por ejemplo, RRSS).\n\nEn “Etiqueta del conjunto”, escribe una descripción (por ejemplo, ¿Qué redes sociales usas?).\n\nPulsa Añadir para verlo en la sección “Conjuntos de respuestas múltiples” y luego Aceptar.\n\nSPSS habrá creado un conjunto llamado **RRSS[\\(]** (el símbolo `\\)` indica que es un conjunto de respuestas múltiples).\n\n\nVideo\nCrear conjunto de respuestas múltiples\n\n\n\n\n\n\n\nVe a Analizar → Tablas → Tablas personalizadas…\n\nEn la lista de variables (al final del panel izquierdo), encontrarás el nuevo conjunto que definiste\n(por ejemplo, RRSS[$]).\n\nArrastra el conjunto a las filas de la tabla.\n\nPulsa Aceptar para generar la tabla.\n\n\n\n\n\n\n\nOJO\n\n\n\n\nEste procedimiento solo funciona si tus variables ya son dicotómicas (0/1).\n\nEl valor que representa seleccionado debe ser 1.\n\nLos conjuntos de respuestas múltiples aparecen con el sufijo [$] en la lista de variables.\n\nPara evitar confusiones, usa un mismo prefijo (usa_, participa_, etc.) para las variables del mismo grupo.\n\n\n\n\n\nVideo\nTabular respuestas múltiples"
   },
   {
-    "objectID": "univariada.html#frecuencias",
-    "href": "univariada.html#frecuencias",
-    "title": "2. Estadística univariada",
+    "objectID": "univariada.html#tablas-con-preguntas-de-respuestas-múltiples",
+    "href": "univariada.html#tablas-con-preguntas-de-respuestas-múltiples",
+    "title": "Estadística univariada",
     "section": "",
-    "text": "Ruta SPSS:\nAnalizar &gt; Estadísticos descriptivos &gt; Frecuencias…\nPermite obtener tablas de frecuencias, porcentajes y gráficos de barras.\n\n\n\nFrecuencias"
+    "text": "TL;DR\n\n\n\n1️⃣ Crea un conjunto de respuestas múltiples con\nAnalizar → Tablas → Conjunto de respuestas múltiples…\n2️⃣ Luego, úsalo en\nAnalizar → Tablas → Tablas personalizadas…\npara obtener frecuencias y porcentajes de cada alternativa.\n\n\n\n\n\nVe a Analizar → Tablas → Conjunto de respuestas múltiples…\n\nEn la lista de variables, selecciona todas las variables que correspondan a las alternativas de la misma pregunta (ejem. usa_facebook, usa_instagram, usa_tiktok, usa_youtube).\nEn “Valores contado”, especifica que el valor 1 indica respuesta seleccionada.\n\nMarca la opción Variables dicotómicas.\n\nEn “Nombre del conjunto”, escribe un nombre corto sin espacios (por ejemplo, RRSS).\n\nEn “Etiqueta del conjunto”, escribe una descripción (por ejemplo, ¿Qué redes sociales usas?).\n\nPulsa Añadir para verlo en la sección “Conjuntos de respuestas múltiples” y luego Aceptar.\n\nSPSS habrá creado un conjunto llamado **RRSS[\\(]** (el símbolo `\\)` indica que es un conjunto de respuestas múltiples).\n\n\nVideo\nCrear conjunto de respuestas múltiples\n\n\n\n\n\n\n\nVe a Analizar → Tablas → Tablas personalizadas…\n\nEn la lista de variables (al final del panel izquierdo), encontrarás el nuevo conjunto que definiste\n(por ejemplo, RRSS[$]).\n\nArrastra el conjunto a las filas de la tabla.\n\nPulsa Aceptar para generar la tabla.\n\n\n\n\n\n\n\nOJO\n\n\n\n\nEste procedimiento solo funciona si tus variables ya son dicotómicas (0/1).\n\nEl valor que representa seleccionado debe ser 1.\n\nLos conjuntos de respuestas múltiples aparecen con el sufijo [$] en la lista de variables.\n\nPara evitar confusiones, usa un mismo prefijo (usa_, participa_, etc.) para las variables del mismo grupo.\n\n\n\n\n\nVideo\nTabular respuestas múltiples"
   }
 ]

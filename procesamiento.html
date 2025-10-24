@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1. Procesamiento de bases – Manual de SPSS</title>
+<title>Procesamiento de bases – Manual de SPSS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -123,12 +123,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#importar-base-desde-google-forms-o-excel" id="toc-importar-base-desde-google-forms-o-excel" class="nav-link active" data-scroll-target="#importar-base-desde-google-forms-o-excel">Importar base desde Google Forms o Excel</a></li>
-  <li><a href="#identificar-variables" id="toc-identificar-variables" class="nav-link" data-scroll-target="#identificar-variables">Identificar variables</a></li>
-  <li><a href="#recodificación-automática" id="toc-recodificación-automática" class="nav-link" data-scroll-target="#recodificación-automática">Recodificación automática</a></li>
-  <li><a href="#recodificar-en-distintas-variables" id="toc-recodificar-en-distintas-variables" class="nav-link" data-scroll-target="#recodificar-en-distintas-variables">Recodificar en distintas variables</a></li>
-  <li><a href="#calcular-nueva-variable" id="toc-calcular-nueva-variable" class="nav-link" data-scroll-target="#calcular-nueva-variable">Calcular nueva variable</a></li>
-  <li><a href="#buscar-texto-dentro-de-una-respuesta-char.index" id="toc-buscar-texto-dentro-de-una-respuesta-char.index" class="nav-link" data-scroll-target="#buscar-texto-dentro-de-una-respuesta-char.index">Buscar texto dentro de una respuesta (CHAR.INDEX)</a></li>
+  <li><a href="#importar-base-desde-google-forms-o-excel" id="toc-importar-base-desde-google-forms-o-excel" class="nav-link active" data-scroll-target="#importar-base-desde-google-forms-o-excel">1. Importar base desde Google Forms o Excel</a></li>
+  <li><a href="#identificar-variables" id="toc-identificar-variables" class="nav-link" data-scroll-target="#identificar-variables">2. Identificar variables</a></li>
+  <li><a href="#recodificación-automática" id="toc-recodificación-automática" class="nav-link" data-scroll-target="#recodificación-automática">3. Recodificación automática</a></li>
+  <li><a href="#recodificar-en-distintas-variables" id="toc-recodificar-en-distintas-variables" class="nav-link" data-scroll-target="#recodificar-en-distintas-variables">4. Recodificar en distintas variables</a></li>
+  <li><a href="#definir-etiquetas-de-valores-para-recodificaciones-no-automáticas" id="toc-definir-etiquetas-de-valores-para-recodificaciones-no-automáticas" class="nav-link" data-scroll-target="#definir-etiquetas-de-valores-para-recodificaciones-no-automáticas">5. Definir etiquetas de valores (para recodificaciones no automáticas)</a></li>
+  <li><a href="#lógica-de-las-preguntas-con-respuestas-múltiples" id="toc-lógica-de-las-preguntas-con-respuestas-múltiples" class="nav-link" data-scroll-target="#lógica-de-las-preguntas-con-respuestas-múltiples">6. Lógica de las preguntas con respuestas múltiples</a>
+  <ul class="collapse">
+  <li><a href="#procedimiento-con-calcular-variable" id="toc-procedimiento-con-calcular-variable" class="nav-link" data-scroll-target="#procedimiento-con-calcular-variable">6.1. Procedimiento con <em>Calcular variable</em></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -137,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">1. Procesamiento de bases</h1>
+<h1 class="title">Procesamiento de bases</h1>
 </div>
 
 
@@ -155,34 +158,73 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="importar-base-desde-google-forms-o-excel" class="level2">
-<h2 class="anchored" data-anchor-id="importar-base-desde-google-forms-o-excel">Importar base desde Google Forms o Excel</h2>
-<p><strong>En SPSS:</strong><br>
-<code>Archivo &gt; Importar datos &gt; Excel…</code></p>
+<h2 class="anchored" data-anchor-id="importar-base-desde-google-forms-o-excel">1. Importar base desde Google Forms o Excel</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ruta en SPSS: <code>Archivo &gt; Importar datos &gt; Excel…</code></p>
+</div>
+</div>
 <ol type="1">
-<li>Abre SPSS<br>
+<li>Desde Google Sheets, descarga las respuestas en formato Excel (<code>.xlsx</code>)</li>
+<li>En SPSS, abre la ruta <code>Archivo &gt; Importar datos &gt; Excel…</code><br>
 </li>
-<li>Ve al menú <code>Archivo &gt; Importar datos &gt; Excel…</code><br>
+<li>Ubica en el buscados tu archivo descargado con las respuestas de Google Forms (<code>.xlsx</code>)<br>
 </li>
-<li>Selecciona el archivo descargado de Google Forms (<code>.xlsx</code> o <code>.csv</code>)<br>
-</li>
-<li>Revisa que SPSS identifique correctamente las variables y tipos</li>
+<li>Revisa la configuración automática identificada por SPSS y haz click en <code>Aceptar</code>.</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/importar_excel.png" class="img-fluid figure-img"></p>
+<p><video src="img/importar_excel.mov" class="img-fluid" controls=""><a href="img/importar_excel.mov">Video</a></video></p>
+<figcaption>Importar Excel en SPSS</figcaption>
+</figure>
+</div>
+<p>En unos segundos, verás tu conjunto de datos…</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/importado.png" class="img-fluid figure-img"></p>
 <figcaption>Importar Excel en SPSS</figcaption>
 </figure>
 </div>
 <hr>
 </section>
 <section id="identificar-variables" class="level2">
-<h2 class="anchored" data-anchor-id="identificar-variables">Identificar variables</h2>
+<h2 class="anchored" data-anchor-id="identificar-variables">2. Identificar variables</h2>
+<div class="callout callout-style-default callout-warning callout-titled" title="OJO">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+OJO
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Al importar una base desde <strong>Google Forms o Excel</strong>, revisa que todo haya sido leído correctamente:</p>
+<ol type="1">
+<li><p><strong>Las respuestas se suelen importar como texto</strong><br>
+Google Forms guarda las alternativas como palabras, no como números.<br>
+➜ <strong>Deberás transformar estas variables a numéricas</strong> antes de analizarlas.</p></li>
+<li><p><strong>Los nombres de variables provienen de los encabezados</strong><br>
+Suelen ser largos y poco legibles pues se borran los espacios. ➜ Revisa la <em>Vista de variables</em> para ajustar los nombres (cortos, sin espacios, tildes ni signos).</p></li>
+<li><p><strong>Verifica las etiquetas de valores y el formato de variables</strong><br>
+SPSS no asigna etiquetas de valores ni siempre reconoce el tipo de dato correcto.<br>
+➜ Corrige estos aspectos como parte del procesamiento.</p></li>
+</ol>
+</div>
+</div>
 <p>Una vez importada la base, revisa la <strong>vista de variables</strong>:</p>
 <ul>
-<li><strong>Nombre:</strong> cómo se llamará la variable<br>
+<li><strong>Nombre:</strong> cómo se llaman las variables<br>
 </li>
-<li><strong>Tipo:</strong> cadena o numérica<br>
-</li>
+<li><strong>Tipo:</strong> son cadena o numéricas</li>
 <li><strong>Medida:</strong> nominal, ordinal, escala<br>
 </li>
 <li><strong>Valores:</strong> etiquetas de categorías</li>
@@ -196,81 +238,348 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 <section id="recodificación-automática" class="level2">
-<h2 class="anchored" data-anchor-id="recodificación-automática">Recodificación automática</h2>
-<p><strong>Ruta en SPSS:</strong><br>
-<code>Transformar &gt; Recodificación automática…</code></p>
+<h2 class="anchored" data-anchor-id="recodificación-automática">3. Recodificación automática</h2>
 <p>Esta opción sirve para transformar variables con pocas respuestas (por ejemplo Sí/No).</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ruta en SPSS: <code>Transformar &gt; Recodificación automática…</code></p>
+</div>
+</div>
 <ol type="1">
-<li>Selecciona la variable<br>
+<li>Ve a la ruta <strong><code>Transformar &gt; Recodificación automática…</code></strong><br>
 </li>
-<li>Haz clic en la flecha para incluirla<br>
+<li>Selecciona la variable que deseas recodificar.<br>
 </li>
-<li>Escribe el nuevo nombre de variable<br>
+<li>Haz clic en la <strong>flecha</strong> para moverla al cuadro de variables seleccionadas.<br>
 </li>
-<li>Pulsa “Aceptar”<br>
+<li>En la parte inferior, escribe el <strong>nombre de la nueva variable</strong> y pulsa <strong>“Añadir nuevo nombre”</strong>.<br>
 </li>
-<li>Verás la nueva variable <strong>numérica</strong> creada automáticamente</li>
+<li>Si vas a trabajar con más de una variable, repite los pasos <strong>2 a 4</strong> para cada una.<br>
+</li>
+<li>Revisa la opción <strong>“Ordenar por valor”</strong>:
+<ul>
+<li><em>De menor a mayor</em> → SPSS asignará los números según el <strong>orden alfabético</strong> de las respuestas (por ejemplo: “A veces” = 1, “Siempre” = 3).<br>
+</li>
+<li><em>De mayor a menor</em> → invertirá ese orden.<br>
+</li>
+</ul></li>
+<li>Si todas las variables tienen <strong>las mismas alternativas de respuesta</strong>, marca<br>
+<strong>“Utilizar el mismo esquema de recodificación para todas las variables”</strong><br>
+para aplicar el mismo patrón en un solo paso.<br>
+</li>
+<li>Finalmente, pulsa <strong>“Aceptar”</strong> para ejecutar la recodificación.</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/recodificar_automatica.png" class="img-fluid figure-img"></p>
+<p><video src="img/recod_autom.mov" class="img-fluid" controls=""><a href="img/recod_autom.mov">Video</a></video></p>
+<figcaption>Recodificación automática</figcaption>
+</figure>
+</div>
+<p>Verás la(s) nueva(s) variable(s) <strong>numérica(s)</strong> creada(s) automáticamente</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><video src="img/show_recod_autom.mov" class="img-fluid" controls=""><a href="img/show_recod_autom.mov">Video</a></video></p>
 <figcaption>Recodificación automática</figcaption>
 </figure>
 </div>
 <hr>
 </section>
 <section id="recodificar-en-distintas-variables" class="level2">
-<h2 class="anchored" data-anchor-id="recodificar-en-distintas-variables">Recodificar en distintas variables</h2>
-<p><strong>Ruta en SPSS:</strong><br>
-<code>Transformar &gt; Recodificar en distintas variables…</code></p>
-<p>Úsala cuando: - No estás seguro de que todas las respuestas aparezcan - Deseas crear categorías nuevas</p>
-<p>Ejemplo: recodificar niveles de satisfacción.</p>
+<h2 class="anchored" data-anchor-id="recodificar-en-distintas-variables">4. Recodificar en distintas variables</h2>
+<p>Úsala cuando:</p>
+<ul>
+<li>No estás segura de que todas las respuestas aparezcan</li>
+<li>Deseas crear categorías nuevas</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ruta en SPSS: <code>Transformar &gt; Recodificar en distintas variables…</code></p>
+</div>
+</div>
 <ol type="1">
-<li>Selecciona variable<br>
+<li>Ve a la ruta <strong><code>Transformar &gt; Recodificar en distintas variables…</code></strong>.<br>
 </li>
-<li>Clic en “Valores antiguos y nuevos…”<br>
+<li>Selecciona la variable que deseas recodificar.<br>
 </li>
-<li>Define equivalencias<br>
+<li>Haz clic en la <strong>flecha</strong> para moverla al cuadro de variables seleccionadas.<br>
 </li>
-<li>Marca la casilla “Convertir a numérico”<br>
+<li>En la parte inferior, escribe el <strong>nombre de la nueva variable</strong> (por ejemplo, <code>entusiasmo</code>) y agrega una <strong>etiqueta de variable</strong> descriptiva (por ejemplo, <em>Nivel de entusiasmo declarado</em>).<br>
 </li>
-<li>Pulsa “Continuar” &gt; “Aceptar”</li>
+<li>Pulsa <strong>“Valores antiguos y nuevos…”</strong> para abrir la ventana donde definirás las equivalencias.<br>
+</li>
+<li>En esa ventana, asigna correspondencias entre los valores originales (texto) y los nuevos valores numéricos.
+<ul>
+<li>Ejemplo: “Nada entusiasmado” → 1, “Poco entusiasmado” → 2, “…” → 3, “…” → 4, “…” → 5.<br>
+</li>
+</ul></li>
+<li>Pulsa <strong>“Continuar”</strong> y luego <strong>“Aceptar”</strong> para aplicar la recodificación.</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/recodificar_nueva.png" class="img-fluid figure-img"></p>
+<p><video src="img/recod_distintas.mov" class="img-fluid" controls=""><a href="img/recod_distintas.mov">Video</a></video></p>
 <figcaption>Recodificar en distintas variables</figcaption>
 </figure>
 </div>
+<div class="callout callout-style-default callout-warning callout-titled" title="OJO">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+OJO
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Esta opción crea <strong>una nueva variable</strong> sin modificar la original. Asegúrate de asignarle un <strong>nombre claro</strong> y una <strong>etiqueta descriptiva</strong>, ya que SPSS la añadirá al final de la base de datos.</p>
+<p>Las categorías de texto se transformarán en valores numéricos según las equivalencias que definas. <strong>Falta añadir etiquetas de valores</strong> para que esos números tengan sentido en tus análisis.</p>
+</div>
+</div>
 <hr>
 </section>
-<section id="calcular-nueva-variable" class="level2">
-<h2 class="anchored" data-anchor-id="calcular-nueva-variable">Calcular nueva variable</h2>
-<p><strong>Ruta:</strong> <code>Transformar &gt; Calcular variable…</code></p>
-<p>Sirve para crear índices o separar preguntas múltiples.<br>
-Ejemplo: crear un índice de actitudes o separar respuestas de texto.</p>
+<section id="definir-etiquetas-de-valores-para-recodificaciones-no-automáticas" class="level2">
+<h2 class="anchored" data-anchor-id="definir-etiquetas-de-valores-para-recodificaciones-no-automáticas">5. Definir etiquetas de valores (para recodificaciones no automáticas)</h2>
+<p>Una vez creadas tus nuevas variables numéricas, asigna las <strong>etiquetas de valores</strong> para que cada número corresponda al texto de la categoría original.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>Vista de variables → Columna "Valores" → Definir etiquetas</code></p>
+</div>
+</div>
+<ol type="1">
+<li>Cambia a la <strong>Vista de variables</strong>.<br>
+</li>
+<li>En la columna <strong>“Valores”</strong> de la nueva variable, haz clic en el botón con los tres puntos <code>[…]</code>.<br>
+</li>
+<li>En la ventana que se abre, define cada correspondencia:
+<ul>
+<li><strong>Valor:</strong> número asignado (por ejemplo, 1)<br>
+</li>
+<li><strong>Etiqueta de valor:</strong> texto asociado (por ejemplo, “Muy insatisfecho”)<br>
+</li>
+</ul></li>
+<li>Pulsa <strong>“Añadir”</strong> después de cada par valor–etiqueta.<br>
+</li>
+<li>Al finalizar, presiona <strong>“Aceptar”</strong> y verifica que todas las etiquetas estén registradas correctamente.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="📘 Usar sintaxis para definir etiquetas">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📘 Usar sintaxis para definir etiquetas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>También puedes definir las <strong>etiquetas de valores</strong> mediante <strong>sintaxis SPSS</strong>,<br>
+lo que resulta útil para documentar tus pasos o aplicarlos a varias variables a la vez.</p>
+<p><strong>Ruta:</strong> <code>Archivo &gt; Nuevo &gt; Sintaxis</code></p>
+<p>Ejemplo con la variable <code>entusiasmo</code>:</p>
+<pre class="spss"><code>VALUE LABELS entusiasmo
+  1 'Nada de entusiasmo'
+  2 'Poco entusiasmo'
+  3 'Algo de entusiasmo'
+  4 'Bastante entusiasmo'
+  5 'Mucho entusiasmo'.</code></pre>
+<p>Lo que hicimos fue usar la función o comando <code>VALUE LABELS</code> luego poner el nombre de la variable, luego los valores numéricos seguidos de la etiqueta que queremos entre comillas (’’). Al final, cerramos con .</p>
+<p>💡 Ejecuta el bloque (click en el botón ▶️ verde) para aplicar las etiquetas automáticamente. La sintaxis te permite repetir el mismo procedimiento sin usar menús y mantener registro de cómo definiste tus valores.</p>
+<p>A continuación, un video de ejemplo…</p>
+</div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/calcular_variable.png" class="img-fluid figure-img"></p>
-<figcaption>Calcular variable</figcaption>
+<p><video src="img/etiquetas_sintaxis.mov" class="img-fluid" controls=""><a href="img/etiquetas_sintaxis.mov">Video</a></video></p>
+<figcaption>Añadir etiquetas con sintaxis</figcaption>
 </figure>
 </div>
 <hr>
 </section>
-<section id="buscar-texto-dentro-de-una-respuesta-char.index" class="level2">
-<h2 class="anchored" data-anchor-id="buscar-texto-dentro-de-una-respuesta-char.index">Buscar texto dentro de una respuesta (CHAR.INDEX)</h2>
-<p><strong>Expresión en SPSS:</strong></p>
-<p>CHAR.INDEX([variable], ‘texto’) &gt; 0</p>
-<p>Esto devuelve: - 1 si encuentra el texto - 0 si no lo encuentra</p>
-<p>Ejemplo: identificar si alguien mencionó “Facebook” en una respuesta.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="img/charindex.png" class="img-fluid figure-img"></p>
-<figcaption>Ejemplo de CHAR.INDEX</figcaption>
-</figure>
+<section id="lógica-de-las-preguntas-con-respuestas-múltiples" class="level2">
+<h2 class="anchored" data-anchor-id="lógica-de-las-preguntas-con-respuestas-múltiples">6. Lógica de las preguntas con respuestas múltiples</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Google Forms <strong>almacena las respuestas múltiples como texto separado por comas</strong>, no como variables independientes.<br>
+</li>
+<li>Para analizarlas, debes <strong>crear una nueva variable por cada alternativa</strong>, usando <code>CHAR.INDEX</code>.<br>
+</li>
+<li>Asegúrate de que las palabras entre comillas coincidan exactamente con las de la base (mayúsculas, tildes, espacios, etc.).</li>
+</ul>
+</div>
+</div>
+<p>Cuando exportamos una base desde <strong>Google Forms</strong>, las preguntas de tipo <em>selección múltiple</em> (donde las personas pueden marcar más de una opción) se guardan en una <strong>sola columna</strong>, como <strong>texto (cadena)</strong>.</p>
+<p>Cada respuesta seleccionada aparece separada por <strong>comas</strong>, por ejemplo:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>¿qué redes sociales usas?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Facebook, Instagram</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>TikTok</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Facebook, TikTok, YouTube</td>
+</tr>
+</tbody>
+</table>
+<p>Esto genera un problema para el análisis, ya que SPSS <strong>no reconoce cada alternativa por separado</strong>:<br>
+todas están dentro de una misma celda.</p>
+<p>Para poder analizar cada alternativa individualmente, debemos <strong>crear variables dicotómicas (0/1)</strong> —una columna por cada red social— donde:</p>
+<ul>
+<li><strong>1</strong> significa que la persona <strong>marcó</strong> esa opción.<br>
+</li>
+<li><strong>0</strong> significa que <strong>no la marcó</strong>.</li>
+</ul>
+<p>💡 En otras palabras, convertimos una <strong>columna de texto</strong> en <strong>varias columnas binarias</strong> que indican la presencia o ausencia de cada alternativa.</p>
+<hr>
+<section id="procedimiento-con-calcular-variable" class="level3">
+<h3 class="anchored" data-anchor-id="procedimiento-con-calcular-variable">6.1. Procedimiento con <em>Calcular variable</em></h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Usa <strong>Transformar → Calcular variable…</strong> con<br>
+<code>CHAR.INDEX([variable], 'texto') &gt; 0</code><br>
+para convertir una respuesta múltiple en varias <strong>variables dicotómicas (0/1)</strong>.</p>
+</div>
+</div>
+<ol type="1">
+<li>Ve a la ruta <strong><code>Transformar &gt; Calcular variable…</code></strong><br>
+</li>
+<li>En <strong>“Nombre de variable destino”</strong>, escribe el nombre de la nueva variable (por ejemplo, <code>usa_facebook</code>).<br>
+</li>
+<li>En <strong>“Expresión numérica”</strong>, usaremos una función que busque si el texto “Facebook” aparece en la respuesta.<br>
+</li>
+<li>Pulsa el botón <strong>“Cadena”</strong> (para ver las funciones de texto).<br>
+</li>
+<li>Selecciona <strong>CHAR.INDEX</strong> y haz clic en la <strong>flecha azul</strong> para insertarla en el cuadro de expresión.<br>
+</li>
+<li>Escribe la siguiente fórmula, adaptando el nombre de tu variable original: <code>CHAR.INDEX(redes_sociales, 'Facebook') &gt; 0</code></li>
+<li>Pulsa <strong>Aceptar</strong>.<br>
+SPSS creará una nueva variable donde:
+<ul>
+<li><strong>1</strong> indica que la palabra “Facebook” aparece en la respuesta.<br>
+</li>
+<li><strong>0</strong> indica que no aparece.</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="🧠 Cómo funciona `CHAR.INDEX`">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🧠 Cómo funciona <code>CHAR.INDEX</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><code>CHAR.INDEX(campo, 'texto')</code> busca una cadena específica dentro de otra.<br>
+</li>
+<li>Si la encuentra, devuelve la <strong>posición del primer carácter</strong> donde aparece.<br>
+</li>
+<li>Si no la encuentra, devuelve <strong>0</strong>.<br>
+</li>
+<li>Al agregar <code>&gt; 0</code>, la expresión se convierte en una <strong>condición lógica</strong> que devuelve:
+<ul>
+<li><strong>1</strong> si el texto está presente.<br>
+</li>
+<li><strong>0</strong> si no está presente.</li>
+</ul></li>
+</ul>
+<p>Ejemplo:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 18%">
+<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>¿qué redes sociales usas?</th>
+<th>usa_facebook</th>
+<th>usa_tiktok</th>
+<th>usa_instagram</th>
+<th>usa_youtube</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Facebook, Instagram</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>TikTok</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>Facebook, TikTok, YouTube</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -364,7 +673,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/naddc\.github\.io\/manual-spss\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
