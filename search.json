@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "procesamiento.html",
+    "href": "procesamiento.html",
+    "title": "1. Procesamiento de bases",
+    "section": "",
+    "text": "En SPSS:\nArchivo &gt; Importar datos &gt; Excel…\n\nAbre SPSS\n\nVe al menú Archivo &gt; Importar datos &gt; Excel…\n\nSelecciona el archivo descargado de Google Forms (.xlsx o .csv)\n\nRevisa que SPSS identifique correctamente las variables y tipos\n\n\n\n\nImportar Excel en SPSS"
+  },
+  {
+    "objectID": "procesamiento.html#importar-base-desde-google-forms-o-excel",
+    "href": "procesamiento.html#importar-base-desde-google-forms-o-excel",
+    "title": "1. Procesamiento de bases",
+    "section": "",
+    "text": "En SPSS:\nArchivo &gt; Importar datos &gt; Excel…\n\nAbre SPSS\n\nVe al menú Archivo &gt; Importar datos &gt; Excel…\n\nSelecciona el archivo descargado de Google Forms (.xlsx o .csv)\n\nRevisa que SPSS identifique correctamente las variables y tipos\n\n\n\n\nImportar Excel en SPSS"
+  },
+  {
+    "objectID": "procesamiento.html#identificar-variables",
+    "href": "procesamiento.html#identificar-variables",
+    "title": "1. Procesamiento de bases",
+    "section": "Identificar variables",
+    "text": "Identificar variables\nUna vez importada la base, revisa la vista de variables:\n\nNombre: cómo se llamará la variable\n\nTipo: cadena o numérica\n\nMedida: nominal, ordinal, escala\n\nValores: etiquetas de categorías\n\n\n\n\nVista de variables"
+  },
+  {
+    "objectID": "procesamiento.html#recodificación-automática",
+    "href": "procesamiento.html#recodificación-automática",
+    "title": "1. Procesamiento de bases",
+    "section": "Recodificación automática",
+    "text": "Recodificación automática\nRuta en SPSS:\nTransformar &gt; Recodificación automática…\nEsta opción sirve para transformar variables con pocas respuestas (por ejemplo Sí/No).\n\nSelecciona la variable\n\nHaz clic en la flecha para incluirla\n\nEscribe el nuevo nombre de variable\n\nPulsa “Aceptar”\n\nVerás la nueva variable numérica creada automáticamente\n\n\n\n\nRecodificación automática"
+  },
+  {
+    "objectID": "procesamiento.html#recodificar-en-distintas-variables",
+    "href": "procesamiento.html#recodificar-en-distintas-variables",
+    "title": "1. Procesamiento de bases",
+    "section": "Recodificar en distintas variables",
+    "text": "Recodificar en distintas variables\nRuta en SPSS:\nTransformar &gt; Recodificar en distintas variables…\nÚsala cuando: - No estás seguro de que todas las respuestas aparezcan - Deseas crear categorías nuevas\nEjemplo: recodificar niveles de satisfacción.\n\nSelecciona variable\n\nClic en “Valores antiguos y nuevos…”\n\nDefine equivalencias\n\nMarca la casilla “Convertir a numérico”\n\nPulsa “Continuar” &gt; “Aceptar”\n\n\n\n\nRecodificar en distintas variables"
+  },
+  {
+    "objectID": "procesamiento.html#calcular-nueva-variable",
+    "href": "procesamiento.html#calcular-nueva-variable",
+    "title": "1. Procesamiento de bases",
+    "section": "Calcular nueva variable",
+    "text": "Calcular nueva variable\nRuta: Transformar &gt; Calcular variable…\nSirve para crear índices o separar preguntas múltiples.\nEjemplo: crear un índice de actitudes o separar respuestas de texto.\n\n\n\nCalcular variable"
+  },
+  {
+    "objectID": "procesamiento.html#buscar-texto-dentro-de-una-respuesta-char.index",
+    "href": "procesamiento.html#buscar-texto-dentro-de-una-respuesta-char.index",
+    "title": "1. Procesamiento de bases",
+    "section": "Buscar texto dentro de una respuesta (CHAR.INDEX)",
+    "text": "Buscar texto dentro de una respuesta (CHAR.INDEX)\nExpresión en SPSS:\nCHAR.INDEX([variable], ‘texto’) &gt; 0\nEsto devuelve: - 1 si encuentra el texto - 0 si no lo encuentra\nEjemplo: identificar si alguien mencionó “Facebook” en una respuesta.\n\n\n\nEjemplo de CHAR.INDEX"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Manual de Procesamiento de Datos en SPSS",
+    "section": "",
+    "text": "Bienvenida\nEste sitio te guiará paso a paso para aprender a procesar bases de datos y realizar análisis en SPSS, siguiendo la estructura utilizada en nuestras prácticas del curso.\nCada sección reproduce las operaciones que normalmente harías en SPSS (no en R), acompañadas de explicaciones, ejemplos y capturas de pantalla."
+  },
+  {
+    "objectID": "univariada.html",
+    "href": "univariada.html",
+    "title": "2. Estadística univariada",
+    "section": "",
+    "text": "Ruta SPSS:\nAnalizar &gt; Estadísticos descriptivos &gt; Frecuencias…\nPermite obtener tablas de frecuencias, porcentajes y gráficos de barras.\n\n\n\nFrecuencias"
+  },
+  {
+    "objectID": "univariada.html#frecuencias",
+    "href": "univariada.html#frecuencias",
+    "title": "2. Estadística univariada",
+    "section": "",
+    "text": "Ruta SPSS:\nAnalizar &gt; Estadísticos descriptivos &gt; Frecuencias…\nPermite obtener tablas de frecuencias, porcentajes y gráficos de barras.\n\n\n\nFrecuencias"
+  }
+]
