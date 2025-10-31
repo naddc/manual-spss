@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Recodificación de variables – Manual de SPSS</title>
+<title>Importación de bases – Manual de SPSS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -163,17 +163,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#recodificación-automática" id="toc-recodificación-automática" class="nav-link active" data-scroll-target="#recodificación-automática">1. Recodificación automática</a>
-  <ul class="collapse">
-  <li><a href="#uso" id="toc-uso" class="nav-link" data-scroll-target="#uso">Uso</a></li>
-  <li><a href="#pasos" id="toc-pasos" class="nav-link" data-scroll-target="#pasos">Pasos</a></li>
-  </ul></li>
-  <li><a href="#recodificación-en-distintas-variables" id="toc-recodificación-en-distintas-variables" class="nav-link" data-scroll-target="#recodificación-en-distintas-variables">2. Recodificación en distintas variables</a>
-  <ul class="collapse">
-  <li><a href="#uso-1" id="toc-uso-1" class="nav-link" data-scroll-target="#uso-1">Uso</a></li>
-  <li><a href="#pasos-1" id="toc-pasos-1" class="nav-link" data-scroll-target="#pasos-1">Pasos</a></li>
-  </ul></li>
-  <li><a href="#definir-etiquetas-de-valores" id="toc-definir-etiquetas-de-valores" class="nav-link" data-scroll-target="#definir-etiquetas-de-valores">3. Definir etiquetas de valores</a></li>
+  <li><a href="#descargar-datos-desde-google-forms" id="toc-descargar-datos-desde-google-forms" class="nav-link active" data-scroll-target="#descargar-datos-desde-google-forms">1. Descargar datos desde Google Forms</a></li>
+  <li><a href="#importar-datos-de-formato-excel" id="toc-importar-datos-de-formato-excel" class="nav-link" data-scroll-target="#importar-datos-de-formato-excel">2. Importar datos de formato Excel</a></li>
+  <li><a href="#explorar-variables" id="toc-explorar-variables" class="nav-link" data-scroll-target="#explorar-variables">3. Explorar variables</a></li>
   </ul>
 </nav>
     </div>
@@ -182,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Recodificación de variables</h1>
+<h1 class="title">Importación de bases</h1>
 </div>
 
 
@@ -199,14 +191,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="recodificación-automática" class="level2">
-<h2 class="anchored" data-anchor-id="recodificación-automática">1. Recodificación automática</h2>
-<section id="uso" class="level3">
-<h3 class="anchored" data-anchor-id="uso">Uso</h3>
-<p>Sirve para transformar variables de tipo <em>cadena</em> a tipo <em>numérico</em> con <em>pocas alternativas no ordenadas</em> (por ejemplo Sí/No).</p>
+<section id="descargar-datos-desde-google-forms" class="level2">
+<h2 class="anchored" data-anchor-id="descargar-datos-desde-google-forms">1. Descargar datos desde Google Forms</h2>
+<p>Desde Google Forms, haz la conexión del formulario con una Hoja de cálculo en Google Sheets. Seguidamente, descarga la base en formato Excel (<code>.xlsx</code>).</p>
 </section>
-<section id="pasos" class="level3">
-<h3 class="anchored" data-anchor-id="pasos">Pasos</h3>
+<section id="importar-datos-de-formato-excel" class="level2">
+<h2 class="anchored" data-anchor-id="importar-datos-de-formato-excel">2. Importar datos de formato Excel</h2>
 <div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -217,98 +207,32 @@ TL;DR
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ruta en SPSS: <code>Transformar &gt; Recodificación automática…</code></p>
+<p>Ruta en SPSS: <code>Archivo &gt; Importar datos &gt; Excel…</code></p>
 </div>
 </div>
 <ol type="1">
-<li>Ve a la ruta <strong><code>Transformar &gt; Recodificación automática…</code></strong><br>
+<li>En SPSS, abre la ruta <code>Archivo &gt; Importar datos &gt; Excel…</code><br>
 </li>
-<li>Selecciona la variable que deseas recodificar.<br>
+<li>Ubica en el buscados tu archivo descargado con las respuestas de Google Forms (<code>.xlsx</code>)<br>
 </li>
-<li>Haz clic en la <strong>flecha</strong> para moverla al cuadro de variables seleccionadas.<br>
-</li>
-<li>En la parte inferior, escribe el <strong>nombre de la nueva variable</strong> y pulsa <strong>“Añadir nuevo nombre”</strong>.<br>
-</li>
-<li>Si vas a trabajar con más de una variable, repite los pasos <strong>2 a 4</strong> para cada una.<br>
-</li>
-<li>Revisa la opción <strong>“Ordenar por valor”</strong>:
-<ul>
-<li><em>De menor a mayor</em> → SPSS asignará los números según el <strong>orden alfabético</strong> de las respuestas (por ejemplo: “A veces” = 1, “Siempre” = 3).<br>
-</li>
-<li><em>De mayor a menor</em> → invertirá ese orden.<br>
-</li>
-</ul></li>
-<li>Si todas las variables tienen <strong>las mismas alternativas de respuesta</strong>, marca<br>
-<strong>“Utilizar el mismo esquema de recodificación para todas las variables”</strong><br>
-para aplicar el mismo patrón en un solo paso.<br>
-</li>
-<li>Finalmente, pulsa <strong>“Aceptar”</strong> para ejecutar la recodificación.</li>
+<li>Revisa la configuración automática identificada por SPSS y haz click en <code>Aceptar</code>.</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><video src="img/recod_autom.mov" class="img-fluid" controls=""><a href="img/recod_autom.mov">Video</a></video></p>
-<figcaption>Recodificación automática</figcaption>
+<p><video src="img/importar_excel.mov" class="img-fluid" controls=""><a href="img/importar_excel.mov">Video</a></video></p>
+<figcaption>Importar Excel en SPSS</figcaption>
 </figure>
 </div>
-<p>Verás la(s) nueva(s) variable(s) <strong>numérica(s)</strong> creada(s) automáticamente</p>
+<p>En unos segundos, verás tu conjunto de datos…</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><video src="img/show_recod_autom.mov" class="img-fluid" controls=""><a href="img/show_recod_autom.mov">Video</a></video></p>
-<figcaption>Recodificación automática</figcaption>
+<p><img src="img/importado.png" class="img-fluid figure-img"></p>
+<figcaption>Importar Excel en SPSS</figcaption>
 </figure>
 </div>
 </section>
-</section>
-<section id="recodificación-en-distintas-variables" class="level2">
-<h2 class="anchored" data-anchor-id="recodificación-en-distintas-variables">2. Recodificación en distintas variables</h2>
-<section id="uso-1" class="level3">
-<h3 class="anchored" data-anchor-id="uso-1">Uso</h3>
-<p>Sirve para transformar variables de tipo <em>cadena</em> a tipo <em>numérico</em> cuando:</p>
-<ul>
-<li>No tenemos certeza de que todas las alternativas hayan sido usadas</li>
-<li>Deseamos crear categorías nuevas que no se encuentran en los datos</li>
-<li>Deseamos dar un orden específico a las alternativas (variables ordinales)</li>
-</ul>
-<p>Es recomendable trabajar con recodificación en distinta variable y no en la misma variable para evitar borrar los datos originales y podamos acceder a ellos en caso sea necesario.</p>
-</section>
-<section id="pasos-1" class="level3">
-<h3 class="anchored" data-anchor-id="pasos-1">Pasos</h3>
-<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-TL;DR
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Ruta en SPSS: <code>Transformar &gt; Recodificar en distintas variables…</code></p>
-</div>
-</div>
-<ol type="1">
-<li>Ve a la ruta <strong><code>Transformar &gt; Recodificar en distintas variables…</code></strong>.</li>
-<li>Selecciona la variable que deseas recodificar.<br>
-</li>
-<li>Haz clic en la <strong>flecha</strong> para moverla al cuadro de variables seleccionadas.<br>
-</li>
-<li>En la parte inferior, escribe el <strong>nombre de la nueva variable</strong> (por ejemplo, <code>entusiasmo</code>) y agrega una <strong>etiqueta de variable</strong> descriptiva (por ejemplo, <em>Nivel de entusiasmo declarado</em>).<br>
-</li>
-<li>Pulsa <strong>“Valores antiguos y nuevos…”</strong> para abrir la ventana donde definirás las equivalencias.<br>
-</li>
-<li>En esa ventana, asigna correspondencias entre los valores originales (texto) y los nuevos valores numéricos.
-<ul>
-<li>Ejemplo: “Nada entusiasmado” → 1, “Poco entusiasmado” → 2, “…” → 3, “…” → 4, “…” → 5.<br>
-</li>
-</ul></li>
-<li>Pulsa <strong>“Continuar”</strong> y luego <strong>“Aceptar”</strong> para aplicar la recodificación.</li>
-</ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><video src="img/recod_distintas.mov" class="img-fluid" controls=""><a href="img/recod_distintas.mov">Video</a></video></p>
-<figcaption>Recodificar en distintas variables</figcaption>
-</figure>
-</div>
+<section id="explorar-variables" class="level2">
+<h2 class="anchored" data-anchor-id="explorar-variables">3. Explorar variables</h2>
 <div class="callout callout-style-default callout-warning callout-titled" title="OJO">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -319,74 +243,32 @@ OJO
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Esta opción crea <strong>una nueva variable</strong> sin modificar la original. Asegúrate de asignarle un <strong>nombre claro</strong> y una <strong>etiqueta descriptiva</strong>, ya que SPSS la añadirá al final de la base de datos.</p>
-<p>Las categorías de texto se transformarán en valores numéricos según las equivalencias que definas. <strong>Falta añadir etiquetas de valores</strong> para que esos números tengan sentido en tus análisis.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="definir-etiquetas-de-valores" class="level2">
-<h2 class="anchored" data-anchor-id="definir-etiquetas-de-valores">3. Definir etiquetas de valores</h2>
-<p>(para recodificaciones no automáticas o variables numéricas)</p>
-<p>Todas las variables de tipo numérico que representen variables categóricas deben llevar <em>etiquetas de valores</em>. El proceso de recodificación automática ya arroja nuevas variables con etiquetas de valores, pero para que cada número corresponda al texto de la categoría original.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-TL;DR
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><code>Vista de variables → Columna "Valores" → Definir etiquetas</code></p>
-</div>
-</div>
+<p>Al importar una base desde <strong>Google Forms o Excel</strong>, revisa que todo haya sido leído correctamente:</p>
 <ol type="1">
-<li>Cambia a la <strong>Vista de variables</strong>.<br>
-</li>
-<li>En la columna <strong>“Valores”</strong> de la nueva variable, haz clic en el botón con los tres puntos <code>[…]</code>.<br>
-</li>
-<li>En la ventana que se abre, define cada correspondencia:
-<ul>
-<li><strong>Valor:</strong> número asignado (por ejemplo, 1)<br>
-</li>
-<li><strong>Etiqueta de valor:</strong> texto asociado (por ejemplo, “Muy insatisfecho”)<br>
-</li>
-</ul></li>
-<li>Pulsa <strong>“Añadir”</strong> después de cada par valor–etiqueta.<br>
-</li>
-<li>Al finalizar, presiona <strong>“Aceptar”</strong> y verifica que todas las etiquetas estén registradas correctamente.</li>
+<li><p><strong>Las respuestas se suelen importar como texto</strong><br>
+Google Forms guarda las alternativas como palabras, no como números.<br>
+➜ <strong>Deberás transformar estas variables a numéricas</strong> antes de analizarlas.</p></li>
+<li><p><strong>Los nombres de variables provienen de los encabezados</strong><br>
+Suelen ser largos y poco legibles pues se borran los espacios. ➜ Revisa la <em>Vista de variables</em> para ajustar los nombres (cortos, sin espacios, tildes ni signos).</p></li>
+<li><p><strong>Verifica las etiquetas de valores y el formato de variables</strong><br>
+SPSS no asigna etiquetas de valores ni siempre reconoce el tipo de dato correcto.<br>
+➜ Corrige estos aspectos como parte del procesamiento.</p></li>
 </ol>
-<div class="callout callout-style-default callout-note callout-titled" title="📘 Usar sintaxis para definir etiquetas">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-📘 Usar sintaxis para definir etiquetas
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>También puedes definir las <strong>etiquetas de valores</strong> mediante <strong>sintaxis SPSS</strong>,<br>
-lo que resulta útil para documentar tus pasos o aplicarlos a varias variables a la vez.</p>
-<p><strong>Ruta:</strong> <code>Archivo &gt; Nuevo &gt; Sintaxis</code></p>
-<p>Ejemplo con la variable <code>entusiasmo</code>:</p>
-<pre class="spss"><code>VALUE LABELS entusiasmo
-  1 'Nada de entusiasmo'
-  2 'Poco entusiasmo'
-  3 'Algo de entusiasmo'
-  4 'Bastante entusiasmo'
-  5 'Mucho entusiasmo'.</code></pre>
-<p>Lo que hicimos fue usar la función o comando <code>VALUE LABELS</code> luego poner el nombre de la variable, luego los valores numéricos seguidos de la etiqueta que queremos entre comillas (’’). Al final, cerramos con .</p>
-<p>💡 Ejecuta el bloque (click en el botón ▶️ verde) para aplicar las etiquetas automáticamente. La sintaxis te permite repetir el mismo procedimiento sin usar menús y mantener registro de cómo definiste tus valores.</p>
-<p>A continuación, un video de ejemplo…</p>
-</div>
-</div>
+<p>Una vez importada la base, revisa la <strong>vista de variables</strong>:</p>
+<ul>
+<li><strong>Nombre:</strong> cómo se llaman las variables<br>
+</li>
+<li><strong>Tipo:</strong> son cadena o numéricas</li>
+<li><strong>Medida:</strong> nominal, ordinal, escala<br>
+</li>
+<li><strong>Valores:</strong> etiquetas de categorías</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><video src="img/etiquetas_sintaxis.mov" class="img-fluid" controls=""><a href="img/etiquetas_sintaxis.mov">Video</a></video></p>
-<figcaption>Añadir etiquetas con sintaxis</figcaption>
+<p><img src="img/vista_variables.png" class="img-fluid figure-img"></p>
+<figcaption>Vista de variables</figcaption>
 </figure>
 </div>
 

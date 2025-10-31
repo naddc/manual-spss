@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Estadística univariada – Manual de SPSS</title>
+<title>Respuestas múltiples – Manual de SPSS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,22 +120,58 @@ window.Quarto = {
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./procesamiento.html"> 
-<span class="menu-text">1. Procesamiento de bases</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-procesamiento-de-bases" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Procesamiento de bases</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-procesamiento-de-bases">    
+        <li>
+    <a class="dropdown-item" href="./import.html">
+ <span class="dropdown-text">Importación de bases</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./univariada.html" aria-current="page"> 
-<span class="menu-text">2. Estadística univariada</span></a>
+        <li>
+    <a class="dropdown-item" href="./procesamiento.html">
+ <span class="dropdown-text">Recodificación</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./bivariada.qmd"> 
-<span class="menu-text">3. Estadística bivariada</span></a>
+        <li>
+    <a class="dropdown-item" href="./proc_mrsets.html">
+ <span class="dropdown-text">Respuestas múltiples</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./graficos.qmd"> 
-<span class="menu-text">4. Gráficos</span></a>
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-estadística-univariada" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Estadística univariada</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-estadística-univariada">    
+        <li>
+    <a class="dropdown-item" href="./univariada.html">
+ <span class="dropdown-text">Respuestas múltiples</span></a>
   </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-estadística-bivariada" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Estadística bivariada</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-estadística-bivariada">    
+        <li>
+    <a class="dropdown-item" href="./chi2.qmd">
+ <span class="dropdown-text">Chi-cuadrado</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-gráficos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Gráficos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-gráficos">    
+        <li>
+    <a class="dropdown-item" href="./graficos.qmd">
+ <span class="dropdown-text">Gráficos</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -165,7 +201,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Estadística univariada</h1>
+<h1 class="title">Respuestas múltiples</h1>
 </div>
 
 
@@ -361,7 +397,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/naddc\.github\.io\/manual-spss\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

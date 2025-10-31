@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://naddc.github.io/manual-spss/procesamiento.html</loc>
-    <lastmod>2025-10-24T16:52:28.683Z</lastmod>
+    <loc>https://naddc.github.io/manual-spss/desc_unica.html</loc>
+    <lastmod>2025-10-31T02:35:55.683Z</lastmod>
+  </url>
+  <url>
+    <loc>https://naddc.github.io/manual-spss/proc_mrsets.html</loc>
+    <lastmod>2025-10-31T01:53:24.111Z</lastmod>
+  </url>
+  <url>
+    <loc>https://naddc.github.io/manual-spss/import.html</loc>
+    <lastmod>2025-10-31T01:39:37.032Z</lastmod>
+  </url>
+  <url>
+    <loc>https://naddc.github.io/manual-spss/chi2.html</loc>
+    <lastmod>2025-10-31T10:24:48.954Z</lastmod>
   </url>
   <url>
     <loc>https://naddc.github.io/manual-spss/index.html</loc>
     <lastmod>2025-10-24T15:52:01.486Z</lastmod>
   </url>
   <url>
-    <loc>https://naddc.github.io/manual-spss/univariada.html</loc>
-    <lastmod>2025-10-24T15:49:16.583Z</lastmod>
+    <loc>https://naddc.github.io/manual-spss/desc_mrsets.html</loc>
+    <lastmod>2025-10-31T02:30:40.194Z</lastmod>
+  </url>
+  <url>
+    <loc>https://naddc.github.io/manual-spss/procesamiento.html</loc>
+    <lastmod>2025-10-31T01:52:56.668Z</lastmod>
   </url>
 </urlset>
