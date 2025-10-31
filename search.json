@@ -4,21 +4,21 @@
     "href": "desc_unica.html",
     "title": "Respuesta única",
     "section": "",
-    "text": "TL;DR\n\n\n\n1️⃣ Crea un conjunto de respuestas múltiples con\nAnalizar → Tablas → Conjunto de respuestas múltiples…\n2️⃣ Luego, úsalo en\nAnalizar → Tablas → Tablas personalizadas…\npara obtener frecuencias y porcentajes de cada alternativa."
+    "text": "TL;DR\n\n\n\nAnalizar → Estadísticos descriptivos → Descriptivos… o Analizar → Estadísticos descriptivos → Frecuencias…\n\n\n\n\nVideo\nObtener estadísticos descriptivos para variables numéricas\n\n\n\n\nVideo\nObtener estadísticos descriptivos para variables numéricas\n\n\nRecuerda que siempre puedes usar el siguiente botón en la barra de menú para genera rápidamente una tabla:\n\n\n\nObtener estadísticos descriptivos para variables numéricas"
   },
   {
     "objectID": "desc_unica.html#tablas-con-preguntas-numéricas",
     "href": "desc_unica.html#tablas-con-preguntas-numéricas",
     "title": "Respuesta única",
     "section": "",
-    "text": "TL;DR\n\n\n\n1️⃣ Crea un conjunto de respuestas múltiples con\nAnalizar → Tablas → Conjunto de respuestas múltiples…\n2️⃣ Luego, úsalo en\nAnalizar → Tablas → Tablas personalizadas…\npara obtener frecuencias y porcentajes de cada alternativa."
+    "text": "TL;DR\n\n\n\nAnalizar → Estadísticos descriptivos → Descriptivos… o Analizar → Estadísticos descriptivos → Frecuencias…\n\n\n\n\nVideo\nObtener estadísticos descriptivos para variables numéricas\n\n\n\n\nVideo\nObtener estadísticos descriptivos para variables numéricas\n\n\nRecuerda que siempre puedes usar el siguiente botón en la barra de menú para genera rápidamente una tabla:\n\n\n\nObtener estadísticos descriptivos para variables numéricas"
   },
   {
     "objectID": "desc_unica.html#tablas-con-preguntas-categóricas",
     "href": "desc_unica.html#tablas-con-preguntas-categóricas",
     "title": "Respuesta única",
     "section": "2. Tablas con preguntas categóricas",
-    "text": "2. Tablas con preguntas categóricas"
+    "text": "2. Tablas con preguntas categóricas\n\n\n\n\n\n\nTL;DR\n\n\n\nAnalizar → Estadísticos descriptivos → Descriptivos…\n\n\n\n\nVideo\nObtener estadísticos descriptivos para variables categóricas\n\n\nRecuerda que siempre puedes usar el siguiente botón en la barra de menú para genera rápidamente una tabla:\n\n\n\nObtener estadísticos descriptivos para variables numéricas"
   },
   {
     "objectID": "proc_mrsets.html",
@@ -67,14 +67,14 @@
     "href": "chi2.html",
     "title": "Prueba chi-cuadrado de independencia",
     "section": "",
-    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas. Para esto, compara las **frecuencias observadas* con las *frecuencias esperadas**.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
+    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas. Para esto, compara las frecuencias observadas con las frecuencias esperadas.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
   },
   {
     "objectID": "chi2.html#uso",
     "href": "chi2.html#uso",
     "title": "Prueba chi-cuadrado de independencia",
     "section": "",
-    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas. Para esto, compara las **frecuencias observadas* con las *frecuencias esperadas**.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
+    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas. Para esto, compara las frecuencias observadas con las frecuencias esperadas.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
   },
   {
     "objectID": "chi2.html#pasos",
