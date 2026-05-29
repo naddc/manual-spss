@@ -1,96 +1,119 @@
 ---
-title: "1. Procesamiento de bases"
+title: "Recodificación de variables"
 format: html
 ---
 
-## Importar base desde Google Forms o Excel
+## 1. Recodificación automática
 
-**En SPSS:**  
-`Archivo > Importar datos > Excel…`
+### Uso
 
-1. Abre SPSS  
-2. Ve al menú `Archivo > Importar datos > Excel…`  
-3. Selecciona el archivo descargado de Google Forms (`.xlsx` o `.csv`)  
-4. Revisa que SPSS identifique correctamente las variables y tipos
+Sirve para transformar variables de tipo *cadena* a tipo *numérico* con *pocas alternativas no ordenadas* (por ejemplo Sí/No).
 
-![Importar Excel en SPSS](img/importar_excel.png)
+### Pasos
 
----
-
-## Identificar variables
-
-Una vez importada la base, revisa la **vista de variables**:
-
-- **Nombre:** cómo se llamará la variable  
-- **Tipo:** cadena o numérica  
-- **Medida:** nominal, ordinal, escala  
-- **Valores:** etiquetas de categorías  
-
-![Vista de variables](img/vista_variables.png)
-
----
-
-## Recodificación automática
-
-**Ruta en SPSS:**  
+::: {.callout-tip title="TL;DR"}
+Ruta en SPSS:
 `Transformar > Recodificación automática…`
+:::
 
-Esta opción sirve para transformar variables con pocas respuestas (por ejemplo Sí/No).
+1. Ve a la ruta **`Transformar > Recodificación automática…`**  
+2. Selecciona la variable que deseas recodificar.  
+3. Haz clic en la **flecha** para moverla al cuadro de variables seleccionadas.  
+4. En la parte inferior, escribe el **nombre de la nueva variable** y pulsa **“Añadir nuevo nombre”**.  
+5. Si vas a trabajar con más de una variable, repite los pasos **2 a 4** para cada una.  
+6. Revisa la opción **“Ordenar por valor”**:  
+   - *De menor a mayor* → SPSS asignará los números según el **orden alfabético** de las respuestas (por ejemplo: “A veces” = 1, “Siempre” = 3).  
+   - *De mayor a menor* → invertirá ese orden.  
+7. Si todas las variables tienen **las mismas alternativas de respuesta**, marca  
+   **“Utilizar el mismo esquema de recodificación para todas las variables”**  
+   para aplicar el mismo patrón en un solo paso.  
+8. Finalmente, pulsa **“Aceptar”** para ejecutar la recodificación. 
 
-1. Selecciona la variable  
-2. Haz clic en la flecha para incluirla  
-3. Escribe el nuevo nombre de variable  
-4. Pulsa “Aceptar”  
-5. Verás la nueva variable **numérica** creada automáticamente  
+![Recodificación automática](img/recod_autom.mov)
 
-![Recodificación automática](img/recodificar_automatica.png)
+Verás la(s) nueva(s) variable(s) **numérica(s)** creada(s) automáticamente  
 
----
+![Recodificación automática](img/show_recod_autom.mov)
 
-## Recodificar en distintas variables
+## 2. Recodificación en distintas variables
 
-**Ruta en SPSS:**  
+### Uso
+
+Sirve para transformar variables de tipo *cadena* a tipo *numérico* cuando:
+
+- No tenemos certeza de que todas las alternativas hayan sido usadas
+- Deseamos crear categorías nuevas que no se encuentran en los datos
+- Deseamos dar un orden específico a las alternativas (variables ordinales)
+
+Es recomendable trabajar con recodificación en distinta variable y no en la misma variable para evitar borrar los datos originales y podamos acceder a ellos en caso sea necesario.
+
+### Pasos
+
+::: {.callout-tip title="TL;DR"}
+Ruta en SPSS:
 `Transformar > Recodificar en distintas variables…`
+:::
 
-Úsala cuando:
-- No estás seguro de que todas las respuestas aparezcan
-- Deseas crear categorías nuevas
-
-Ejemplo: recodificar niveles de satisfacción.
-
-1. Selecciona variable  
-2. Clic en “Valores antiguos y nuevos…”  
-3. Define equivalencias  
-4. Marca la casilla “Convertir a numérico”  
-5. Pulsa “Continuar” > “Aceptar”
-
-![Recodificar en distintas variables](img/recodificar_nueva.png)
-
----
-
-## Calcular nueva variable
-
-**Ruta:** `Transformar > Calcular variable…`
-
-Sirve para crear índices o separar preguntas múltiples.  
-Ejemplo: crear un índice de actitudes o separar respuestas de texto.
-
-![Calcular variable](img/calcular_variable.png)
-
----
-
-## Buscar texto dentro de una respuesta (CHAR.INDEX)
-
-**Expresión en SPSS:**
-
-CHAR.INDEX([variable], 'texto') > 0
+1. Ve a la ruta **`Transformar > Recodificar en distintas variables…`**.
+2. Selecciona la variable que deseas recodificar.  
+3. Haz clic en la **flecha** para moverla al cuadro de variables seleccionadas.  
+4. En la parte inferior, escribe el **nombre de la nueva variable** (por ejemplo, `entusiasmo`) y agrega una **etiqueta de variable** descriptiva (por ejemplo, *Nivel de entusiasmo declarado*).  
+5. Pulsa **“Valores antiguos y nuevos…”** para abrir la ventana donde definirás las equivalencias.  
+6. En esa ventana, asigna correspondencias entre los valores originales (texto) y los nuevos valores numéricos.  
+   - Ejemplo: “Nada entusiasmado” → 1, “Poco entusiasmado” → 2, “...” → 3, “...” → 4, “...” → 5.  
+7. Pulsa **“Continuar”** y luego **“Aceptar”** para aplicar la recodificación.
 
 
-Esto devuelve:
-- 1 si encuentra el texto
-- 0 si no lo encuentra
+![Recodificar en distintas variables](img/recod_distintas.mov)
 
-Ejemplo: identificar si alguien mencionó “Facebook” en una respuesta.
+::: {.callout-warning title="OJO"}
+Esta opción crea **una nueva variable** sin modificar la original. Asegúrate de asignarle un **nombre claro** y una **etiqueta descriptiva**, ya que SPSS la añadirá al final de la base de datos.
 
-![Ejemplo de CHAR.INDEX](img/charindex.png)
+Las categorías de texto se transformarán en valores numéricos según las equivalencias que definas. **Falta añadir etiquetas de valores** para que esos números tengan sentido en tus análisis.
+:::
+
+## 3. Definir etiquetas de valores 
+
+(para recodificaciones no automáticas o variables numéricas)
+
+Todas las variables de tipo numérico que representen variables categóricas deben llevar *etiquetas de valores*. El proceso de recodificación automática ya arroja nuevas variables con etiquetas de valores, pero   para que cada número corresponda al texto de la categoría original.
+
+::: {.callout-tip title="TL;DR"}
+`Vista de variables → Columna "Valores" → Definir etiquetas`
+:::
+
+1. Cambia a la **Vista de variables**.  
+2. En la columna **“Valores”** de la nueva variable, haz clic en el botón con los tres puntos `[…]`.  
+3. En la ventana que se abre, define cada correspondencia:  
+   - **Valor:** número asignado (por ejemplo, 1)  
+   - **Etiqueta de valor:** texto asociado (por ejemplo, “Muy insatisfecho”)  
+4. Pulsa **“Añadir”** después de cada par valor–etiqueta.  
+5. Al finalizar, presiona **“Aceptar”** y verifica que todas las etiquetas estén registradas correctamente.
+
+::: {.callout-note title="📘 Usar sintaxis para definir etiquetas"}
+También puedes definir las **etiquetas de valores** mediante **sintaxis SPSS**,  
+lo que resulta útil para documentar tus pasos o aplicarlos a varias variables a la vez.
+
+**Ruta:** `Archivo > Nuevo > Sintaxis`
+
+Ejemplo con la variable `entusiasmo`:
+
+```spss
+VALUE LABELS entusiasmo
+  1 'Nada de entusiasmo'
+  2 'Poco entusiasmo'
+  3 'Algo de entusiasmo'
+  4 'Bastante entusiasmo'
+  5 'Mucho entusiasmo'.
+```
+Lo que hicimos fue usar la función o comando `VALUE LABELS` luego poner el nombre de la variable, luego los valores numéricos seguidos de la etiqueta que queremos entre comillas (''). Al final, cerramos con .
+
+💡 Ejecuta el bloque (click en el botón ▶️ verde) para aplicar las etiquetas automáticamente.
+La sintaxis te permite repetir el mismo procedimiento sin usar menús y mantener registro
+de cómo definiste tus valores.
+
+A continuación, un video de ejemplo...
+:::
+
+![Añadir etiquetas con sintaxis](img/etiquetas_sintaxis.mov)
 

@@ -1,0 +1,80 @@
+---
+title: "Respuestras múltiples"
+format: html
+---
+
+## 1. Lógica de las preguntas con respuestas múltiples
+
+::: {.callout-tip title="TL;DR"}
+- Google Forms **almacena las respuestas múltiples como texto separado por comas**, no como variables independientes.  
+- Para analizarlas, debes **crear una nueva variable por cada alternativa**, usando `CHAR.INDEX`.  
+- Asegúrate de que las palabras entre comillas coincidan exactamente con las de la base (mayúsculas, tildes, espacios, etc.).
+:::
+
+Cuando exportamos una base desde **Google Forms**, las preguntas de tipo *selección múltiple* (donde las personas pueden marcar más de una opción) se guardan en una **sola columna**, como **texto (cadena)**.  
+
+Cada respuesta seleccionada aparece separada por **comas**, por ejemplo:
+
+| ID | ¿qué redes sociales usas? |
+|----|----------------|
+| 1  | Facebook, Instagram |
+| 2  | TikTok |
+| 3  | Facebook, TikTok, YouTube |
+
+Esto genera un problema para el análisis, ya que SPSS **no reconoce cada alternativa por separado**:  
+todas están dentro de una misma celda.  
+
+Para poder analizar cada alternativa individualmente, debemos **crear variables dicotómicas (0/1)** —una columna por cada red social— donde:
+
+  - **1** significa que la persona **marcó** esa opción.  
+  - **0** significa que **no la marcó**.
+
+En otras palabras, convertimos una **columna de texto** en **varias columnas binarias** que indican la presencia o ausencia de cada alternativa.
+
+
+## 2. Procedimiento con *Calcular variable*
+
+::: {.callout-tip title="TL;DR"}
+Usa **Transformar → Calcular variable…** con  
+`CHAR.INDEX([variable], 'texto') > 0`  
+para convertir una respuesta múltiple en varias **variables dicotómicas (0/1)**.
+:::
+
+1. Ve a la ruta **`Transformar > Calcular variable…`**  
+2. En **“Nombre de variable destino”**, escribe el nombre de la nueva variable (por ejemplo, `usa_facebook`).  
+3. En **“Expresión numérica”**, usaremos una función que busque si el texto “Facebook” aparece en la respuesta.  
+4. Pulsa el botón **“Cadena”** (para ver las funciones de texto).  
+5. Selecciona **CHAR.INDEX** y haz clic en la **flecha azul** para insertarla en el cuadro de expresión.  
+6. Escribe la siguiente fórmula, adaptando el nombre de tu variable original:
+   `CHAR.INDEX(redes_sociales, 'Facebook') > 0`
+7. Pulsa **Aceptar**.  
+   SPSS creará una nueva variable donde:  
+    - **1** indica que la palabra “Facebook” aparece en la respuesta.  
+    - **0** indica que no aparece.  
+   
+::: {.callout-note title="Cómo funciona `CHAR.INDEX`"}
+
+- `CHAR.INDEX(campo, 'texto')` busca una cadena específica dentro de otra.  
+- Si la encuentra, devuelve la **posición del primer carácter** donde aparece.  
+- Si no la encuentra, devuelve **0**.  
+- Al agregar `> 0`, la expresión se convierte en una **condición lógica** que devuelve:  
+  - **1** si el texto está presente.  
+  - **0** si no está presente.  
+
+Ejemplo:
+
+| ¿qué redes sociales usas? | usa_facebook | usa_tiktok | usa_instagram | usa_youtube |
+|---------------------------|--------------| ---------- | --------------| ----------  |
+| Facebook, Instagram       | 1            | 0 | 1 | 0 |
+| TikTok                    | 0            | 1 | 0 | 0 | 
+| Facebook, TikTok, YouTube | 1            | 1 | 0 | 1 | 
+
+:::
+
+![Crear variables dicotómicas/binarias](img/rpta_multiple.mov)
+
+
+
+
+
+

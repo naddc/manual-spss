@@ -1,0 +1,47 @@
+---
+title: "Respuestas múltiples"
+format: html
+---
+
+## 1. Tablas con preguntas de respuestas múltiples
+
+::: {.callout-tip title="TL;DR"}
+1️⃣ Crea un **conjunto de respuestas múltiples** con  
+`Analizar → Tablas → Conjunto de respuestas múltiples…`  
+2️⃣ Luego, úsalo en  
+`Analizar → Tablas → Tablas personalizadas…`  
+para obtener **frecuencias y porcentajes** de cada alternativa.
+:::
+
+### 1.1. Procedimiento para definir un conjunto de respuestas múltiples
+
+1. Ve a **Analizar → Tablas → Conjunto de respuestas múltiples…**  
+2. En la lista de variables, selecciona todas las variables que correspondan a las alternativas de la misma pregunta (ejem. `usa_facebook`, `usa_instagram`, `usa_tiktok`, `usa_youtube`). 
+3. En “Valores contado”, especifica que el valor **1** indica *respuesta seleccionada*.  
+4. Marca la opción **Variables dicotómicas**.  
+5. En “Nombre del conjunto”, escribe un nombre corto sin espacios (por ejemplo, `RRSS`).  
+6. En “Etiqueta del conjunto”, escribe una descripción (por ejemplo, *¿Qué redes sociales usas?*).  
+7. Pulsa **Añadir**  para verlo en la sección **"Conjuntos de respuestas múltiples"** y luego **Aceptar**.  
+
+SPSS habrá creado un conjunto llamado **RRSS[$]** (el símbolo $ indica que es un conjunto de respuestas múltiples).
+
+![Crear conjunto de respuestas múltiples](img/def_conjunto.mov)
+
+---
+
+### 1.2. Usar el conjunto en Tablas personalizadas
+
+1. Ve a **Analizar → Tablas → Tablas personalizadas…**  
+2. En la lista de variables (al final del panel izquierdo), encontrarás el nuevo conjunto que definiste  
+   (por ejemplo, **RRSS[$]**).  
+3. Arrastra el conjunto a las filas de la tabla.  
+4. Pulsa **Aceptar** para generar la tabla.
+
+::: {.callout-warning title="OJO"}
+- Este procedimiento solo funciona si tus variables ya son **dicotómicas (0/1)**.  
+- El valor que representa *seleccionado* debe ser **1**.  
+- Los conjuntos de respuestas múltiples aparecen con el sufijo **[$]** en la lista de variables.  
+- Para evitar confusiones, usa un mismo prefijo (`usa_`, `participa_`, etc.) para las variables del mismo grupo.
+:::
+
+![Tabular respuestas múltiples](img/tab_multiple.mov)

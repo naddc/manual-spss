@@ -1,0 +1,22 @@
+---
+title: "Prueba chi-cuadrado de independencia"
+format: html
+---
+
+## Uso
+
+Esta prueba permite evaluar si existe una **asociación estadística** entre **dos** variables **categóricas**. Para esto, compara las **frecuencias observadas** con las **frecuencias esperadas**.
+
+Bajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.
+
+#### *H₀ (p-value \> 0.05\*): No hay asociación entre las variables.*
+
+#### *H₁ (p-value \<= 0.05\*): Existe asociación entre las variables.*
+
+\*95% de confianza.
+
+## Pasos
+
+::: {.callout-tip title="TL;DR"}
+`Analizar → Estadísticos descriptivos → Tablas cruzadas...`
+:::

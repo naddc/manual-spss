@@ -6,16 +6,30 @@ website:
   title: "Manual de SPSS"
   navbar:
     left:
-      - text: "Inicio"
+      - text: Inicio
         href: index.qmd
-      - text: "1. Procesamiento de bases"
-        href: procesamiento.qmd
-      - text: "2. Estadística univariada"
-        href: univariada.qmd
-      - text: "3. Estadística bivariada"
-        href: bivariada.qmd
-      - text: "4. Gráficos"
-        href: graficos.qmd
+      - text: Procesamiento de bases
+        menu:
+          - href: import.qmd
+            text: Importación de bases
+          - href: procesamiento.qmd
+            text: Recodificación
+          - href: proc_mrsets.qmd
+            text: Respuestas múltiples
+      - text: Estadística univariada
+        menu:
+          - href: desc_unica.qmd
+            text: Respuesta única
+          - href: desc_mrsets.qmd
+            text: Respuestas múltiples
+      - text: Estadística bivariada
+        menu:
+          - href: chi2.qmd
+            text: Chi-cuadrado
+      - text: Gráficos
+        menu:
+          - href: graficos.qmd
+            text: Gráficos
 
 format:
   html:

@@ -1,0 +1,33 @@
+---
+title: "Respuesta única"
+format: html
+---
+
+## 1. Tablas con preguntas numéricas
+
+::: {.callout-tip title="TL;DR"}
+`Analizar → Estadísticos descriptivos → Descriptivos…`
+o
+`Analizar → Estadísticos descriptivos → Frecuencias…`  
+:::
+
+
+![Obtener estadísticos descriptivos para variables numéricas](img/desc_num1.mov)
+
+![Obtener estadísticos descriptivos para variables numéricas](img/desc_num2.mov)
+
+Recuerda que siempre puedes usar el siguiente botón en la barra de menú para genera rápidamente una tabla:
+
+![Obtener estadísticos descriptivos](img/desc_stats.png)
+
+## 2. Tablas con preguntas categóricas
+
+::: {.callout-tip title="TL;DR"}
+`Analizar → Estadísticos descriptivos → Descriptivos…`
+:::
+
+![Obtener estadísticos descriptivos para variables categóricas](img/desc_cat.mov)
+
+Recuerda que siempre puedes usar el siguiente botón en la barra de menú para genera rápidamente una tabla:
+
+![Obtener estadísticos descriptivos](img/desc_stats.png)
