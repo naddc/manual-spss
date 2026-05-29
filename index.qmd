@@ -22,14 +22,14 @@ navbar:
             text: Respuesta única
           - href: desc_mrsets.qmd
             text: Respuestas múltiples
-      - text: Estadística bivariada
-        menu:
-          - href: chi2.qmd
-            text: Chi-cuadrado
-      - text: Gráficos
-        menu:
-          - href: graficos.qmd
-            text: Gráficos
+      # - text: Estadística bivariada
+      #   menu:
+      #     - href: chi2.qmd
+      #       text: Chi-cuadrado
+      # - text: Gráficos
+      #   menu:
+      #     - href: graficos.qmd
+      #       text: Gráficos
 ---
 
 # Bienvenido/a
