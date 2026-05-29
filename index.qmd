@@ -32,7 +32,7 @@ navbar:
             text: Gráficos
 ---
 
-# Bienvenida
+# Bienvenido/a
 
 Este sitio te guiará paso a paso para **aprender a procesar bases de datos y realizar análisis en SPSS**,
 siguiendo la estructura utilizada en nuestras prácticas del curso.

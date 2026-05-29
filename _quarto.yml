@@ -27,9 +27,9 @@ website:
           - href: chi2.qmd
             text: Chi-cuadrado
       - text: Gráficos
-        menu:
-          - href: graficos.qmd
-            text: Gráficos
+        # menu:
+        #   - href: graficos.qmd
+        #     text: Gráficos
 
 format:
   html:
