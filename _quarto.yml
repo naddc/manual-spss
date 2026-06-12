@@ -30,6 +30,8 @@ website:
         menu:
           - href: chi2.qmd
             text: Chi-cuadrado
+          - href: ttest.qmd
+            text: T de Student
       # - text: Gráficos
       #   # menu:
       #   #   - href: graficos.qmd

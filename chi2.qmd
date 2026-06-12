@@ -5,7 +5,7 @@ format: html
 
 ## Uso
 
-Esta prueba permite evaluar si existe una **asociación estadística** entre **dos** variables **categóricas**. Para esto, compara las **frecuencias observadas** con las **frecuencias esperadas**.
+Esta prueba permite evaluar si existe una **asociación estadística** entre **dos** variables **categóricas** (nominales u ordinales). Para esto, compara las **frecuencias observadas** con las **frecuencias esperadas**.
 
 Bajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.
 
@@ -18,5 +18,32 @@ Bajo el supuesto de independencia, si las diferencias son suficientemente grande
 ## Pasos
 
 ::: {.callout-tip title="TL;DR"}
-`Analizar → Estadísticos descriptivos → Tablas cruzadas...`
+`Analizar → Estadísticos descriptivos → Tablas cruzadas…`  
+Luego: `Estadísticos… → marcar Chi-cuadrado`
 :::
+
+1. Ve a la ruta **`Analizar → Estadísticos descriptivos → Tablas cruzadas…`** (también puedes generar la tabla con **`Analizar → Tablas → Tablas personalizadas…`**).
+2. Coloca una variable en **Filas** y la otra en **Columnas**.
+3. Haz clic en el botón **“Estadísticos…”**.
+4. Marca la casilla **“Chi-cuadrado”** y pulsa **“Continuar”**.
+5. Pulsa **“Aceptar”** para generar los resultados.
+
+## Leyendo los resultados
+
+En la tabla **“Pruebas de chi-cuadrado”**, fíjate siempre en la fila **“Chi-cuadrado de Pearson”** y lee el valor de **“Significación asintótica (bilateral)”**. Ese es tu *p-value*.
+
+| Nivel de confianza | p-value | Decisión |
+|--------------------|---------|----------|
+| 95% | p ≤ 0.05 | Se rechaza H₀ → **hay asociación** |
+| 95% | p > 0.05 | No se rechaza H₀ → **no hay asociación** |
+
+**Ejemplo de interpretación:** si cruzas *zona de Lima* y *nivel de conocimiento sobre reciclaje* y obtienes una significación de 0.012 (≤ 0.05), rechazas H₀ y concluyes que **existe una asociación** entre la zona de residencia y el nivel de conocimiento. Si obtienes 0.480 (> 0.05), concluyes que **no se encontró asociación** entre ambas.
+
+::: {.callout-warning title="OJO"}
+- Ambas variables deben ser **categóricas** (nominales u ordinales). Si tienes una variable numérica, primero recodifícala en niveles.
+- Revisa la **nota al pie** de la tabla: si SPSS indica que varias casillas tienen un **recuento esperado menor que 5**, la prueba pierde validez. En ese caso, agrupa categorías para reducir el número de casillas.
+- El chi-cuadrado indica **si hay asociación, no su dirección ni su causa**. La interpretación es **asociativa**, nunca causal.
+:::
+
+<!-- Cuando grabes el video, descomenta la siguiente línea y coloca el archivo en img/ -->
+<!-- ![Prueba de chi-cuadrado en SPSS](img/chi2.mov) -->

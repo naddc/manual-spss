@@ -1,0 +1,60 @@
+---
+title: "Prueba T de Student (muestras independientes)"
+format: html
+---
+
+## Uso
+
+La prueba **T de Student para muestras independientes** permite evaluar si la **media** de una variable **numérica** difiere entre **dos grupos** definidos por una variable **categórica dicotómica** (de dos categorías).
+
+Por ejemplo: ¿el promedio del *índice de conocimiento sobre reciclaje* (`ICR`) es distinto entre hombres y mujeres?
+
+#### *H₀ (p-value \> 0.05\*): Las medias de ambos grupos son iguales (no hay diferencia).*
+
+#### *H₁ (p-value \<= 0.05\*): Las medias de ambos grupos son diferentes.*
+
+\*95% de confianza.
+
+::: {.callout-note title="Supuesto"}
+La prueba asume que la variable numérica se distribuye de forma **aproximadamente normal**. Los dos grupos deben ser **independientes**: cada caso pertenece a un solo grupo, no a ambos.
+:::
+
+## Pasos
+
+::: {.callout-tip title="TL;DR"}
+`Analizar → Comparar medias y proporciones → Prueba T de muestras independientes…`
+:::
+
+1. Ve a la ruta **`Analizar → Comparar medias y proporciones → Prueba T de muestras independientes…`**
+2. En **“Variables de prueba”**, coloca la variable **numérica** (por ejemplo, `ICR`).
+3. En **“Variable de agrupación”**, coloca la variable **categórica dicotómica** (por ejemplo, `sexo`).
+4. Haz clic en **“Definir grupos…”**, marca **“Utilizar valores especificados”** y escribe los dos valores que identifican a cada grupo (por ejemplo, **Grupo 1: 0** y **Grupo 2: 1**). Pulsa **“Continuar”**.
+5. Pulsa **“Aceptar”**.
+
+## Leyendo los resultados
+
+La lectura tiene **dos partes**:
+
+**1. Revisa la prueba de Levene (igualdad de varianzas).** En la tabla, mira la columna **“Sig.”** de la *Prueba de Levene*:
+
+- Si **Sig. > 0.05** → las varianzas son similares → usa la fila **“Se asumen varianzas iguales”**.
+- Si **Sig. ≤ 0.05** → las varianzas son distintas → usa la fila **“No se asumen varianzas iguales”**.
+
+**2. Lee el *p-value* de la prueba t.** En la fila que te indicó Levene, lee la **significación bilateral** (en versiones nuevas de SPSS aparece como **“P de dos factores”**; en versiones anteriores, como **“Sig. (bilateral)”**):
+
+| Nivel de confianza | p-value | Decisión |
+|--------------------|---------|----------|
+| 95% | p ≤ 0.05 | Se rechaza H₀ → **las medias son diferentes** |
+| 95% | p > 0.05 | No se rechaza H₀ → **no hay diferencia de medias** |
+
+**3. Compara las medias.** Si hay diferencia significativa, mira la tabla **“Estadísticas de grupo”** para indicar **cuál grupo tiene la media más alta**.
+
+**Ejemplo de interpretación:** si comparas el `ICR` entre hombres y mujeres y obtienes una significación bilateral de 0.03 (≤ 0.05), concluyes que **existe una diferencia significativa** entre el promedio de conocimiento de ambos grupos; luego, según la tabla de medias, señalas cuál grupo presenta el promedio más alto.
+
+::: {.callout-warning title="OJO"}
+- La variable de agrupación debe tener **exactamente dos grupos**. Si tienes más de dos (por ejemplo, tres carreras), usa **ANOVA**, no la T de Student.
+- La prueba indica **si las medias difieren**, no por qué. La interpretación es **asociativa**, no causal.
+:::
+
+<!-- Cuando grabes el video, descomenta la siguiente línea y coloca el archivo en img/ -->
+<!-- ![Prueba T de Student en SPSS](img/ttest.mov) -->
