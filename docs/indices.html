@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Respuestas múltiples – Manual de SPSS</title>
+<title>Calcular variables agrupadas (índices) – Manual de SPSS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -164,11 +164,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tablas-con-preguntas-de-respuestas-múltiples" id="toc-tablas-con-preguntas-de-respuestas-múltiples" class="nav-link active" data-scroll-target="#tablas-con-preguntas-de-respuestas-múltiples">1. Tablas con preguntas de respuestas múltiples</a>
-  <ul class="collapse">
-  <li><a href="#procedimiento-para-definir-un-conjunto-de-respuestas-múltiples" id="toc-procedimiento-para-definir-un-conjunto-de-respuestas-múltiples" class="nav-link" data-scroll-target="#procedimiento-para-definir-un-conjunto-de-respuestas-múltiples">1.1. Procedimiento para definir un conjunto de respuestas múltiples</a></li>
-  <li><a href="#usar-el-conjunto-en-tablas-personalizadas" id="toc-usar-el-conjunto-en-tablas-personalizadas" class="nav-link" data-scroll-target="#usar-el-conjunto-en-tablas-personalizadas">1.2. Usar el conjunto en Tablas personalizadas</a></li>
-  </ul></li>
+  <li><a href="#qué-es-un-índice" id="toc-qué-es-un-índice" class="nav-link active" data-scroll-target="#qué-es-un-índice">1. ¿Qué es un índice?</a></li>
+  <li><a href="#procedimiento" id="toc-procedimiento" class="nav-link" data-scroll-target="#procedimiento">3. Procedimiento</a></li>
+  <li><a href="#opcional-convertir-el-índice-en-niveles" id="toc-opcional-convertir-el-índice-en-niveles" class="nav-link" data-scroll-target="#opcional-convertir-el-índice-en-niveles">4. (Opcional) Convertir el índice en niveles</a></li>
   </ul>
 </nav>
     </div>
@@ -177,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Respuestas múltiples</h1>
+<h1 class="title">Calcular variables agrupadas (índices)</h1>
 </div>
 
 
@@ -194,8 +192,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="tablas-con-preguntas-de-respuestas-múltiples" class="level2">
-<h2 class="anchored" data-anchor-id="tablas-con-preguntas-de-respuestas-múltiples">1. Tablas con preguntas de respuestas múltiples</h2>
+<section id="qué-es-un-índice" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-un-índice">1. ¿Qué es un índice?</h2>
 <div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -206,80 +204,109 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>1️⃣ Crea un <strong>conjunto de respuestas múltiples</strong> con<br>
-<code>Analizar → Tablas → Conjunto de respuestas múltiples…</code><br>
-2️⃣ Luego, úsalo en<br>
-<code>Analizar → Tablas → Tablas personalizadas…</code><br>
-para obtener <strong>frecuencias y porcentajes</strong> de cada alternativa.</p>
+<p>Ruta en SPSS: <code>Transformar → Calcular variable…</code><br>
+Expresión: <code>MEAN(i1, i2, i3, i4, i5)</code></p>
 </div>
 </div>
-<section id="procedimiento-para-definir-un-conjunto-de-respuestas-múltiples" class="level3">
-<h3 class="anchored" data-anchor-id="procedimiento-para-definir-un-conjunto-de-respuestas-múltiples">1.1. Procedimiento para definir un conjunto de respuestas múltiples</h3>
-<ol type="1">
-<li>Ve a <strong>Analizar → Tablas → Conjunto de respuestas múltiples…</strong><br>
-</li>
-<li>En la lista de variables, selecciona todas las variables que correspondan a las alternativas de la misma pregunta (ejem. <code>usa_facebook</code>, <code>usa_instagram</code>, <code>usa_tiktok</code>, <code>usa_youtube</code>).</li>
-<li>En “Valores contado”, especifica que el valor <strong>1</strong> indica <em>respuesta seleccionada</em>.<br>
-</li>
-<li>Marca la opción <strong>Variables dicotómicas</strong>.<br>
-</li>
-<li>En “Nombre del conjunto”, escribe un nombre corto sin espacios (por ejemplo, <code>RRSS</code>).<br>
-</li>
-<li>En “Etiqueta del conjunto”, escribe una descripción (por ejemplo, <em>¿Qué redes sociales usas?</em>).<br>
-</li>
-<li>Pulsa <strong>Añadir</strong> para verlo en la sección <strong>“Conjuntos de respuestas múltiples”</strong> y luego <strong>Aceptar</strong>.</li>
-</ol>
-<p>SPSS habrá creado un conjunto llamado <strong>RRSS[$]</strong> (el símbolo $ indica que es un conjunto de respuestas múltiples).</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><video src="img/def_conjunto.mov" class="img-fluid" controls=""><a href="img/def_conjunto.mov">Video</a></video></p>
-<figcaption>Crear conjunto de respuestas múltiples</figcaption>
-</figure>
-</div>
-<hr>
-</section>
-<section id="usar-el-conjunto-en-tablas-personalizadas" class="level3">
-<h3 class="anchored" data-anchor-id="usar-el-conjunto-en-tablas-personalizadas">1.2. Usar el conjunto en Tablas personalizadas</h3>
-<ol type="1">
-<li>Ve a <strong>Analizar → Tablas → Tablas personalizadas…</strong><br>
-</li>
-<li>En la lista de variables (al final del panel izquierdo), encontrarás el nuevo conjunto que definiste<br>
-(por ejemplo, <strong>RRSS[$]</strong>).<br>
-</li>
-<li>Arrastra el conjunto a las filas de la tabla.<br>
-</li>
-<li>Pulsa <strong>Aceptar</strong> para generar la tabla.</li>
-</ol>
-<div class="callout callout-style-default callout-warning callout-titled" title="OJO">
+<p>Muchas veces medimos un mismo concepto con <strong>varias preguntas</strong> (ítems), normalmente en escala Likert (1 a 5). Para analizarlo como <strong>una sola variable</strong>, las combinamos en un <strong>índice</strong>.</p>
+<p>Por ejemplo, si mides el <em>conocimiento sobre reciclaje</em> con 5 afirmaciones (<code>i1</code> a <code>i5</code>), puedes crear un <strong>Índice de Conocimiento sobre Reciclaje (<code>ICR</code>)</strong> que resuma esas 5 preguntas en un solo número.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="OJO: revisa esto antes de calcular">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>OJO
+<span class="screen-reader-only">Warning</span>OJO: revisa esto antes de calcular
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Este procedimiento solo funciona si tus variables ya son <strong>dicotómicas (0/1)</strong>.<br>
+<li>Todos los ítems deben estar en la <strong>misma escala</strong> (por ejemplo, todos de 1 a 5).<br>
 </li>
-<li>El valor que representa <em>seleccionado</em> debe ser <strong>1</strong>.<br>
-</li>
-<li>Los conjuntos de respuestas múltiples aparecen con el sufijo <strong>[$]</strong> en la lista de variables.<br>
-</li>
-<li>Para evitar confusiones, usa un mismo prefijo (<code>usa_</code>, <code>participa_</code>, etc.) para las variables del mismo grupo.</li>
+<li>Todos deben apuntar en la <strong>misma dirección</strong>. Si algún ítem está redactado de forma inversa (donde un valor alto significa lo contrario), <strong>recodifícalo primero</strong> para que un valor alto signifique lo mismo en todos los ítems.</li>
 </ul>
 </div>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><video src="img/tab_multiple.mov" class="img-fluid" controls=""><a href="img/tab_multiple.mov">Video</a></video></p>
-<figcaption>Tabular respuestas múltiples</figcaption>
-</figure>
+</section>
+<section id="procedimiento" class="level2">
+<h2 class="anchored" data-anchor-id="procedimiento">3. Procedimiento</h2>
+<p><strong><code>MEAN()</code></strong> calcula el <strong>promedio</strong> de los ítems. El resultado se mantiene en la <strong>misma escala original (1 a 5)</strong>, por lo que es fácil de interpretar.</p>
+<ol type="1">
+<li>Ve a la ruta <strong><code>Transformar → Calcular variable…</code></strong></li>
+<li>En <strong>“Nombre de variable destino”</strong>, escribe el nombre del índice (por ejemplo, <code>ICR</code>).</li>
+<li>Pulsa <strong>“Tipo y etiqueta…”</strong> y agrega una <strong>etiqueta descriptiva</strong> (por ejemplo, <em>Índice de conocimiento sobre reciclaje</em>).</li>
+<li>En <strong>“Expresión numérica”</strong>, escribe la función adaptando los nombres de tus ítems: <code>MEAN(i1, i2, i3, i4, i5)</code></li>
+<li>Pulsa <strong>“Aceptar”</strong>.</li>
+</ol>
+<p>SPSS creará una nueva variable al final de la base. Será de tipo <strong>Numérico</strong> y medida <strong>Escala</strong>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="¿Por qué MEAN()?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>¿Por qué MEAN()?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><code>MEAN()</code></strong> calcula el <strong>promedio</strong> de los ítems. El resultado se mantiene en la <strong>misma escala original (1 a 5)</strong>, por lo que es fácil de interpretar.</p>
+</div>
+</div>
+</section>
+<section id="opcional-convertir-el-índice-en-niveles" class="level2">
+<h2 class="anchored" data-anchor-id="opcional-convertir-el-índice-en-niveles">4. (Opcional) Convertir el índice en niveles</h2>
+<p>Si necesitas una versión <strong>categórica</strong> del índice —por ejemplo, para una tabla cruzada o un chi-cuadrado—, recodifícalo en una variable de niveles (<code>NivelICR</code>):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Promedio del índice</th>
+<th>Nivel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.00 – 2.33</td>
+<td>Bajo</td>
+</tr>
+<tr class="even">
+<td>2.34 – 3.66</td>
+<td>Medio</td>
+</tr>
+<tr class="odd">
+<td>3.67 – 5.00</td>
+<td>Alto</td>
+</tr>
+</tbody>
+</table>
+<p>Usa la ruta <strong><code>Transformar → Recodificar en distintas variables…</code></strong> (ver la sección de <a href="procesamiento.html"><strong>Recodificación</strong></a>). La nueva variable <code>NivelICR</code> debe ser de medida <strong>Ordinal</strong>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Recuerda">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Recuerda
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Después de recodificar, <strong>define las etiquetas de valores</strong> (1 = “Bajo”, 2 = “Medio”, 3 = “Alto”) para que los números tengan sentido en tus tablas.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Nota sobre el análisis">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Nota sobre el análisis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El índice (<code>ICR</code>, medida Escala) es la variable que usarás en pruebas como la <strong>correlación</strong>; su versión en niveles (<code>NivelICR</code>, medida Ordinal) sirve para <strong>tablas cruzadas</strong> y <strong>chi-cuadrado</strong>. Recuerda que todo el análisis es <strong>asociativo</strong>, no causal.</p>
+</div>
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

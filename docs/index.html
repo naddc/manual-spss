@@ -106,8 +106,16 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Importación de bases</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./filtrar.html">
+ <span class="dropdown-text">Filtrar y eliminar casos</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./procesamiento.html">
  <span class="dropdown-text">Recodificación</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./indices.html">
+ <span class="dropdown-text">Índices (variables agrupadas)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./proc_mrsets.html">
@@ -116,10 +124,10 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-estadística-univariada" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Estadística univariada</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análisis-descriptivo" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Análisis descriptivo</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-estadística-univariada">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-análisis-descriptivo">    
         <li>
     <a class="dropdown-item" href="./desc_unica.html">
  <span class="dropdown-text">Respuesta única</span></a>
@@ -127,6 +135,17 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="./desc_mrsets.html">
  <span class="dropdown-text">Respuestas múltiples</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análisis-inferencial" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Análisis inferencial</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-análisis-inferencial">    
+        <li>
+    <a class="dropdown-item" href="./chi2.html">
+ <span class="dropdown-text">Chi-cuadrado</span></a>
   </li>  
     </ul>
   </li>
@@ -260,7 +279,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/naddc\.github\.io\/manual-spss\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
