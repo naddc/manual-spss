@@ -91,12 +91,33 @@ Todas las variables de tipo numérico que representen variables categóricas deb
 5. Al finalizar, presiona **“Aceptar”** y verifica que todas las etiquetas estén registradas correctamente.
 
 ::: {.callout-note title="📘 Usar sintaxis para definir etiquetas"}
-También puedes definir las **etiquetas de valores** mediante **sintaxis SPSS**,  
-lo que resulta útil para documentar tus pasos o aplicarlos a varias variables a la vez.
+También puedes definir las etiquetas mediante **sintaxis SPSS**, lo que resulta útil para documentar tus pasos o aplicarlos a varias variables a la vez.
 
 **Ruta:** `Archivo > Nuevo > Sintaxis`
 
-Ejemplo con la variable `entusiasmo`:
+Hay dos comandos distintos, no los confundas:
+
+- **`VARIABLE LABELS`** → pone el nombre descriptivo de la **variable** (lo que se ve como título en los resultados).
+- **`VALUE LABELS`** → pone el significado de cada **valor numérico** (1 = "Nada de entusiasmo", etc.).
+
+**1. Etiquetar la variable con `VARIABLE LABELS`**
+
+```spss
+VARIABLE LABELS entusiasmo 'Nivel de entusiasmo declarado'.
+```
+
+Usamos el comando `VARIABLE LABELS`, luego el nombre de la variable y, entre comillas (''), la etiqueta que queremos mostrar. Cerramos con un punto (.).
+
+Si quieres etiquetar varias variables a la vez, las listas una debajo de otra y cierras con un solo punto al final:
+
+```spss
+VARIABLE LABELS 
+  entusiasmo 'Nivel de entusiasmo declarado'
+  edad 'Edad del encuestado'
+  zona_lima 'Zona de Lima donde reside'.
+```
+
+**2. Etiquetar los valores con `VALUE LABELS`**
 
 ```spss
 VALUE LABELS entusiasmo
@@ -106,13 +127,12 @@ VALUE LABELS entusiasmo
   4 'Bastante entusiasmo'
   5 'Mucho entusiasmo'.
 ```
-Lo que hicimos fue usar la función o comando `VALUE LABELS` luego poner el nombre de la variable, luego los valores numéricos seguidos de la etiqueta que queremos entre comillas (''). Al final, cerramos con .
 
-💡 Ejecuta el bloque (click en el botón ▶️ verde) para aplicar las etiquetas automáticamente.
-La sintaxis te permite repetir el mismo procedimiento sin usar menús y mantener registro
-de cómo definiste tus valores.
+Usamos el comando `VALUE LABELS`, luego el nombre de la variable, y después los valores numéricos seguidos de la etiqueta que queremos entre comillas (''). Al final, cerramos con un punto (.).
 
-A continuación, un video de ejemplo...
+💡 Ejecuta el bloque (click en el botón ▶️ verde) para aplicar las etiquetas automáticamente. La sintaxis te permite repetir el mismo procedimiento sin usar menús y mantener registro de cómo definiste tus variables y valores.
+
+A continuación, un video de ejemplo…
 :::
 
 ![Añadir etiquetas con sintaxis](img/etiquetas_sintaxis.mov)

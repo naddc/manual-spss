@@ -1,0 +1,57 @@
+---
+title: "Calcular variables agrupadas (índices)"
+format: html
+---
+
+## 1. ¿Qué es un índice?
+
+::: {.callout-tip title="TL;DR"}
+Ruta en SPSS: `Transformar → Calcular variable…`  
+Expresión: `MEAN(i1, i2, i3, i4, i5)`
+:::
+
+Muchas veces medimos un mismo concepto con **varias preguntas** (ítems), normalmente en escala Likert (1 a 5). Para analizarlo como **una sola variable**, las combinamos en un **índice**.
+
+Por ejemplo, si mides el *conocimiento sobre reciclaje* con 5 afirmaciones (`i1` a `i5`), puedes crear un **Índice de Conocimiento sobre Reciclaje (`ICR`)** que resuma esas 5 preguntas en un solo número.
+
+::: {.callout-warning title="OJO: revisa esto antes de calcular"}
+- Todos los ítems deben estar en la **misma escala** (por ejemplo, todos de 1 a 5).  
+- Todos deben apuntar en la **misma dirección**. Si algún ítem está redactado de forma inversa (donde un valor alto significa lo contrario), **recodifícalo primero** para que un valor alto signifique lo mismo en todos los ítems.
+:::
+
+## 3. Procedimiento
+
+**`MEAN()`** calcula el **promedio** de los ítems. El resultado se mantiene en la **misma escala original (1 a 5)**, por lo que es fácil de interpretar.
+
+1. Ve a la ruta **`Transformar → Calcular variable…`**
+2. En **“Nombre de variable destino”**, escribe el nombre del índice (por ejemplo, `ICR`).
+3. Pulsa **“Tipo y etiqueta…”** y agrega una **etiqueta descriptiva** (por ejemplo, *Índice de conocimiento sobre reciclaje*).
+4. En **“Expresión numérica”**, escribe la función adaptando los nombres de tus ítems:
+   `MEAN(i1, i2, i3, i4, i5)`
+5. Pulsa **“Aceptar”**.
+
+SPSS creará una nueva variable al final de la base. Será de tipo **Numérico** y medida **Escala**.
+
+::: {.callout-note title="¿Por qué MEAN()?"}
+**`MEAN()`** calcula el **promedio** de los ítems. El resultado se mantiene en la **misma escala original (1 a 5)**, por lo que es fácil de interpretar.
+:::
+
+## 4. (Opcional) Convertir el índice en niveles
+
+Si necesitas una versión **categórica** del índice —por ejemplo, para una tabla cruzada o un chi-cuadrado—, recodifícalo en una variable de niveles (`NivelICR`):
+
+| Promedio del índice | Nivel |
+|---------------------|-------|
+| 1.00 – 2.33 | Bajo |
+| 2.34 – 3.66 | Medio |
+| 3.67 – 5.00 | Alto |
+
+Usa la ruta **`Transformar → Recodificar en distintas variables…`** (ver la sección de [**Recodificación**](procesamiento.html)). La nueva variable `NivelICR` debe ser de medida **Ordinal**.
+
+::: {.callout-tip title="Recuerda"}
+Después de recodificar, **define las etiquetas de valores** (1 = “Bajo”, 2 = “Medio”, 3 = “Alto”) para que los números tengan sentido en tus tablas.
+:::
+
+::: {.callout-note title="Nota sobre el análisis"}
+El índice (`ICR`, medida Escala) es la variable que usarás en pruebas como la **correlación**; su versión en niveles (`NivelICR`, medida Ordinal) sirve para **tablas cruzadas** y **chi-cuadrado**. Recuerda que todo el análisis es **asociativo**, no causal.
+:::

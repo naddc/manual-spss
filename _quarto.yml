@@ -12,24 +12,28 @@ website:
         menu:
           - href: import.qmd
             text: Importación de bases
+          - href: filtrar.qmd
+            text: Filtrar y eliminar casos
           - href: procesamiento.qmd
             text: Recodificación
+          - href: indices.qmd
+            text: Índices (variables agrupadas)
           - href: proc_mrsets.qmd
             text: Respuestas múltiples
-      - text: Estadística univariada
+      - text: Análisis descriptivo
         menu:
           - href: desc_unica.qmd
             text: Respuesta única
           - href: desc_mrsets.qmd
             text: Respuestas múltiples
-      - text: Estadística bivariada
+      - text: Análisis inferencial
         menu:
           - href: chi2.qmd
             text: Chi-cuadrado
-      - text: Gráficos
-        # menu:
-        #   - href: graficos.qmd
-        #     text: Gráficos
+      # - text: Gráficos
+      #   # menu:
+      #   #   - href: graficos.qmd
+      #   #     text: Gráficos
 
 format:
   html:

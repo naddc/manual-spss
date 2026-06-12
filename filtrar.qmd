@@ -1,0 +1,67 @@
+---
+title: "Filtrar y eliminar casos"
+format: html
+---
+
+## 1. ¿Para qué filtrar casos?
+
+::: {.callout-tip title="TL;DR"}
+Ruta en SPSS: `Datos → Seleccionar casos…`
+:::
+
+Al limpiar tu base muchas veces necesitas **quedarte solo con un subconjunto de casos**. Por ejemplo:
+
+- Conservar únicamente a quienes **dieron su consentimiento**.
+- Trabajar solo con tu **público objetivo** (por ejemplo, estudiantes de 18 a 25 años).
+- Descartar respuestas **incompletas o no válidas**.
+- Analizar un **subgrupo** específico (por ejemplo, solo mujeres) sin perder el resto de la base.
+
+SPSS permite hacerlo de dos maneras: **filtrar** (temporal, no borra nada) o **eliminar** (permanente).
+
+## 2. Filtrar casos (temporal)
+
+::: {.callout-tip title="TL;DR"}
+`Datos → Seleccionar casos… → Si se satisface la condición → Filtrar casos no seleccionados`
+:::
+
+1. Ve a la ruta **`Datos → Seleccionar casos…`**
+2. Marca la opción **“Si se satisface la condición”** y pulsa el botón **“Si…”**.
+3. Escribe la **condición** que deben cumplir los casos que quieres conservar. Por ejemplo:
+   - `consentimiento = 1` → conserva solo a quienes aceptaron participar.
+   - `edad >= 18 & edad <= 25` → conserva solo al rango de edad objetivo.
+   - `zona_lima = 5` → conserva solo a quienes residen en Lima Moderna.
+4. Pulsa **“Continuar”**.
+5. En la sección **“Resultados”**, deja marcada la opción **“Filtrar casos no seleccionados”** (recomendado).
+6. Pulsa **“Aceptar”**.
+
+SPSS creará una variable nueva llamada **`filter_$`** y marcará con una **línea diagonal** el número de fila de los casos excluidos. A partir de ese momento, **todos los análisis usan solo los casos seleccionados**, pero los demás siguen en la base.
+
+::: {.callout-note title="Operadores útiles para las condiciones"}
+- `=` igual a  ·  `~=` distinto de  ·  `>` mayor que  ·  `<` menor que  ·  `>=` y `<=`
+- `&` (y): se deben cumplir **ambas** condiciones → `edad >= 18 & sexo = 2`
+- `|` (o): basta con que se cumpla **una** → `zona_lima = 4 | zona_lima = 5`
+:::
+
+## 3. Eliminar casos (permanente)
+
+::: {.callout-warning title="OJO: esto sí borra datos"}
+**“Eliminar casos no seleccionados” quita los casos de tu base.** Si guardas el archivo, los pierdes. Antes de eliminar, **guarda una copia** con `Archivo → Guardar como…` (por ejemplo, `base_limpia.sav`) o, mejor aún, **usa el filtro** de la sección anterior, que no borra nada.
+:::
+
+Si necesitas eliminar definitivamente los casos que no cumplen un criterio:
+
+1. Ve a **`Datos → Seleccionar casos…`** y define tu condición (igual que en la sección 2).
+2. En **“Resultados”**, elige **“Eliminar casos no seleccionados”**.
+3. Pulsa **“Aceptar”**.
+
+También puedes eliminar casos **manualmente**: en la **Vista de datos**, haz clic en el **número de fila** del caso (se selecciona toda la fila), luego clic derecho → **“Borrar”**.
+
+## 4. Quitar el filtro
+
+Para volver a trabajar con **todos** los casos:
+
+1. Ve a **`Datos → Seleccionar casos…`**
+2. Marca la opción **“Todos los casos”**.
+3. Pulsa **“Aceptar”**.
+
+La variable `filter_$` puede quedarse en la base; mientras esté seleccionado “Todos los casos”, no afecta tus análisis.
