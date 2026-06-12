@@ -105,8 +105,16 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Importación de bases</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./filtrar.html">
+ <span class="dropdown-text">Filtrar y eliminar casos</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./procesamiento.html">
  <span class="dropdown-text">Recodificación</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./indices.html">
+ <span class="dropdown-text">Índices (variables agrupadas)</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./proc_mrsets.html">
@@ -115,10 +123,10 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-estadística-univariada" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Estadística univariada</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análisis-descriptivo" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Análisis descriptivo</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-estadística-univariada">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-análisis-descriptivo">    
         <li>
     <a class="dropdown-item" href="./desc_unica.html">
  <span class="dropdown-text">Respuesta única</span></a>
@@ -126,6 +134,17 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="./desc_mrsets.html">
  <span class="dropdown-text">Respuestas múltiples</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análisis-inferencial" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Análisis inferencial</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-análisis-inferencial">    
+        <li>
+    <a class="dropdown-item" href="./chi2.html">
+ <span class="dropdown-text">Chi-cuadrado</span></a>
   </li>  
     </ul>
   </li>
@@ -350,18 +369,30 @@ para aplicar el mismo patrón en un solo paso.<br>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>También puedes definir las <strong>etiquetas de valores</strong> mediante <strong>sintaxis SPSS</strong>,<br>
-lo que resulta útil para documentar tus pasos o aplicarlos a varias variables a la vez.</p>
+<p>También puedes definir las etiquetas mediante <strong>sintaxis SPSS</strong>, lo que resulta útil para documentar tus pasos o aplicarlos a varias variables a la vez.</p>
 <p><strong>Ruta:</strong> <code>Archivo &gt; Nuevo &gt; Sintaxis</code></p>
-<p>Ejemplo con la variable <code>entusiasmo</code>:</p>
+<p>Hay dos comandos distintos, no los confundas:</p>
+<ul>
+<li><strong><code>VARIABLE LABELS</code></strong> → pone el nombre descriptivo de la <strong>variable</strong> (lo que se ve como título en los resultados).</li>
+<li><strong><code>VALUE LABELS</code></strong> → pone el significado de cada <strong>valor numérico</strong> (1 = “Nada de entusiasmo”, etc.).</li>
+</ul>
+<p><strong>1. Etiquetar la variable con <code>VARIABLE LABELS</code></strong></p>
+<pre class="spss"><code>VARIABLE LABELS entusiasmo 'Nivel de entusiasmo declarado'.</code></pre>
+<p>Usamos el comando <code>VARIABLE LABELS</code>, luego el nombre de la variable y, entre comillas (’’), la etiqueta que queremos mostrar. Cerramos con un punto (.).</p>
+<p>Si quieres etiquetar varias variables a la vez, las listas una debajo de otra y cierras con un solo punto al final:</p>
+<pre class="spss"><code>VARIABLE LABELS 
+  entusiasmo 'Nivel de entusiasmo declarado'
+  edad 'Edad del encuestado'
+  zona_lima 'Zona de Lima donde reside'.</code></pre>
+<p><strong>2. Etiquetar los valores con <code>VALUE LABELS</code></strong></p>
 <pre class="spss"><code>VALUE LABELS entusiasmo
   1 'Nada de entusiasmo'
   2 'Poco entusiasmo'
   3 'Algo de entusiasmo'
   4 'Bastante entusiasmo'
   5 'Mucho entusiasmo'.</code></pre>
-<p>Lo que hicimos fue usar la función o comando <code>VALUE LABELS</code> luego poner el nombre de la variable, luego los valores numéricos seguidos de la etiqueta que queremos entre comillas (’’). Al final, cerramos con .</p>
-<p>💡 Ejecuta el bloque (click en el botón ▶️ verde) para aplicar las etiquetas automáticamente. La sintaxis te permite repetir el mismo procedimiento sin usar menús y mantener registro de cómo definiste tus valores.</p>
+<p>Usamos el comando <code>VALUE LABELS</code>, luego el nombre de la variable, y después los valores numéricos seguidos de la etiqueta que queremos entre comillas (’’). Al final, cerramos con un punto (.).</p>
+<p>💡 Ejecuta el bloque (click en el botón ▶️ verde) para aplicar las etiquetas automáticamente. La sintaxis te permite repetir el mismo procedimiento sin usar menús y mantener registro de cómo definiste tus variables y valores.</p>
 <p>A continuación, un video de ejemplo…</p>
 </div>
 </div>

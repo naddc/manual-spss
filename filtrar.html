@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Respuestas múltiples – Manual de SPSS</title>
+<title>Filtrar y eliminar casos – Manual de SPSS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -164,11 +164,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tablas-con-preguntas-de-respuestas-múltiples" id="toc-tablas-con-preguntas-de-respuestas-múltiples" class="nav-link active" data-scroll-target="#tablas-con-preguntas-de-respuestas-múltiples">1. Tablas con preguntas de respuestas múltiples</a>
-  <ul class="collapse">
-  <li><a href="#procedimiento-para-definir-un-conjunto-de-respuestas-múltiples" id="toc-procedimiento-para-definir-un-conjunto-de-respuestas-múltiples" class="nav-link" data-scroll-target="#procedimiento-para-definir-un-conjunto-de-respuestas-múltiples">1.1. Procedimiento para definir un conjunto de respuestas múltiples</a></li>
-  <li><a href="#usar-el-conjunto-en-tablas-personalizadas" id="toc-usar-el-conjunto-en-tablas-personalizadas" class="nav-link" data-scroll-target="#usar-el-conjunto-en-tablas-personalizadas">1.2. Usar el conjunto en Tablas personalizadas</a></li>
-  </ul></li>
+  <li><a href="#para-qué-filtrar-casos" id="toc-para-qué-filtrar-casos" class="nav-link active" data-scroll-target="#para-qué-filtrar-casos">1. ¿Para qué filtrar casos?</a></li>
+  <li><a href="#filtrar-casos-temporal" id="toc-filtrar-casos-temporal" class="nav-link" data-scroll-target="#filtrar-casos-temporal">2. Filtrar casos (temporal)</a></li>
+  <li><a href="#eliminar-casos-permanente" id="toc-eliminar-casos-permanente" class="nav-link" data-scroll-target="#eliminar-casos-permanente">3. Eliminar casos (permanente)</a></li>
+  <li><a href="#quitar-el-filtro" id="toc-quitar-el-filtro" class="nav-link" data-scroll-target="#quitar-el-filtro">4. Quitar el filtro</a></li>
   </ul>
 </nav>
     </div>
@@ -177,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Respuestas múltiples</h1>
+<h1 class="title">Filtrar y eliminar casos</h1>
 </div>
 
 
@@ -194,8 +193,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="tablas-con-preguntas-de-respuestas-múltiples" class="level2">
-<h2 class="anchored" data-anchor-id="tablas-con-preguntas-de-respuestas-múltiples">1. Tablas con preguntas de respuestas múltiples</h2>
+<section id="para-qué-filtrar-casos" class="level2">
+<h2 class="anchored" data-anchor-id="para-qué-filtrar-casos">1. ¿Para qué filtrar casos?</h2>
 <div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -206,80 +205,99 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>1️⃣ Crea un <strong>conjunto de respuestas múltiples</strong> con<br>
-<code>Analizar → Tablas → Conjunto de respuestas múltiples…</code><br>
-2️⃣ Luego, úsalo en<br>
-<code>Analizar → Tablas → Tablas personalizadas…</code><br>
-para obtener <strong>frecuencias y porcentajes</strong> de cada alternativa.</p>
+<p>Ruta en SPSS: <code>Datos → Seleccionar casos…</code></p>
 </div>
 </div>
-<section id="procedimiento-para-definir-un-conjunto-de-respuestas-múltiples" class="level3">
-<h3 class="anchored" data-anchor-id="procedimiento-para-definir-un-conjunto-de-respuestas-múltiples">1.1. Procedimiento para definir un conjunto de respuestas múltiples</h3>
-<ol type="1">
-<li>Ve a <strong>Analizar → Tablas → Conjunto de respuestas múltiples…</strong><br>
-</li>
-<li>En la lista de variables, selecciona todas las variables que correspondan a las alternativas de la misma pregunta (ejem. <code>usa_facebook</code>, <code>usa_instagram</code>, <code>usa_tiktok</code>, <code>usa_youtube</code>).</li>
-<li>En “Valores contado”, especifica que el valor <strong>1</strong> indica <em>respuesta seleccionada</em>.<br>
-</li>
-<li>Marca la opción <strong>Variables dicotómicas</strong>.<br>
-</li>
-<li>En “Nombre del conjunto”, escribe un nombre corto sin espacios (por ejemplo, <code>RRSS</code>).<br>
-</li>
-<li>En “Etiqueta del conjunto”, escribe una descripción (por ejemplo, <em>¿Qué redes sociales usas?</em>).<br>
-</li>
-<li>Pulsa <strong>Añadir</strong> para verlo en la sección <strong>“Conjuntos de respuestas múltiples”</strong> y luego <strong>Aceptar</strong>.</li>
-</ol>
-<p>SPSS habrá creado un conjunto llamado <strong>RRSS[$]</strong> (el símbolo $ indica que es un conjunto de respuestas múltiples).</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><video src="img/def_conjunto.mov" class="img-fluid" controls=""><a href="img/def_conjunto.mov">Video</a></video></p>
-<figcaption>Crear conjunto de respuestas múltiples</figcaption>
-</figure>
-</div>
-<hr>
+<p>Al limpiar tu base muchas veces necesitas <strong>quedarte solo con un subconjunto de casos</strong>. Por ejemplo:</p>
+<ul>
+<li>Conservar únicamente a quienes <strong>dieron su consentimiento</strong>.</li>
+<li>Trabajar solo con tu <strong>público objetivo</strong> (por ejemplo, estudiantes de 18 a 25 años).</li>
+<li>Descartar respuestas <strong>incompletas o no válidas</strong>.</li>
+<li>Analizar un <strong>subgrupo</strong> específico (por ejemplo, solo mujeres) sin perder el resto de la base.</li>
+</ul>
+<p>SPSS permite hacerlo de dos maneras: <strong>filtrar</strong> (temporal, no borra nada) o <strong>eliminar</strong> (permanente).</p>
 </section>
-<section id="usar-el-conjunto-en-tablas-personalizadas" class="level3">
-<h3 class="anchored" data-anchor-id="usar-el-conjunto-en-tablas-personalizadas">1.2. Usar el conjunto en Tablas personalizadas</h3>
-<ol type="1">
-<li>Ve a <strong>Analizar → Tablas → Tablas personalizadas…</strong><br>
-</li>
-<li>En la lista de variables (al final del panel izquierdo), encontrarás el nuevo conjunto que definiste<br>
-(por ejemplo, <strong>RRSS[$]</strong>).<br>
-</li>
-<li>Arrastra el conjunto a las filas de la tabla.<br>
-</li>
-<li>Pulsa <strong>Aceptar</strong> para generar la tabla.</li>
-</ol>
-<div class="callout callout-style-default callout-warning callout-titled" title="OJO">
+<section id="filtrar-casos-temporal" class="level2">
+<h2 class="anchored" data-anchor-id="filtrar-casos-temporal">2. Filtrar casos (temporal)</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>OJO
+<span class="screen-reader-only">Tip</span>TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>Datos → Seleccionar casos… → Si se satisface la condición → Filtrar casos no seleccionados</code></p>
+</div>
+</div>
+<ol type="1">
+<li>Ve a la ruta <strong><code>Datos → Seleccionar casos…</code></strong></li>
+<li>Marca la opción <strong>“Si se satisface la condición”</strong> y pulsa el botón <strong>“Si…”</strong>.</li>
+<li>Escribe la <strong>condición</strong> que deben cumplir los casos que quieres conservar. Por ejemplo:
+<ul>
+<li><code>consentimiento = 1</code> → conserva solo a quienes aceptaron participar.</li>
+<li><code>edad &gt;= 18 &amp; edad &lt;= 25</code> → conserva solo al rango de edad objetivo.</li>
+<li><code>zona_lima = 5</code> → conserva solo a quienes residen en Lima Moderna.</li>
+</ul></li>
+<li>Pulsa <strong>“Continuar”</strong>.</li>
+<li>En la sección <strong>“Resultados”</strong>, deja marcada la opción <strong>“Filtrar casos no seleccionados”</strong> (recomendado).</li>
+<li>Pulsa <strong>“Aceptar”</strong>.</li>
+</ol>
+<p>SPSS creará una variable nueva llamada <strong><code>filter_$</code></strong> y marcará con una <strong>línea diagonal</strong> el número de fila de los casos excluidos. A partir de ese momento, <strong>todos los análisis usan solo los casos seleccionados</strong>, pero los demás siguen en la base.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Operadores útiles para las condiciones">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Operadores útiles para las condiciones
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Este procedimiento solo funciona si tus variables ya son <strong>dicotómicas (0/1)</strong>.<br>
-</li>
-<li>El valor que representa <em>seleccionado</em> debe ser <strong>1</strong>.<br>
-</li>
-<li>Los conjuntos de respuestas múltiples aparecen con el sufijo <strong>[$]</strong> en la lista de variables.<br>
-</li>
-<li>Para evitar confusiones, usa un mismo prefijo (<code>usa_</code>, <code>participa_</code>, etc.) para las variables del mismo grupo.</li>
+<li><code>=</code> igual a · <code>~=</code> distinto de · <code>&gt;</code> mayor que · <code>&lt;</code> menor que · <code>&gt;=</code> y <code>&lt;=</code></li>
+<li><code>&amp;</code> (y): se deben cumplir <strong>ambas</strong> condiciones → <code>edad &gt;= 18 &amp; sexo = 2</code></li>
+<li><code>|</code> (o): basta con que se cumpla <strong>una</strong> → <code>zona_lima = 4 | zona_lima = 5</code></li>
 </ul>
 </div>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><video src="img/tab_multiple.mov" class="img-fluid" controls=""><a href="img/tab_multiple.mov">Video</a></video></p>
-<figcaption>Tabular respuestas múltiples</figcaption>
-</figure>
-</div>
-
-
 </section>
+<section id="eliminar-casos-permanente" class="level2">
+<h2 class="anchored" data-anchor-id="eliminar-casos-permanente">3. Eliminar casos (permanente)</h2>
+<div class="callout callout-style-default callout-warning callout-titled" title="OJO: esto sí borra datos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>OJO: esto sí borra datos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>“Eliminar casos no seleccionados” quita los casos de tu base.</strong> Si guardas el archivo, los pierdes. Antes de eliminar, <strong>guarda una copia</strong> con <code>Archivo → Guardar como…</code> (por ejemplo, <code>base_limpia.sav</code>) o, mejor aún, <strong>usa el filtro</strong> de la sección anterior, que no borra nada.</p>
+</div>
+</div>
+<p>Si necesitas eliminar definitivamente los casos que no cumplen un criterio:</p>
+<ol type="1">
+<li>Ve a <strong><code>Datos → Seleccionar casos…</code></strong> y define tu condición (igual que en la sección 2).</li>
+<li>En <strong>“Resultados”</strong>, elige <strong>“Eliminar casos no seleccionados”</strong>.</li>
+<li>Pulsa <strong>“Aceptar”</strong>.</li>
+</ol>
+<p>También puedes eliminar casos <strong>manualmente</strong>: en la <strong>Vista de datos</strong>, haz clic en el <strong>número de fila</strong> del caso (se selecciona toda la fila), luego clic derecho → <strong>“Borrar”</strong>.</p>
+</section>
+<section id="quitar-el-filtro" class="level2">
+<h2 class="anchored" data-anchor-id="quitar-el-filtro">4. Quitar el filtro</h2>
+<p>Para volver a trabajar con <strong>todos</strong> los casos:</p>
+<ol type="1">
+<li>Ve a <strong><code>Datos → Seleccionar casos…</code></strong></li>
+<li>Marca la opción <strong>“Todos los casos”</strong>.</li>
+<li>Pulsa <strong>“Aceptar”</strong>.</li>
+</ol>
+<p>La variable <code>filter_$</code> puede quedarse en la base; mientras esté seleccionado “Todos los casos”, no afecta tus análisis.</p>
+
+
 </section>
 
 </main> <!-- /main -->
