@@ -1,0 +1,63 @@
+---
+title: "Gráficos"
+format: html
+---
+
+El **Generador de gráficos** es la herramienta principal de SPSS para crear gráficos. Por defecto los gráficos de barras muestran el **recuento** (frecuencia), pero casi siempre conviene mostrar **porcentajes** para que las categorías sean comparables.
+
+## 1. Abrir el Generador de gráficos
+
+::: {.callout-tip title="TL;DR"}
+`Gráficos → Generador de gráficos…`
+:::
+
+1. Ve a **Gráficos → Generador de gráficos…**  
+2. Si aparece un aviso sobre los **niveles de medición**, pulsa **Aceptar** para continuar (o **Definir propiedades de variables…** si necesitas corregir alguno).  
+3. En la pestaña **Galería**, elige el tipo de gráfico (por ejemplo, **Barras**) y arrastra el primer modelo al lienzo de la parte superior.
+
+::: {.callout-warning title="OJO"}
+El Generador de gráficos respeta el **nivel de medición** de cada variable (nominal, ordinal o escala). Si una variable está mal definida, no te dejará usarla como esperas. Revísalo antes en la **Vista de variables**.
+:::
+
+## 2. Gráfico de barras de una variable
+
+1. En **Galería → Barras**, arrastra el modelo de **barras simples** al lienzo.  
+2. Arrastra tu variable categórica (ej. `carrera`) al **eje X**.  
+3. Por defecto, el **eje Y** mostrará el **Recuento**.  
+4. Pulsa **Aceptar** para generar el gráfico.
+
+### 2.1. Cambiar recuento por porcentaje
+
+1. En el Generador de gráficos, ubica el panel **Propiedades del elemento** (a la derecha). Si no aparece, pulsa el botón **Propiedades del elemento…**  
+2. En **Editar propiedades de:**, selecciona **Barra1**.  
+3. En el menú desplegable **Estadístico**, cambia **Recuento** por **Porcentaje (?)**.  
+4. Pulsa **Definir parámetro de porcentaje…** y elige la base del porcentaje:  
+   - **Total general** → cada barra es el % sobre todos los casos *(lo más común en univariado)*.  
+   - **Total para cada categoría del eje X** → cada categoría del eje X suma 100% *(útil en barras agrupadas)*.  
+5. Pulsa **Aplicar** y luego **Aceptar**.
+
+::: {.callout-warning title="OJO"}
+Elegir bien la **base del porcentaje** es clave: el número cambia por completo según el denominador. Para describir una sola variable usa **Total general**; para comparar grupos dentro de un gráfico agrupado, usa **Total para cada categoría del eje X**.
+:::
+
+### 2.2. Mostrar la media u otros estadísticos
+
+El mismo menú **Estadístico** permite mostrar la **Media**, la **Mediana**, la **Suma**, etc., en lugar del recuento, siempre que la variable del **eje Y** sea **numérica (de escala)**.
+
+Por ejemplo, para graficar el promedio de `horas_rrss_dia` según `carrera`:
+
+1. Arrastra `carrera` al **eje X** y `horas_rrss_dia` al **eje Y**.  
+2. SPSS mostrará automáticamente la **Media**; cámbiala a **Mediana** u otro desde **Estadístico** si lo prefieres.  
+3. Pulsa **Aceptar**.
+
+## 3. Barras agrupadas (dos variables)
+
+1. En **Galería → Barras**, arrastra el modelo de **barras agrupadas** al lienzo.  
+2. Arrastra la primera variable al **eje X** (ej. `carrera`).  
+3. Arrastra la segunda al cuadro **Color del clúster** (ej. `recicla_actualmente`).  
+4. En **Propiedades del elemento**, cambia el **Estadístico** a **Porcentaje** y define la base como **Total para cada categoría del eje X**, de modo que cada grupo del eje X sume 100% y las barras sean comparables.  
+5. Pulsa **Aceptar**.
+
+::: {.callout-tip title="Otros gráficos"}
+En la **Galería** también encontrarás **histogramas** y **diagramas de caja**, que requieren variables **numéricas (de escala)** —no uses escalas de Likert ni variables categóricas en ellos—.
+:::

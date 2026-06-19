@@ -1,0 +1,61 @@
+---
+title: "Tablas personalizadas"
+format: html
+---
+
+Las **tablas personalizadas** permiten **cruzar dos variables** en una sola tabla y mostrar, además del recuento, **porcentajes** y —cuando una de las variables es numérica— estadísticos como la **media** o la **mediana**.
+
+## 1. Cruzar dos variables categóricas
+
+::: {.callout-tip title="TL;DR"}
+`Analizar → Tablas → Tablas personalizadas…`  
+Una variable a **Filas** y otra a **Columnas**.
+:::
+
+1. Ve a **Analizar → Tablas → Tablas personalizadas…**  
+2. Arrastra la primera variable categórica (ej. `carrera`) al área de **Filas**.  
+3. Arrastra la segunda (ej. `sexo`) al área de **Columnas**.  
+4. Pulsa **Aceptar**. Obtendrás una tabla con el **recuento** (frecuencia) de casos en cada cruce.
+
+### 1.1. Agregar porcentajes
+
+1. En el lienzo de la tabla, haz clic en la variable para seleccionarla.  
+2. Pulsa el botón **Estadísticas de resumen…** (abajo a la izquierda).  
+3. En la lista de estadísticos, pasa a la derecha los que necesites:  
+   - **Recuento**  
+   - **% de N columnas** (porcentaje dentro de cada columna)  
+   - **% de N filas** (porcentaje dentro de cada fila)  
+   - **% de N tablas** (porcentaje sobre el total de casos)  
+4. Pulsa **Aplicar a la selección** y luego **Aceptar**.
+
+::: {.callout-warning title="OJO"}
+El **% de columna**, el **% de fila** y el **% de tabla** responden preguntas distintas. Lo más común es usar el **% de columna** cuando la variable de las columnas es la que define los grupos que quieres comparar (ej. comparar el reciclaje *dentro de* cada sexo).
+:::
+
+## 2. Cruzar una variable categórica con una numérica
+
+::: {.callout-tip title="TL;DR"}
+Pon la variable **categórica** en **Filas** y la **numérica** en **Columnas**.  
+SPSS mostrará por defecto la **media**; desde **Estadísticas de resumen…** puedes añadir mediana y más.
+:::
+
+1. Ve a **Analizar → Tablas → Tablas personalizadas…**  
+2. Arrastra la variable categórica (ej. `carrera`) al área de **Filas**.  
+3. Arrastra la variable numérica (ej. `edad` o `horas_rrss_dia`) al área de **Columnas**.  
+   SPSS reconoce que es de **escala** y mostrará la **Media** por defecto.  
+4. Para añadir más estadísticos, selecciona la variable numérica en el lienzo y pulsa **Estadísticas de resumen…**  
+5. Pasa a la derecha los que necesites: **Mediana**, **Desviación típica**, **Mínimo**, **Máximo**, **Recuento válido**.  
+6. Pulsa **Aplicar a la selección** y luego **Aceptar**.
+
+::: {.callout-warning title="OJO"}
+La **media** y la **mediana** solo aparecen si la variable está definida como **escala** en la *Vista de variables*. Si una variable numérica figura como *nominal* u *ordinal* y no te deja calcularlas, cambia su **nivel de medición** a **escala** (o, dentro del lienzo, haz clic derecho sobre la variable → nivel de medición).
+:::
+
+## 3. Análisis adicionales
+
+Dentro de la misma tabla puedes:
+
+- **Combinar varios estadísticos**: mostrar a la vez **recuento + % de columna**, o **media + mediana + desviación típica**.  
+- **Mostrar totales**: selecciona la variable en el lienzo → pestaña **Totales y subtotales** → marca **Mostrar total**.  
+- **Anidar variables**: arrastra una segunda variable *encima* de otra (dentro de Filas o Columnas) para abrir subgrupos.  
+- **Cambiar el nivel de medición** de una variable dentro del lienzo (clic derecho) para que SPSS la trate como categórica o como escala según lo que quieras calcular.
