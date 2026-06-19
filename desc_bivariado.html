@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Prueba T de Student (muestras independientes) – Manual de SPSS</title>
+<title>Tablas personalizadas – Manual de SPSS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -190,9 +190,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#uso" id="toc-uso" class="nav-link active" data-scroll-target="#uso">Uso</a></li>
-  <li><a href="#pasos" id="toc-pasos" class="nav-link" data-scroll-target="#pasos">Pasos</a></li>
-  <li><a href="#leyendo-los-resultados" id="toc-leyendo-los-resultados" class="nav-link" data-scroll-target="#leyendo-los-resultados">Leyendo los resultados</a></li>
+  <li><a href="#cruzar-dos-variables-categóricas" id="toc-cruzar-dos-variables-categóricas" class="nav-link active" data-scroll-target="#cruzar-dos-variables-categóricas">1. Cruzar dos variables categóricas</a>
+  <ul class="collapse">
+  <li><a href="#agregar-porcentajes" id="toc-agregar-porcentajes" class="nav-link" data-scroll-target="#agregar-porcentajes">1.1. Agregar porcentajes</a></li>
+  </ul></li>
+  <li><a href="#cruzar-una-variable-categórica-con-una-numérica" id="toc-cruzar-una-variable-categórica-con-una-numérica" class="nav-link" data-scroll-target="#cruzar-una-variable-categórica-con-una-numérica">2. Cruzar una variable categórica con una numérica</a></li>
+  <li><a href="#análisis-adicionales" id="toc-análisis-adicionales" class="nav-link" data-scroll-target="#análisis-adicionales">3. Análisis adicionales</a></li>
   </ul>
 </nav>
     </div>
@@ -201,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Prueba T de Student (muestras independientes)</h1>
+<h1 class="title">Tablas personalizadas</h1>
 </div>
 
 
@@ -218,33 +221,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="uso" class="level2">
-<h2 class="anchored" data-anchor-id="uso">Uso</h2>
-<p>La prueba <strong>T de Student para muestras independientes</strong> permite evaluar si la <strong>media</strong> de una variable <strong>numérica</strong> difiere entre <strong>dos grupos</strong> definidos por una variable <strong>categórica dicotómica</strong> (de dos categorías).</p>
-<p>Por ejemplo: ¿el promedio del <em>índice de conocimiento sobre reciclaje</em> (<code>ICR</code>) es distinto entre hombres y mujeres?</p>
-<section id="h₀-p-value-0.05-las-medias-de-ambos-grupos-son-iguales-no-hay-diferencia." class="level4">
-<h4 class="anchored" data-anchor-id="h₀-p-value-0.05-las-medias-de-ambos-grupos-son-iguales-no-hay-diferencia."><em>H₀ (p-value &gt; 0.05*): Las medias de ambos grupos son iguales (no hay diferencia).</em></h4>
-</section>
-<section id="h₁-p-value-0.05-las-medias-de-ambos-grupos-son-diferentes." class="level4">
-<h4 class="anchored" data-anchor-id="h₁-p-value-0.05-las-medias-de-ambos-grupos-son-diferentes."><em>H₁ (p-value &lt;= 0.05*): Las medias de ambos grupos son diferentes.</em></h4>
-<p>*95% de confianza.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Supuesto">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Supuesto
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>La prueba asume que la variable numérica se distribuye de forma <strong>aproximadamente normal</strong>. Los dos grupos deben ser <strong>independientes</strong>: cada caso pertenece a un solo grupo, no a ambos.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="pasos" class="level2">
-<h2 class="anchored" data-anchor-id="pasos">Pasos</h2>
+<p>Las <strong>tablas personalizadas</strong> permiten <strong>cruzar dos variables</strong> en una sola tabla y mostrar, además del recuento, <strong>porcentajes</strong> y —cuando una de las variables es numérica— estadísticos como la <strong>media</strong> o la <strong>mediana</strong>.</p>
+<section id="cruzar-dos-variables-categóricas" class="level2">
+<h2 class="anchored" data-anchor-id="cruzar-dos-variables-categóricas">1. Cruzar dos variables categóricas</h2>
 <div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -255,49 +234,39 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>Analizar → Comparar medias y proporciones → Prueba T de muestras independientes…</code></p>
+<p><code>Analizar → Tablas → Tablas personalizadas…</code><br>
+Una variable a <strong>Filas</strong> y otra a <strong>Columnas</strong>.</p>
 </div>
 </div>
 <ol type="1">
-<li>Ve a la ruta <strong><code>Analizar → Comparar medias y proporciones → Prueba T de muestras independientes…</code></strong></li>
-<li>En <strong>“Variables de prueba”</strong>, coloca la variable <strong>numérica</strong> (por ejemplo, <code>ICR</code>).</li>
-<li>En <strong>“Variable de agrupación”</strong>, coloca la variable <strong>categórica dicotómica</strong> (por ejemplo, <code>sexo</code>).</li>
-<li>Haz clic en <strong>“Definir grupos…”</strong>, marca <strong>“Utilizar valores especificados”</strong> y escribe los dos valores que identifican a cada grupo (por ejemplo, <strong>Grupo 1: 0</strong> y <strong>Grupo 2: 1</strong>). Pulsa <strong>“Continuar”</strong>.</li>
-<li>Pulsa <strong>“Aceptar”</strong>.</li>
+<li>Ve a <strong>Analizar → Tablas → Tablas personalizadas…</strong><br>
+</li>
+<li>Arrastra la primera variable categórica (ej. <code>carrera</code>) al área de <strong>Filas</strong>.<br>
+</li>
+<li>Arrastra la segunda (ej. <code>sexo</code>) al área de <strong>Columnas</strong>.<br>
+</li>
+<li>Pulsa <strong>Aceptar</strong>. Obtendrás una tabla con el <strong>recuento</strong> (frecuencia) de casos en cada cruce.</li>
 </ol>
-</section>
-<section id="leyendo-los-resultados" class="level2">
-<h2 class="anchored" data-anchor-id="leyendo-los-resultados">Leyendo los resultados</h2>
-<p>La lectura tiene <strong>dos partes</strong>:</p>
-<p><strong>1. Revisa la prueba de Levene (igualdad de varianzas).</strong> En la tabla, mira la columna <strong>“Sig.”</strong> de la <em>Prueba de Levene</em>:</p>
+<section id="agregar-porcentajes" class="level3">
+<h3 class="anchored" data-anchor-id="agregar-porcentajes">1.1. Agregar porcentajes</h3>
+<ol type="1">
+<li>En el lienzo de la tabla, haz clic en la variable para seleccionarla.<br>
+</li>
+<li>Pulsa el botón <strong>Estadísticas de resumen…</strong> (abajo a la izquierda).<br>
+</li>
+<li>En la lista de estadísticos, pasa a la derecha los que necesites:
 <ul>
-<li>Si <strong>Sig. &gt; 0.05</strong> → las varianzas son similares → usa la fila <strong>“Se asumen varianzas iguales”</strong>.</li>
-<li>Si <strong>Sig. ≤ 0.05</strong> → las varianzas son distintas → usa la fila <strong>“No se asumen varianzas iguales”</strong>.</li>
-</ul>
-<p><strong>2. Lee el <em>p-value</em> de la prueba t.</strong> En la fila que te indicó Levene, lee la <strong>significación bilateral</strong> (en versiones nuevas de SPSS aparece como <strong>“P de dos factores”</strong>; en versiones anteriores, como <strong>“Sig. (bilateral)”</strong>):</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Nivel de confianza</th>
-<th>p-value</th>
-<th>Decisión</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>95%</td>
-<td>p ≤ 0.05</td>
-<td>Se rechaza H₀ → <strong>las medias son diferentes</strong></td>
-</tr>
-<tr class="even">
-<td>95%</td>
-<td>p &gt; 0.05</td>
-<td>No se rechaza H₀ → <strong>no hay diferencia de medias</strong></td>
-</tr>
-</tbody>
-</table>
-<p><strong>3. Compara las medias.</strong> Si hay diferencia significativa, mira la tabla <strong>“Estadísticas de grupo”</strong> para indicar <strong>cuál grupo tiene la media más alta</strong>.</p>
-<p><strong>Ejemplo de interpretación:</strong> si comparas el <code>ICR</code> entre hombres y mujeres y obtienes una significación bilateral de 0.03 (≤ 0.05), concluyes que <strong>existe una diferencia significativa</strong> entre el promedio de conocimiento de ambos grupos; luego, según la tabla de medias, señalas cuál grupo presenta el promedio más alto.</p>
+<li><strong>Recuento</strong><br>
+</li>
+<li><strong>% de N columnas</strong> (porcentaje dentro de cada columna)<br>
+</li>
+<li><strong>% de N filas</strong> (porcentaje dentro de cada fila)<br>
+</li>
+<li><strong>% de N tablas</strong> (porcentaje sobre el total de casos)<br>
+</li>
+</ul></li>
+<li>Pulsa <strong>Aplicar a la selección</strong> y luego <strong>Aceptar</strong>.</li>
+</ol>
 <div class="callout callout-style-default callout-warning callout-titled" title="OJO">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -308,14 +277,67 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>El <strong>% de columna</strong>, el <strong>% de fila</strong> y el <strong>% de tabla</strong> responden preguntas distintas. Lo más común es usar el <strong>% de columna</strong> cuando la variable de las columnas es la que define los grupos que quieres comparar (ej. comparar el reciclaje <em>dentro de</em> cada sexo).</p>
+</div>
+</div>
+</section>
+</section>
+<section id="cruzar-una-variable-categórica-con-una-numérica" class="level2">
+<h2 class="anchored" data-anchor-id="cruzar-una-variable-categórica-con-una-numérica">2. Cruzar una variable categórica con una numérica</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pon la variable <strong>categórica</strong> en <strong>Filas</strong> y la <strong>numérica</strong> en <strong>Columnas</strong>.<br>
+SPSS mostrará por defecto la <strong>media</strong>; desde <strong>Estadísticas de resumen…</strong> puedes añadir mediana y más.</p>
+</div>
+</div>
+<ol type="1">
+<li>Ve a <strong>Analizar → Tablas → Tablas personalizadas…</strong><br>
+</li>
+<li>Arrastra la variable categórica (ej. <code>carrera</code>) al área de <strong>Filas</strong>.<br>
+</li>
+<li>Arrastra la variable numérica (ej. <code>edad</code> o <code>horas_rrss_dia</code>) al área de <strong>Columnas</strong>.<br>
+SPSS reconoce que es de <strong>escala</strong> y mostrará la <strong>Media</strong> por defecto.<br>
+</li>
+<li>Para añadir más estadísticos, selecciona la variable numérica en el lienzo y pulsa <strong>Estadísticas de resumen…</strong><br>
+</li>
+<li>Pasa a la derecha los que necesites: <strong>Mediana</strong>, <strong>Desviación típica</strong>, <strong>Mínimo</strong>, <strong>Máximo</strong>, <strong>Recuento válido</strong>.<br>
+</li>
+<li>Pulsa <strong>Aplicar a la selección</strong> y luego <strong>Aceptar</strong>.</li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled" title="OJO">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>OJO
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La <strong>media</strong> y la <strong>mediana</strong> solo aparecen si la variable está definida como <strong>escala</strong> en la <em>Vista de variables</em>. Si una variable numérica figura como <em>nominal</em> u <em>ordinal</em> y no te deja calcularlas, cambia su <strong>nivel de medición</strong> a <strong>escala</strong> (o, dentro del lienzo, haz clic derecho sobre la variable → nivel de medición).</p>
+</div>
+</div>
+</section>
+<section id="análisis-adicionales" class="level2">
+<h2 class="anchored" data-anchor-id="análisis-adicionales">3. Análisis adicionales</h2>
+<p>Dentro de la misma tabla puedes:</p>
 <ul>
-<li>La variable de agrupación debe tener <strong>exactamente dos grupos</strong>. Si tienes más de dos (por ejemplo, tres carreras), usa <strong>ANOVA</strong>, no la T de Student.</li>
-<li>La prueba indica <strong>si las medias difieren</strong>, no por qué. La interpretación es <strong>asociativa</strong>, no causal.</li>
+<li><strong>Combinar varios estadísticos</strong>: mostrar a la vez <strong>recuento + % de columna</strong>, o <strong>media + mediana + desviación típica</strong>.<br>
+</li>
+<li><strong>Mostrar totales</strong>: selecciona la variable en el lienzo → pestaña <strong>Totales y subtotales</strong> → marca <strong>Mostrar total</strong>.<br>
+</li>
+<li><strong>Anidar variables</strong>: arrastra una segunda variable <em>encima</em> de otra (dentro de Filas o Columnas) para abrir subgrupos.<br>
+</li>
+<li><strong>Cambiar el nivel de medición</strong> de una variable dentro del lienzo (clic derecho) para que SPSS la trate como categórica o como escala según lo que quieras calcular.</li>
 </ul>
-</div>
-</div>
-<!-- Cuando grabes el video, descomenta la siguiente línea y coloca el archivo en img/ -->
-<!-- ![Prueba T de Student en SPSS](img/ttest.mov) -->
 
 
 </section>

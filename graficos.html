@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Prueba T de Student (muestras independientes) – Manual de SPSS</title>
+<title>Gráficos – Manual de SPSS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -190,9 +190,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#uso" id="toc-uso" class="nav-link active" data-scroll-target="#uso">Uso</a></li>
-  <li><a href="#pasos" id="toc-pasos" class="nav-link" data-scroll-target="#pasos">Pasos</a></li>
-  <li><a href="#leyendo-los-resultados" id="toc-leyendo-los-resultados" class="nav-link" data-scroll-target="#leyendo-los-resultados">Leyendo los resultados</a></li>
+  <li><a href="#abrir-el-generador-de-gráficos" id="toc-abrir-el-generador-de-gráficos" class="nav-link active" data-scroll-target="#abrir-el-generador-de-gráficos">1. Abrir el Generador de gráficos</a></li>
+  <li><a href="#gráfico-de-barras-de-una-variable" id="toc-gráfico-de-barras-de-una-variable" class="nav-link" data-scroll-target="#gráfico-de-barras-de-una-variable">2. Gráfico de barras de una variable</a>
+  <ul class="collapse">
+  <li><a href="#cambiar-recuento-por-porcentaje" id="toc-cambiar-recuento-por-porcentaje" class="nav-link" data-scroll-target="#cambiar-recuento-por-porcentaje">2.1. Cambiar recuento por porcentaje</a></li>
+  <li><a href="#mostrar-la-media-u-otros-estadísticos" id="toc-mostrar-la-media-u-otros-estadísticos" class="nav-link" data-scroll-target="#mostrar-la-media-u-otros-estadísticos">2.2. Mostrar la media u otros estadísticos</a></li>
+  </ul></li>
+  <li><a href="#barras-agrupadas-dos-variables" id="toc-barras-agrupadas-dos-variables" class="nav-link" data-scroll-target="#barras-agrupadas-dos-variables">3. Barras agrupadas (dos variables)</a></li>
   </ul>
 </nav>
     </div>
@@ -201,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Prueba T de Student (muestras independientes)</h1>
+<h1 class="title">Gráficos</h1>
 </div>
 
 
@@ -218,33 +222,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="uso" class="level2">
-<h2 class="anchored" data-anchor-id="uso">Uso</h2>
-<p>La prueba <strong>T de Student para muestras independientes</strong> permite evaluar si la <strong>media</strong> de una variable <strong>numérica</strong> difiere entre <strong>dos grupos</strong> definidos por una variable <strong>categórica dicotómica</strong> (de dos categorías).</p>
-<p>Por ejemplo: ¿el promedio del <em>índice de conocimiento sobre reciclaje</em> (<code>ICR</code>) es distinto entre hombres y mujeres?</p>
-<section id="h₀-p-value-0.05-las-medias-de-ambos-grupos-son-iguales-no-hay-diferencia." class="level4">
-<h4 class="anchored" data-anchor-id="h₀-p-value-0.05-las-medias-de-ambos-grupos-son-iguales-no-hay-diferencia."><em>H₀ (p-value &gt; 0.05*): Las medias de ambos grupos son iguales (no hay diferencia).</em></h4>
-</section>
-<section id="h₁-p-value-0.05-las-medias-de-ambos-grupos-son-diferentes." class="level4">
-<h4 class="anchored" data-anchor-id="h₁-p-value-0.05-las-medias-de-ambos-grupos-son-diferentes."><em>H₁ (p-value &lt;= 0.05*): Las medias de ambos grupos son diferentes.</em></h4>
-<p>*95% de confianza.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Supuesto">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Supuesto
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>La prueba asume que la variable numérica se distribuye de forma <strong>aproximadamente normal</strong>. Los dos grupos deben ser <strong>independientes</strong>: cada caso pertenece a un solo grupo, no a ambos.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="pasos" class="level2">
-<h2 class="anchored" data-anchor-id="pasos">Pasos</h2>
+<p>El <strong>Generador de gráficos</strong> es la herramienta principal de SPSS para crear gráficos. Por defecto los gráficos de barras muestran el <strong>recuento</strong> (frecuencia), pero casi siempre conviene mostrar <strong>porcentajes</strong> para que las categorías sean comparables.</p>
+<section id="abrir-el-generador-de-gráficos" class="level2">
+<h2 class="anchored" data-anchor-id="abrir-el-generador-de-gráficos">1. Abrir el Generador de gráficos</h2>
 <div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -255,49 +235,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>Analizar → Comparar medias y proporciones → Prueba T de muestras independientes…</code></p>
+<p><code>Gráficos → Generador de gráficos…</code></p>
 </div>
 </div>
 <ol type="1">
-<li>Ve a la ruta <strong><code>Analizar → Comparar medias y proporciones → Prueba T de muestras independientes…</code></strong></li>
-<li>En <strong>“Variables de prueba”</strong>, coloca la variable <strong>numérica</strong> (por ejemplo, <code>ICR</code>).</li>
-<li>En <strong>“Variable de agrupación”</strong>, coloca la variable <strong>categórica dicotómica</strong> (por ejemplo, <code>sexo</code>).</li>
-<li>Haz clic en <strong>“Definir grupos…”</strong>, marca <strong>“Utilizar valores especificados”</strong> y escribe los dos valores que identifican a cada grupo (por ejemplo, <strong>Grupo 1: 0</strong> y <strong>Grupo 2: 1</strong>). Pulsa <strong>“Continuar”</strong>.</li>
-<li>Pulsa <strong>“Aceptar”</strong>.</li>
+<li>Ve a <strong>Gráficos → Generador de gráficos…</strong><br>
+</li>
+<li>Si aparece un aviso sobre los <strong>niveles de medición</strong>, pulsa <strong>Aceptar</strong> para continuar (o <strong>Definir propiedades de variables…</strong> si necesitas corregir alguno).<br>
+</li>
+<li>En la pestaña <strong>Galería</strong>, elige el tipo de gráfico (por ejemplo, <strong>Barras</strong>) y arrastra el primer modelo al lienzo de la parte superior.</li>
 </ol>
-</section>
-<section id="leyendo-los-resultados" class="level2">
-<h2 class="anchored" data-anchor-id="leyendo-los-resultados">Leyendo los resultados</h2>
-<p>La lectura tiene <strong>dos partes</strong>:</p>
-<p><strong>1. Revisa la prueba de Levene (igualdad de varianzas).</strong> En la tabla, mira la columna <strong>“Sig.”</strong> de la <em>Prueba de Levene</em>:</p>
-<ul>
-<li>Si <strong>Sig. &gt; 0.05</strong> → las varianzas son similares → usa la fila <strong>“Se asumen varianzas iguales”</strong>.</li>
-<li>Si <strong>Sig. ≤ 0.05</strong> → las varianzas son distintas → usa la fila <strong>“No se asumen varianzas iguales”</strong>.</li>
-</ul>
-<p><strong>2. Lee el <em>p-value</em> de la prueba t.</strong> En la fila que te indicó Levene, lee la <strong>significación bilateral</strong> (en versiones nuevas de SPSS aparece como <strong>“P de dos factores”</strong>; en versiones anteriores, como <strong>“Sig. (bilateral)”</strong>):</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Nivel de confianza</th>
-<th>p-value</th>
-<th>Decisión</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>95%</td>
-<td>p ≤ 0.05</td>
-<td>Se rechaza H₀ → <strong>las medias son diferentes</strong></td>
-</tr>
-<tr class="even">
-<td>95%</td>
-<td>p &gt; 0.05</td>
-<td>No se rechaza H₀ → <strong>no hay diferencia de medias</strong></td>
-</tr>
-</tbody>
-</table>
-<p><strong>3. Compara las medias.</strong> Si hay diferencia significativa, mira la tabla <strong>“Estadísticas de grupo”</strong> para indicar <strong>cuál grupo tiene la media más alta</strong>.</p>
-<p><strong>Ejemplo de interpretación:</strong> si comparas el <code>ICR</code> entre hombres y mujeres y obtienes una significación bilateral de 0.03 (≤ 0.05), concluyes que <strong>existe una diferencia significativa</strong> entre el promedio de conocimiento de ambos grupos; luego, según la tabla de medias, señalas cuál grupo presenta el promedio más alto.</p>
 <div class="callout callout-style-default callout-warning callout-titled" title="OJO">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -308,14 +255,92 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>El Generador de gráficos respeta el <strong>nivel de medición</strong> de cada variable (nominal, ordinal o escala). Si una variable está mal definida, no te dejará usarla como esperas. Revísalo antes en la <strong>Vista de variables</strong>.</p>
+</div>
+</div>
+</section>
+<section id="gráfico-de-barras-de-una-variable" class="level2">
+<h2 class="anchored" data-anchor-id="gráfico-de-barras-de-una-variable">2. Gráfico de barras de una variable</h2>
+<ol type="1">
+<li>En <strong>Galería → Barras</strong>, arrastra el modelo de <strong>barras simples</strong> al lienzo.<br>
+</li>
+<li>Arrastra tu variable categórica (ej. <code>carrera</code>) al <strong>eje X</strong>.<br>
+</li>
+<li>Por defecto, el <strong>eje Y</strong> mostrará el <strong>Recuento</strong>.<br>
+</li>
+<li>Pulsa <strong>Aceptar</strong> para generar el gráfico.</li>
+</ol>
+<section id="cambiar-recuento-por-porcentaje" class="level3">
+<h3 class="anchored" data-anchor-id="cambiar-recuento-por-porcentaje">2.1. Cambiar recuento por porcentaje</h3>
+<ol type="1">
+<li>En el Generador de gráficos, ubica el panel <strong>Propiedades del elemento</strong> (a la derecha). Si no aparece, pulsa el botón <strong>Propiedades del elemento…</strong><br>
+</li>
+<li>En <strong>Editar propiedades de:</strong>, selecciona <strong>Barra1</strong>.<br>
+</li>
+<li>En el menú desplegable <strong>Estadístico</strong>, cambia <strong>Recuento</strong> por <strong>Porcentaje (?)</strong>.<br>
+</li>
+<li>Pulsa <strong>Definir parámetro de porcentaje…</strong> y elige la base del porcentaje:
 <ul>
-<li>La variable de agrupación debe tener <strong>exactamente dos grupos</strong>. Si tienes más de dos (por ejemplo, tres carreras), usa <strong>ANOVA</strong>, no la T de Student.</li>
-<li>La prueba indica <strong>si las medias difieren</strong>, no por qué. La interpretación es <strong>asociativa</strong>, no causal.</li>
-</ul>
+<li><strong>Total general</strong> → cada barra es el % sobre todos los casos <em>(lo más común en univariado)</em>.<br>
+</li>
+<li><strong>Total para cada categoría del eje X</strong> → cada categoría del eje X suma 100% <em>(útil en barras agrupadas)</em>.<br>
+</li>
+</ul></li>
+<li>Pulsa <strong>Aplicar</strong> y luego <strong>Aceptar</strong>.</li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled" title="OJO">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>OJO
 </div>
 </div>
-<!-- Cuando grabes el video, descomenta la siguiente línea y coloca el archivo en img/ -->
-<!-- ![Prueba T de Student en SPSS](img/ttest.mov) -->
+<div class="callout-body-container callout-body">
+<p>Elegir bien la <strong>base del porcentaje</strong> es clave: el número cambia por completo según el denominador. Para describir una sola variable usa <strong>Total general</strong>; para comparar grupos dentro de un gráfico agrupado, usa <strong>Total para cada categoría del eje X</strong>.</p>
+</div>
+</div>
+</section>
+<section id="mostrar-la-media-u-otros-estadísticos" class="level3">
+<h3 class="anchored" data-anchor-id="mostrar-la-media-u-otros-estadísticos">2.2. Mostrar la media u otros estadísticos</h3>
+<p>El mismo menú <strong>Estadístico</strong> permite mostrar la <strong>Media</strong>, la <strong>Mediana</strong>, la <strong>Suma</strong>, etc., en lugar del recuento, siempre que la variable del <strong>eje Y</strong> sea <strong>numérica (de escala)</strong>.</p>
+<p>Por ejemplo, para graficar el promedio de <code>horas_rrss_dia</code> según <code>carrera</code>:</p>
+<ol type="1">
+<li>Arrastra <code>carrera</code> al <strong>eje X</strong> y <code>horas_rrss_dia</code> al <strong>eje Y</strong>.<br>
+</li>
+<li>SPSS mostrará automáticamente la <strong>Media</strong>; cámbiala a <strong>Mediana</strong> u otro desde <strong>Estadístico</strong> si lo prefieres.<br>
+</li>
+<li>Pulsa <strong>Aceptar</strong>.</li>
+</ol>
+</section>
+</section>
+<section id="barras-agrupadas-dos-variables" class="level2">
+<h2 class="anchored" data-anchor-id="barras-agrupadas-dos-variables">3. Barras agrupadas (dos variables)</h2>
+<ol type="1">
+<li>En <strong>Galería → Barras</strong>, arrastra el modelo de <strong>barras agrupadas</strong> al lienzo.<br>
+</li>
+<li>Arrastra la primera variable al <strong>eje X</strong> (ej. <code>carrera</code>).<br>
+</li>
+<li>Arrastra la segunda al cuadro <strong>Color del clúster</strong> (ej. <code>recicla_actualmente</code>).<br>
+</li>
+<li>En <strong>Propiedades del elemento</strong>, cambia el <strong>Estadístico</strong> a <strong>Porcentaje</strong> y define la base como <strong>Total para cada categoría del eje X</strong>, de modo que cada grupo del eje X sume 100% y las barras sean comparables.<br>
+</li>
+<li>Pulsa <strong>Aceptar</strong>.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Otros gráficos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Otros gráficos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En la <strong>Galería</strong> también encontrarás <strong>histogramas</strong> y <strong>diagramas de caja</strong>, que requieren variables <strong>numéricas (de escala)</strong> —no uses escalas de Likert ni variables categóricas en ellos—.</p>
+</div>
+</div>
 
 
 </section>
