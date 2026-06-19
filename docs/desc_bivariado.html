@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Filtrar y eliminar casos – Manual de SPSS</title>
+<title>Tablas personalizadas – Manual de SPSS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -190,10 +190,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#para-qué-filtrar-casos" id="toc-para-qué-filtrar-casos" class="nav-link active" data-scroll-target="#para-qué-filtrar-casos">1. ¿Para qué filtrar casos?</a></li>
-  <li><a href="#filtrar-casos-temporal" id="toc-filtrar-casos-temporal" class="nav-link" data-scroll-target="#filtrar-casos-temporal">2. Filtrar casos (temporal)</a></li>
-  <li><a href="#eliminar-casos-permanente" id="toc-eliminar-casos-permanente" class="nav-link" data-scroll-target="#eliminar-casos-permanente">3. Eliminar casos (permanente)</a></li>
-  <li><a href="#quitar-el-filtro" id="toc-quitar-el-filtro" class="nav-link" data-scroll-target="#quitar-el-filtro">4. Quitar el filtro</a></li>
+  <li><a href="#cruzar-dos-variables-categóricas" id="toc-cruzar-dos-variables-categóricas" class="nav-link active" data-scroll-target="#cruzar-dos-variables-categóricas">1. Cruzar dos variables categóricas</a>
+  <ul class="collapse">
+  <li><a href="#agregar-porcentajes" id="toc-agregar-porcentajes" class="nav-link" data-scroll-target="#agregar-porcentajes">1.1. Agregar porcentajes</a></li>
+  </ul></li>
+  <li><a href="#cruzar-una-variable-categórica-con-una-numérica" id="toc-cruzar-una-variable-categórica-con-una-numérica" class="nav-link" data-scroll-target="#cruzar-una-variable-categórica-con-una-numérica">2. Cruzar una variable categórica con una numérica</a></li>
+  <li><a href="#análisis-adicionales" id="toc-análisis-adicionales" class="nav-link" data-scroll-target="#análisis-adicionales">3. Análisis adicionales</a></li>
   </ul>
 </nav>
     </div>
@@ -202,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Filtrar y eliminar casos</h1>
+<h1 class="title">Tablas personalizadas</h1>
 </div>
 
 
@@ -219,8 +221,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="para-qué-filtrar-casos" class="level2">
-<h2 class="anchored" data-anchor-id="para-qué-filtrar-casos">1. ¿Para qué filtrar casos?</h2>
+<p>Las <strong>tablas personalizadas</strong> permiten <strong>cruzar dos variables</strong> en una sola tabla y mostrar, además del recuento, <strong>porcentajes</strong> y —cuando una de las variables es numérica— estadísticos como la <strong>media</strong> o la <strong>mediana</strong>.</p>
+<section id="cruzar-dos-variables-categóricas" class="level2">
+<h2 class="anchored" data-anchor-id="cruzar-dos-variables-categóricas">1. Cruzar dos variables categóricas</h2>
 <div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -231,97 +234,110 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ruta en SPSS: <code>Datos → Seleccionar casos…</code></p>
-</div>
-</div>
-<p>Al limpiar tu base muchas veces necesitas <strong>quedarte solo con un subconjunto de casos</strong>. Por ejemplo:</p>
-<ul>
-<li>Conservar únicamente a quienes <strong>dieron su consentimiento</strong>.</li>
-<li>Trabajar solo con tu <strong>público objetivo</strong> (por ejemplo, estudiantes de 18 a 25 años).</li>
-<li>Descartar respuestas <strong>incompletas o no válidas</strong>.</li>
-<li>Analizar un <strong>subgrupo</strong> específico (por ejemplo, solo mujeres) sin perder el resto de la base.</li>
-</ul>
-<p>SPSS permite hacerlo de dos maneras: <strong>filtrar</strong> (temporal, no borra nada) o <strong>eliminar</strong> (permanente).</p>
-</section>
-<section id="filtrar-casos-temporal" class="level2">
-<h2 class="anchored" data-anchor-id="filtrar-casos-temporal">2. Filtrar casos (temporal)</h2>
-<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>TL;DR
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><code>Datos → Seleccionar casos… → Si se satisface la condición → Filtrar casos no seleccionados</code></p>
+<p><code>Analizar → Tablas → Tablas personalizadas…</code><br>
+Una variable a <strong>Filas</strong> y otra a <strong>Columnas</strong>.</p>
 </div>
 </div>
 <ol type="1">
-<li>Ve a la ruta <strong><code>Datos → Seleccionar casos…</code></strong></li>
-<li>Marca la opción <strong>“Si se satisface la condición”</strong> y pulsa el botón <strong>“Si…”</strong>.</li>
-<li>Escribe la <strong>condición</strong> que deben cumplir los casos que quieres conservar. Por ejemplo:
+<li>Ve a <strong>Analizar → Tablas → Tablas personalizadas…</strong><br>
+</li>
+<li>Arrastra la primera variable categórica (ej. <code>carrera</code>) al área de <strong>Filas</strong>.<br>
+</li>
+<li>Arrastra la segunda (ej. <code>sexo</code>) al área de <strong>Columnas</strong>.<br>
+</li>
+<li>Pulsa <strong>Aceptar</strong>. Obtendrás una tabla con el <strong>recuento</strong> (frecuencia) de casos en cada cruce.</li>
+</ol>
+<section id="agregar-porcentajes" class="level3">
+<h3 class="anchored" data-anchor-id="agregar-porcentajes">1.1. Agregar porcentajes</h3>
+<ol type="1">
+<li>En el lienzo de la tabla, haz clic en la variable para seleccionarla.<br>
+</li>
+<li>Pulsa el botón <strong>Estadísticas de resumen…</strong> (abajo a la izquierda).<br>
+</li>
+<li>En la lista de estadísticos, pasa a la derecha los que necesites:
 <ul>
-<li><code>consentimiento = 1</code> → conserva solo a quienes aceptaron participar.</li>
-<li><code>edad &gt;= 18 &amp; edad &lt;= 25</code> → conserva solo al rango de edad objetivo.</li>
-<li><code>zona_lima = 5</code> → conserva solo a quienes residen en Lima Moderna.</li>
+<li><strong>Recuento</strong><br>
+</li>
+<li><strong>% de N columnas</strong> (porcentaje dentro de cada columna)<br>
+</li>
+<li><strong>% de N filas</strong> (porcentaje dentro de cada fila)<br>
+</li>
+<li><strong>% de N tablas</strong> (porcentaje sobre el total de casos)<br>
+</li>
 </ul></li>
-<li>Pulsa <strong>“Continuar”</strong>.</li>
-<li>En la sección <strong>“Resultados”</strong>, deja marcada la opción <strong>“Filtrar casos no seleccionados”</strong> (recomendado).</li>
-<li>Pulsa <strong>“Aceptar”</strong>.</li>
+<li>Pulsa <strong>Aplicar a la selección</strong> y luego <strong>Aceptar</strong>.</li>
 </ol>
-<p>SPSS creará una variable nueva llamada <strong><code>filter_$</code></strong> y marcará con una <strong>línea diagonal</strong> el número de fila de los casos excluidos. A partir de ese momento, <strong>todos los análisis usan solo los casos seleccionados</strong>, pero los demás siguen en la base.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Operadores útiles para las condiciones">
+<div class="callout callout-style-default callout-warning callout-titled" title="OJO">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Operadores útiles para las condiciones
+<span class="screen-reader-only">Warning</span>OJO
 </div>
 </div>
 <div class="callout-body-container callout-body">
+<p>El <strong>% de columna</strong>, el <strong>% de fila</strong> y el <strong>% de tabla</strong> responden preguntas distintas. Lo más común es usar el <strong>% de columna</strong> cuando la variable de las columnas es la que define los grupos que quieres comparar (ej. comparar el reciclaje <em>dentro de</em> cada sexo).</p>
+</div>
+</div>
+</section>
+</section>
+<section id="cruzar-una-variable-categórica-con-una-numérica" class="level2">
+<h2 class="anchored" data-anchor-id="cruzar-una-variable-categórica-con-una-numérica">2. Cruzar una variable categórica con una numérica</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pon la variable <strong>categórica</strong> en <strong>Filas</strong> y la <strong>numérica</strong> en <strong>Columnas</strong>.<br>
+SPSS mostrará por defecto la <strong>media</strong>; desde <strong>Estadísticas de resumen…</strong> puedes añadir mediana y más.</p>
+</div>
+</div>
+<ol type="1">
+<li>Ve a <strong>Analizar → Tablas → Tablas personalizadas…</strong><br>
+</li>
+<li>Arrastra la variable categórica (ej. <code>carrera</code>) al área de <strong>Filas</strong>.<br>
+</li>
+<li>Arrastra la variable numérica (ej. <code>edad</code> o <code>horas_rrss_dia</code>) al área de <strong>Columnas</strong>.<br>
+SPSS reconoce que es de <strong>escala</strong> y mostrará la <strong>Media</strong> por defecto.<br>
+</li>
+<li>Para añadir más estadísticos, selecciona la variable numérica en el lienzo y pulsa <strong>Estadísticas de resumen…</strong><br>
+</li>
+<li>Pasa a la derecha los que necesites: <strong>Mediana</strong>, <strong>Desviación típica</strong>, <strong>Mínimo</strong>, <strong>Máximo</strong>, <strong>Recuento válido</strong>.<br>
+</li>
+<li>Pulsa <strong>Aplicar a la selección</strong> y luego <strong>Aceptar</strong>.</li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled" title="OJO">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>OJO
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La <strong>media</strong> y la <strong>mediana</strong> solo aparecen si la variable está definida como <strong>escala</strong> en la <em>Vista de variables</em>. Si una variable numérica figura como <em>nominal</em> u <em>ordinal</em> y no te deja calcularlas, cambia su <strong>nivel de medición</strong> a <strong>escala</strong> (o, dentro del lienzo, haz clic derecho sobre la variable → nivel de medición).</p>
+</div>
+</div>
+</section>
+<section id="análisis-adicionales" class="level2">
+<h2 class="anchored" data-anchor-id="análisis-adicionales">3. Análisis adicionales</h2>
+<p>Dentro de la misma tabla puedes:</p>
 <ul>
-<li><code>=</code> igual a · <code>~=</code> distinto de · <code>&gt;</code> mayor que · <code>&lt;</code> menor que · <code>&gt;=</code> y <code>&lt;=</code></li>
-<li><code>&amp;</code> (y): se deben cumplir <strong>ambas</strong> condiciones → <code>edad &gt;= 18 &amp; sexo = 2</code></li>
-<li><code>|</code> (o): basta con que se cumpla <strong>una</strong> → <code>zona_lima = 4 | zona_lima = 5</code></li>
+<li><strong>Combinar varios estadísticos</strong>: mostrar a la vez <strong>recuento + % de columna</strong>, o <strong>media + mediana + desviación típica</strong>.<br>
+</li>
+<li><strong>Mostrar totales</strong>: selecciona la variable en el lienzo → pestaña <strong>Totales y subtotales</strong> → marca <strong>Mostrar total</strong>.<br>
+</li>
+<li><strong>Anidar variables</strong>: arrastra una segunda variable <em>encima</em> de otra (dentro de Filas o Columnas) para abrir subgrupos.<br>
+</li>
+<li><strong>Cambiar el nivel de medición</strong> de una variable dentro del lienzo (clic derecho) para que SPSS la trate como categórica o como escala según lo que quieras calcular.</li>
 </ul>
-</div>
-</div>
-</section>
-<section id="eliminar-casos-permanente" class="level2">
-<h2 class="anchored" data-anchor-id="eliminar-casos-permanente">3. Eliminar casos (permanente)</h2>
-<div class="callout callout-style-default callout-warning callout-titled" title="OJO: esto sí borra datos">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>OJO: esto sí borra datos
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>“Eliminar casos no seleccionados” quita los casos de tu base.</strong> Si guardas el archivo, los pierdes. Antes de eliminar, <strong>guarda una copia</strong> con <code>Archivo → Guardar como…</code> (por ejemplo, <code>base_limpia.sav</code>) o, mejor aún, <strong>usa el filtro</strong> de la sección anterior, que no borra nada.</p>
-</div>
-</div>
-<p>Si necesitas eliminar definitivamente los casos que no cumplen un criterio:</p>
-<ol type="1">
-<li>Ve a <strong><code>Datos → Seleccionar casos…</code></strong> y define tu condición (igual que en la sección 2).</li>
-<li>En <strong>“Resultados”</strong>, elige <strong>“Eliminar casos no seleccionados”</strong>.</li>
-<li>Pulsa <strong>“Aceptar”</strong>.</li>
-</ol>
-<p>También puedes eliminar casos <strong>manualmente</strong>: en la <strong>Vista de datos</strong>, haz clic en el <strong>número de fila</strong> del caso (se selecciona toda la fila), luego clic derecho → <strong>“Borrar”</strong>.</p>
-</section>
-<section id="quitar-el-filtro" class="level2">
-<h2 class="anchored" data-anchor-id="quitar-el-filtro">4. Quitar el filtro</h2>
-<p>Para volver a trabajar con <strong>todos</strong> los casos:</p>
-<ol type="1">
-<li>Ve a <strong><code>Datos → Seleccionar casos…</code></strong></li>
-<li>Marca la opción <strong>“Todos los casos”</strong>.</li>
-<li>Pulsa <strong>“Aceptar”</strong>.</li>
-</ol>
-<p>La variable <code>filter_$</code> puede quedarse en la base; mientras esté seleccionado “Todos los casos”, no afecta tus análisis.</p>
 
 
 </section>

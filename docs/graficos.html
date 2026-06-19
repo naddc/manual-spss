@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Filtrar y eliminar casos – Manual de SPSS</title>
+<title>Gráficos – Manual de SPSS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -190,10 +190,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#para-qué-filtrar-casos" id="toc-para-qué-filtrar-casos" class="nav-link active" data-scroll-target="#para-qué-filtrar-casos">1. ¿Para qué filtrar casos?</a></li>
-  <li><a href="#filtrar-casos-temporal" id="toc-filtrar-casos-temporal" class="nav-link" data-scroll-target="#filtrar-casos-temporal">2. Filtrar casos (temporal)</a></li>
-  <li><a href="#eliminar-casos-permanente" id="toc-eliminar-casos-permanente" class="nav-link" data-scroll-target="#eliminar-casos-permanente">3. Eliminar casos (permanente)</a></li>
-  <li><a href="#quitar-el-filtro" id="toc-quitar-el-filtro" class="nav-link" data-scroll-target="#quitar-el-filtro">4. Quitar el filtro</a></li>
+  <li><a href="#abrir-el-generador-de-gráficos" id="toc-abrir-el-generador-de-gráficos" class="nav-link active" data-scroll-target="#abrir-el-generador-de-gráficos">1. Abrir el Generador de gráficos</a></li>
+  <li><a href="#gráfico-de-barras-de-una-variable" id="toc-gráfico-de-barras-de-una-variable" class="nav-link" data-scroll-target="#gráfico-de-barras-de-una-variable">2. Gráfico de barras de una variable</a>
+  <ul class="collapse">
+  <li><a href="#cambiar-recuento-por-porcentaje" id="toc-cambiar-recuento-por-porcentaje" class="nav-link" data-scroll-target="#cambiar-recuento-por-porcentaje">2.1. Cambiar recuento por porcentaje</a></li>
+  <li><a href="#mostrar-la-media-u-otros-estadísticos" id="toc-mostrar-la-media-u-otros-estadísticos" class="nav-link" data-scroll-target="#mostrar-la-media-u-otros-estadísticos">2.2. Mostrar la media u otros estadísticos</a></li>
+  </ul></li>
+  <li><a href="#barras-agrupadas-dos-variables" id="toc-barras-agrupadas-dos-variables" class="nav-link" data-scroll-target="#barras-agrupadas-dos-variables">3. Barras agrupadas (dos variables)</a></li>
   </ul>
 </nav>
     </div>
@@ -202,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Filtrar y eliminar casos</h1>
+<h1 class="title">Gráficos</h1>
 </div>
 
 
@@ -219,8 +222,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="para-qué-filtrar-casos" class="level2">
-<h2 class="anchored" data-anchor-id="para-qué-filtrar-casos">1. ¿Para qué filtrar casos?</h2>
+<p>El <strong>Generador de gráficos</strong> es la herramienta principal de SPSS para crear gráficos. Por defecto los gráficos de barras muestran el <strong>recuento</strong> (frecuencia), pero casi siempre conviene mostrar <strong>porcentajes</strong> para que las categorías sean comparables.</p>
+<section id="abrir-el-generador-de-gráficos" class="level2">
+<h2 class="anchored" data-anchor-id="abrir-el-generador-de-gráficos">1. Abrir el Generador de gráficos</h2>
 <div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -231,97 +235,112 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ruta en SPSS: <code>Datos → Seleccionar casos…</code></p>
-</div>
-</div>
-<p>Al limpiar tu base muchas veces necesitas <strong>quedarte solo con un subconjunto de casos</strong>. Por ejemplo:</p>
-<ul>
-<li>Conservar únicamente a quienes <strong>dieron su consentimiento</strong>.</li>
-<li>Trabajar solo con tu <strong>público objetivo</strong> (por ejemplo, estudiantes de 18 a 25 años).</li>
-<li>Descartar respuestas <strong>incompletas o no válidas</strong>.</li>
-<li>Analizar un <strong>subgrupo</strong> específico (por ejemplo, solo mujeres) sin perder el resto de la base.</li>
-</ul>
-<p>SPSS permite hacerlo de dos maneras: <strong>filtrar</strong> (temporal, no borra nada) o <strong>eliminar</strong> (permanente).</p>
-</section>
-<section id="filtrar-casos-temporal" class="level2">
-<h2 class="anchored" data-anchor-id="filtrar-casos-temporal">2. Filtrar casos (temporal)</h2>
-<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>TL;DR
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><code>Datos → Seleccionar casos… → Si se satisface la condición → Filtrar casos no seleccionados</code></p>
+<p><code>Gráficos → Generador de gráficos…</code></p>
 </div>
 </div>
 <ol type="1">
-<li>Ve a la ruta <strong><code>Datos → Seleccionar casos…</code></strong></li>
-<li>Marca la opción <strong>“Si se satisface la condición”</strong> y pulsa el botón <strong>“Si…”</strong>.</li>
-<li>Escribe la <strong>condición</strong> que deben cumplir los casos que quieres conservar. Por ejemplo:
+<li>Ve a <strong>Gráficos → Generador de gráficos…</strong><br>
+</li>
+<li>Si aparece un aviso sobre los <strong>niveles de medición</strong>, pulsa <strong>Aceptar</strong> para continuar (o <strong>Definir propiedades de variables…</strong> si necesitas corregir alguno).<br>
+</li>
+<li>En la pestaña <strong>Galería</strong>, elige el tipo de gráfico (por ejemplo, <strong>Barras</strong>) y arrastra el primer modelo al lienzo de la parte superior.</li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled" title="OJO">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>OJO
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El Generador de gráficos respeta el <strong>nivel de medición</strong> de cada variable (nominal, ordinal o escala). Si una variable está mal definida, no te dejará usarla como esperas. Revísalo antes en la <strong>Vista de variables</strong>.</p>
+</div>
+</div>
+</section>
+<section id="gráfico-de-barras-de-una-variable" class="level2">
+<h2 class="anchored" data-anchor-id="gráfico-de-barras-de-una-variable">2. Gráfico de barras de una variable</h2>
+<ol type="1">
+<li>En <strong>Galería → Barras</strong>, arrastra el modelo de <strong>barras simples</strong> al lienzo.<br>
+</li>
+<li>Arrastra tu variable categórica (ej. <code>carrera</code>) al <strong>eje X</strong>.<br>
+</li>
+<li>Por defecto, el <strong>eje Y</strong> mostrará el <strong>Recuento</strong>.<br>
+</li>
+<li>Pulsa <strong>Aceptar</strong> para generar el gráfico.</li>
+</ol>
+<section id="cambiar-recuento-por-porcentaje" class="level3">
+<h3 class="anchored" data-anchor-id="cambiar-recuento-por-porcentaje">2.1. Cambiar recuento por porcentaje</h3>
+<ol type="1">
+<li>En el Generador de gráficos, ubica el panel <strong>Propiedades del elemento</strong> (a la derecha). Si no aparece, pulsa el botón <strong>Propiedades del elemento…</strong><br>
+</li>
+<li>En <strong>Editar propiedades de:</strong>, selecciona <strong>Barra1</strong>.<br>
+</li>
+<li>En el menú desplegable <strong>Estadístico</strong>, cambia <strong>Recuento</strong> por <strong>Porcentaje (?)</strong>.<br>
+</li>
+<li>Pulsa <strong>Definir parámetro de porcentaje…</strong> y elige la base del porcentaje:
 <ul>
-<li><code>consentimiento = 1</code> → conserva solo a quienes aceptaron participar.</li>
-<li><code>edad &gt;= 18 &amp; edad &lt;= 25</code> → conserva solo al rango de edad objetivo.</li>
-<li><code>zona_lima = 5</code> → conserva solo a quienes residen en Lima Moderna.</li>
+<li><strong>Total general</strong> → cada barra es el % sobre todos los casos <em>(lo más común en univariado)</em>.<br>
+</li>
+<li><strong>Total para cada categoría del eje X</strong> → cada categoría del eje X suma 100% <em>(útil en barras agrupadas)</em>.<br>
+</li>
 </ul></li>
-<li>Pulsa <strong>“Continuar”</strong>.</li>
-<li>En la sección <strong>“Resultados”</strong>, deja marcada la opción <strong>“Filtrar casos no seleccionados”</strong> (recomendado).</li>
-<li>Pulsa <strong>“Aceptar”</strong>.</li>
+<li>Pulsa <strong>Aplicar</strong> y luego <strong>Aceptar</strong>.</li>
 </ol>
-<p>SPSS creará una variable nueva llamada <strong><code>filter_$</code></strong> y marcará con una <strong>línea diagonal</strong> el número de fila de los casos excluidos. A partir de ese momento, <strong>todos los análisis usan solo los casos seleccionados</strong>, pero los demás siguen en la base.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Operadores útiles para las condiciones">
+<div class="callout callout-style-default callout-warning callout-titled" title="OJO">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Operadores útiles para las condiciones
+<span class="screen-reader-only">Warning</span>OJO
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li><code>=</code> igual a · <code>~=</code> distinto de · <code>&gt;</code> mayor que · <code>&lt;</code> menor que · <code>&gt;=</code> y <code>&lt;=</code></li>
-<li><code>&amp;</code> (y): se deben cumplir <strong>ambas</strong> condiciones → <code>edad &gt;= 18 &amp; sexo = 2</code></li>
-<li><code>|</code> (o): basta con que se cumpla <strong>una</strong> → <code>zona_lima = 4 | zona_lima = 5</code></li>
-</ul>
+<p>Elegir bien la <strong>base del porcentaje</strong> es clave: el número cambia por completo según el denominador. Para describir una sola variable usa <strong>Total general</strong>; para comparar grupos dentro de un gráfico agrupado, usa <strong>Total para cada categoría del eje X</strong>.</p>
 </div>
 </div>
 </section>
-<section id="eliminar-casos-permanente" class="level2">
-<h2 class="anchored" data-anchor-id="eliminar-casos-permanente">3. Eliminar casos (permanente)</h2>
-<div class="callout callout-style-default callout-warning callout-titled" title="OJO: esto sí borra datos">
+<section id="mostrar-la-media-u-otros-estadísticos" class="level3">
+<h3 class="anchored" data-anchor-id="mostrar-la-media-u-otros-estadísticos">2.2. Mostrar la media u otros estadísticos</h3>
+<p>El mismo menú <strong>Estadístico</strong> permite mostrar la <strong>Media</strong>, la <strong>Mediana</strong>, la <strong>Suma</strong>, etc., en lugar del recuento, siempre que la variable del <strong>eje Y</strong> sea <strong>numérica (de escala)</strong>.</p>
+<p>Por ejemplo, para graficar el promedio de <code>horas_rrss_dia</code> según <code>carrera</code>:</p>
+<ol type="1">
+<li>Arrastra <code>carrera</code> al <strong>eje X</strong> y <code>horas_rrss_dia</code> al <strong>eje Y</strong>.<br>
+</li>
+<li>SPSS mostrará automáticamente la <strong>Media</strong>; cámbiala a <strong>Mediana</strong> u otro desde <strong>Estadístico</strong> si lo prefieres.<br>
+</li>
+<li>Pulsa <strong>Aceptar</strong>.</li>
+</ol>
+</section>
+</section>
+<section id="barras-agrupadas-dos-variables" class="level2">
+<h2 class="anchored" data-anchor-id="barras-agrupadas-dos-variables">3. Barras agrupadas (dos variables)</h2>
+<ol type="1">
+<li>En <strong>Galería → Barras</strong>, arrastra el modelo de <strong>barras agrupadas</strong> al lienzo.<br>
+</li>
+<li>Arrastra la primera variable al <strong>eje X</strong> (ej. <code>carrera</code>).<br>
+</li>
+<li>Arrastra la segunda al cuadro <strong>Color del clúster</strong> (ej. <code>recicla_actualmente</code>).<br>
+</li>
+<li>En <strong>Propiedades del elemento</strong>, cambia el <strong>Estadístico</strong> a <strong>Porcentaje</strong> y define la base como <strong>Total para cada categoría del eje X</strong>, de modo que cada grupo del eje X sume 100% y las barras sean comparables.<br>
+</li>
+<li>Pulsa <strong>Aceptar</strong>.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Otros gráficos">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>OJO: esto sí borra datos
+<span class="screen-reader-only">Tip</span>Otros gráficos
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>“Eliminar casos no seleccionados” quita los casos de tu base.</strong> Si guardas el archivo, los pierdes. Antes de eliminar, <strong>guarda una copia</strong> con <code>Archivo → Guardar como…</code> (por ejemplo, <code>base_limpia.sav</code>) o, mejor aún, <strong>usa el filtro</strong> de la sección anterior, que no borra nada.</p>
+<p>En la <strong>Galería</strong> también encontrarás <strong>histogramas</strong> y <strong>diagramas de caja</strong>, que requieren variables <strong>numéricas (de escala)</strong> —no uses escalas de Likert ni variables categóricas en ellos—.</p>
 </div>
 </div>
-<p>Si necesitas eliminar definitivamente los casos que no cumplen un criterio:</p>
-<ol type="1">
-<li>Ve a <strong><code>Datos → Seleccionar casos…</code></strong> y define tu condición (igual que en la sección 2).</li>
-<li>En <strong>“Resultados”</strong>, elige <strong>“Eliminar casos no seleccionados”</strong>.</li>
-<li>Pulsa <strong>“Aceptar”</strong>.</li>
-</ol>
-<p>También puedes eliminar casos <strong>manualmente</strong>: en la <strong>Vista de datos</strong>, haz clic en el <strong>número de fila</strong> del caso (se selecciona toda la fila), luego clic derecho → <strong>“Borrar”</strong>.</p>
-</section>
-<section id="quitar-el-filtro" class="level2">
-<h2 class="anchored" data-anchor-id="quitar-el-filtro">4. Quitar el filtro</h2>
-<p>Para volver a trabajar con <strong>todos</strong> los casos:</p>
-<ol type="1">
-<li>Ve a <strong><code>Datos → Seleccionar casos…</code></strong></li>
-<li>Marca la opción <strong>“Todos los casos”</strong>.</li>
-<li>Pulsa <strong>“Aceptar”</strong>.</li>
-</ol>
-<p>La variable <code>filter_$</code> puede quedarse en la base; mientras esté seleccionado “Todos los casos”, no afecta tus análisis.</p>
 
 
 </section>

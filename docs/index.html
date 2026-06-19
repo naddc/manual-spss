@@ -124,10 +124,10 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análisis-descriptivo" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Análisis descriptivo</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-descriptivo-univariado" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Descriptivo univariado</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-análisis-descriptivo">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-descriptivo-univariado">    
         <li>
     <a class="dropdown-item" href="./desc_unica.html">
  <span class="dropdown-text">Respuesta única</span></a>
@@ -135,6 +135,17 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="./desc_mrsets.html">
  <span class="dropdown-text">Respuestas múltiples</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-descriptivo-bivariado" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Descriptivo bivariado</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-descriptivo-bivariado">    
+        <li>
+    <a class="dropdown-item" href="./desc_bivariado.html">
+ <span class="dropdown-text">Tablas personalizadas</span></a>
   </li>  
     </ul>
   </li>
@@ -150,6 +161,17 @@ ul.task-list li input[type="checkbox"] {
         <li>
     <a class="dropdown-item" href="./ttest.html">
  <span class="dropdown-text">T de Student</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-gráficos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Gráficos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-gráficos">    
+        <li>
+    <a class="dropdown-item" href="./graficos.html">
+ <span class="dropdown-text">Gráficos</span></a>
   </li>  
     </ul>
   </li>
@@ -283,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/naddc\.github\.io\/manual-spss\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
