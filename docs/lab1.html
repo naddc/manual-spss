@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Prueba T de Student (muestras independientes) – Manual de SPSS</title>
+<title>Lab 1: Primer acercamiento a SPSS – Manual de SPSS</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -32,15 +35,14 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,8 +81,6 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Manual de SPSS</span>
     </a>
@@ -95,6 +95,17 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-laboratorios" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Laboratorios</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-laboratorios">    
+        <li>
+    <a class="dropdown-item" href="./lab1.html">
+ <span class="dropdown-text">Lab 1</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-procesamiento-de-bases" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Procesamiento de bases</span>
@@ -123,10 +134,10 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-descriptivo-univariado" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Descriptivo univariado</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-análisis-descriptivo" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Análisis descriptivo</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-descriptivo-univariado">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-análisis-descriptivo">    
         <li>
     <a class="dropdown-item" href="./desc_unica.html">
  <span class="dropdown-text">Respuesta única</span></a>
@@ -135,13 +146,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./desc_mrsets.html">
  <span class="dropdown-text">Respuestas múltiples</span></a>
   </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-descriptivo-bivariado" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Descriptivo bivariado</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-descriptivo-bivariado">    
         <li>
     <a class="dropdown-item" href="./desc_bivariado.html">
  <span class="dropdown-text">Tablas personalizadas</span></a>
@@ -190,9 +194,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#uso" id="toc-uso" class="nav-link active" data-scroll-target="#uso">Uso</a></li>
-  <li><a href="#pasos" id="toc-pasos" class="nav-link" data-scroll-target="#pasos">Pasos</a></li>
-  <li><a href="#leyendo-los-resultados" id="toc-leyendo-los-resultados" class="nav-link" data-scroll-target="#leyendo-los-resultados">Leyendo los resultados</a></li>
+  <li><a href="#paso-1-descargar-el-archivo" id="toc-paso-1-descargar-el-archivo" class="nav-link active" data-scroll-target="#paso-1-descargar-el-archivo">Paso 1: Descargar el archivo</a></li>
+  <li><a href="#paso-2-abrir-la-base-de-datos-en-spss" id="toc-paso-2-abrir-la-base-de-datos-en-spss" class="nav-link" data-scroll-target="#paso-2-abrir-la-base-de-datos-en-spss">Paso 2: Abrir la base de datos en SPSS</a></li>
+  <li><a href="#paso-3-explorar-la-vista-de-variables" id="toc-paso-3-explorar-la-vista-de-variables" class="nav-link" data-scroll-target="#paso-3-explorar-la-vista-de-variables">Paso 3: Explorar la Vista de Variables</a></li>
+  <li><a href="#paso-4-generar-una-tabla-de-frecuencias" id="toc-paso-4-generar-una-tabla-de-frecuencias" class="nav-link" data-scroll-target="#paso-4-generar-una-tabla-de-frecuencias">Paso 4: Generar una tabla de frecuencias</a></li>
+  <li><a href="#paso-5-entregar" id="toc-paso-5-entregar" class="nav-link" data-scroll-target="#paso-5-entregar">Paso 5: Entregar</a></li>
   </ul>
 </nav>
     </div>
@@ -201,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Prueba T de Student (muestras independientes)</h1>
+<h1 class="title">Lab 1: Primer acercamiento a SPSS</h1>
 </div>
 
 
@@ -218,33 +224,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="uso" class="level2">
-<h2 class="anchored" data-anchor-id="uso">Uso</h2>
-<p>La prueba <strong>T de Student para muestras independientes</strong> permite evaluar si la <strong>media</strong> de una variable <strong>numérica</strong> difiere entre <strong>dos grupos</strong> definidos por una variable <strong>categórica dicotómica</strong> (de dos categorías).</p>
-<p>Por ejemplo: ¿el promedio del <em>índice de conocimiento sobre reciclaje</em> (<code>ICR</code>) es distinto entre hombres y mujeres?</p>
-<section id="h₀-p-value-0.05-las-medias-de-ambos-grupos-son-iguales-no-hay-diferencia." class="level4">
-<h4 class="anchored" data-anchor-id="h₀-p-value-0.05-las-medias-de-ambos-grupos-son-iguales-no-hay-diferencia."><em>H₀ (p-value &gt; 0.05*): Las medias de ambos grupos son iguales (no hay diferencia).</em></h4>
-</section>
-<section id="h₁-p-value-0.05-las-medias-de-ambos-grupos-son-diferentes." class="level4">
-<h4 class="anchored" data-anchor-id="h₁-p-value-0.05-las-medias-de-ambos-grupos-son-diferentes."><em>H₁ (p-value &lt;= 0.05*): Las medias de ambos grupos son diferentes.</em></h4>
-<p>*95% de confianza.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Supuesto">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Supuesto
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>La prueba asume que la variable numérica se distribuye de forma <strong>aproximadamente normal</strong>. Los dos grupos deben ser <strong>independientes</strong>: cada caso pertenece a un solo grupo, no a ambos.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="pasos" class="level2">
-<h2 class="anchored" data-anchor-id="pasos">Pasos</h2>
+<style>
+.carrete-slide img {
+  width: 100%;
+  height: 380px;
+  object-fit: contain;
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 18px;
+  background-size: 55%, 55%;
+}
+</style>
 <div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -255,49 +250,43 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>Analizar → Comparar medias y proporciones → Prueba T de muestras independientes…</code></p>
+<p>Abre la base recortada, revisa cómo está descrita cada variable en <strong>Vista de Variables</strong>, genera una tabla de frecuencias y pega tus capturas en la presentación de Drive de Paideia.</p>
 </div>
 </div>
-<ol type="1">
-<li>Ve a la ruta <strong><code>Analizar → Comparar medias y proporciones → Prueba T de muestras independientes…</code></strong></li>
-<li>En <strong>“Variables de prueba”</strong>, coloca la variable <strong>numérica</strong> (por ejemplo, <code>ICR</code>).</li>
-<li>En <strong>“Variable de agrupación”</strong>, coloca la variable <strong>categórica dicotómica</strong> (por ejemplo, <code>sexo</code>).</li>
-<li>Haz clic en <strong>“Definir grupos…”</strong>, marca <strong>“Utilizar valores especificados”</strong> y escribe los dos valores que identifican a cada grupo (por ejemplo, <strong>Grupo 1: 0</strong> y <strong>Grupo 2: 1</strong>). Pulsa <strong>“Continuar”</strong>.</li>
-<li>Pulsa <strong>“Aceptar”</strong>.</li>
-</ol>
+<section id="paso-1-descargar-el-archivo" class="level2">
+<h2 class="anchored" data-anchor-id="paso-1-descargar-el-archivo">Paso 1: Descargar el archivo</h2>
+<p>Descarga <code>BD_LimaComoVamos2024_recortada.sav</code> desde <strong>Paideia</strong>, sección de esta semana. Guárdalo en una carpeta donde lo puedas ubicar fácilmente.</p>
 </section>
-<section id="leyendo-los-resultados" class="level2">
-<h2 class="anchored" data-anchor-id="leyendo-los-resultados">Leyendo los resultados</h2>
-<p>La lectura tiene <strong>dos partes</strong>:</p>
-<p><strong>1. Revisa la prueba de Levene (igualdad de varianzas).</strong> En la tabla, mira la columna <strong>“Sig.”</strong> de la <em>Prueba de Levene</em>:</p>
+<section id="paso-2-abrir-la-base-de-datos-en-spss" class="level2">
+<h2 class="anchored" data-anchor-id="paso-2-abrir-la-base-de-datos-en-spss">Paso 2: Abrir la base de datos en SPSS</h2>
+<p>Abre SPSS y carga el archivo descargado (<strong>Archivo → Abrir → Datos…</strong>). Vas a caer en <strong>Vista de Datos</strong>: las columnas son variables, las filas son casos (personas encuestadas), y cada celda es el valor de una persona en una variable.</p>
+<div id="carouselPaso2" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active carrete-slide">
+      <img src="img/lab1/paso2-01.png" alt="Paso 2 - captura 1">
+    </div>
+    <div class="carousel-item carrete-slide">
+      <img src="img/lab1/paso2-02.png" alt="Paso 2 - captura 2">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselPaso2" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselPaso2" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+</section>
+<section id="paso-3-explorar-la-vista-de-variables" class="level2">
+<h2 class="anchored" data-anchor-id="paso-3-explorar-la-vista-de-variables">Paso 3: Explorar la Vista de Variables</h2>
+<p>Cambia a la pestaña <strong>Vista de Variables</strong> (abajo a la izquierda). Aquí cada fila describe una variable, no una persona: es la “base de datos de la base de datos”.</p>
+<p>Elige <strong>una sola variable</strong> de la base y revisa estas cuatro columnas:</p>
 <ul>
-<li>Si <strong>Sig. &gt; 0.05</strong> → las varianzas son similares → usa la fila <strong>“Se asumen varianzas iguales”</strong>.</li>
-<li>Si <strong>Sig. ≤ 0.05</strong> → las varianzas son distintas → usa la fila <strong>“No se asumen varianzas iguales”</strong>.</li>
+<li><strong>Nombre</strong>: el nombre corto de la variable.</li>
+<li><strong>Etiqueta</strong>: la pregunta o descripción completa.</li>
+<li><strong>Medida</strong>: si es nominal, ordinal o de escala.</li>
+<li><strong>Valores</strong>: qué significa cada código numérico (ej. 1 = Hombre, 2 = Mujer).</li>
 </ul>
-<p><strong>2. Lee el <em>p-value</em> de la prueba t.</strong> En la fila que te indicó Levene, lee la <strong>significación bilateral</strong> (en versiones nuevas de SPSS aparece como <strong>“P de dos factores”</strong>; en versiones anteriores, como <strong>“Sig. (bilateral)”</strong>):</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Nivel de confianza</th>
-<th>p-value</th>
-<th>Decisión</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>95%</td>
-<td>p ≤ 0.05</td>
-<td>Se rechaza H₀ → <strong>las medias son diferentes</strong></td>
-</tr>
-<tr class="even">
-<td>95%</td>
-<td>p &gt; 0.05</td>
-<td>No se rechaza H₀ → <strong>no hay diferencia de medias</strong></td>
-</tr>
-</tbody>
-</table>
-<p><strong>3. Compara las medias.</strong> Si hay diferencia significativa, mira la tabla <strong>“Estadísticas de grupo”</strong> para indicar <strong>cuál grupo tiene la media más alta</strong>.</p>
-<p><strong>Ejemplo de interpretación:</strong> si comparas el <code>ICR</code> entre hombres y mujeres y obtienes una significación bilateral de 0.03 (≤ 0.05), concluyes que <strong>existe una diferencia significativa</strong> entre el promedio de conocimiento de ambos grupos; luego, según la tabla de medias, señalas cuál grupo presenta el promedio más alto.</p>
 <div class="callout callout-style-default callout-warning callout-titled" title="OJO">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -308,14 +297,55 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<ul>
-<li>La variable de agrupación debe tener <strong>exactamente dos grupos</strong>. Si tienes más de dos (por ejemplo, tres carreras), usa <strong>ANOVA</strong>, no la T de Student.</li>
-<li>La prueba indica <strong>si las medias difieren</strong>, no por qué. La interpretación es <strong>asociativa</strong>, no causal.</li>
-</ul>
+<p>El código (1, 2, 3…) no tiene un significado matemático en variables nominales u ordinales — es solo una etiqueta. No se puede sacar un promedio de “sexo”.</p>
 </div>
 </div>
-<!-- Cuando grabes el video, descomenta la siguiente línea y coloca el archivo en img/ -->
-<!-- ![Prueba T de Student en SPSS](img/ttest.mov) -->
+<div id="carouselPaso3" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active carrete-slide">
+      <img src="img/lab1/paso3-01.png" alt="Paso 3 - captura 1">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselPaso3" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselPaso3" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+</section>
+<section id="paso-4-generar-una-tabla-de-frecuencias" class="level2">
+<h2 class="anchored" data-anchor-id="paso-4-generar-una-tabla-de-frecuencias">Paso 4: Generar una tabla de frecuencias</h2>
+<p>Ve a <strong>Analizar → Estadísticos descriptivos → Frecuencias</strong>, selecciona la misma variable que revisaste en el Paso 3, y genera la tabla.</p>
+<div id="carouselPaso4" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active carrete-slide">
+      <img src="img/lab1/paso4-01.png" alt="Paso 4 - captura 1">
+    </div>
+    <div class="carousel-item carrete-slide">
+      <img src="img/lab1/paso4-02.png" alt="Paso 4 - captura 2">
+    </div>
+    <div class="carousel-item carrete-slide">
+      <img src="img/lab1/paso4-03.png" alt="Paso 4 - captura 3">
+    </div>
+    <div class="carousel-item carrete-slide">
+      <img src="img/lab1/paso4-04.png" alt="Paso 4 - captura 4">
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselPaso4" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselPaso4" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+</div></section>
+<section id="paso-5-entregar" class="level2">
+<h2 class="anchored" data-anchor-id="paso-5-entregar">Paso 5: Entregar</h2>
+<p>En la presentación compartida de Drive (enlace en Paideia, sección de esta semana), llena la diapositiva de tu grupo con:</p>
+<ol type="1">
+<li>Información de tu variable en <strong>Vista de Variables</strong> (nombre, etiqueta, medida, valores).</li>
+<li>Captura de la tabla de frecuencias del Paso 4.</li>
+</ol>
 
 
 </section>
@@ -394,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/naddc\.github\.io\/manual-spss\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

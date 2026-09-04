@@ -8,6 +8,10 @@ website:
     left:
       - text: Inicio
         href: index.qmd
+      - text: Laboratorios
+        menu:
+          - href: lab1.qmd
+            text: Lab 1
       - text: Procesamiento de bases
         menu:
           - href: import.qmd
@@ -20,14 +24,12 @@ website:
             text: Índices (variables agrupadas)
           - href: proc_mrsets.qmd
             text: Respuestas múltiples
-      - text: Descriptivo univariado
+      - text: Análisis descriptivo
         menu:
           - href: desc_unica.qmd
             text: Respuesta única
           - href: desc_mrsets.qmd
             text: Respuestas múltiples
-      - text: Descriptivo bivariado
-        menu:
           - href: desc_bivariado.qmd
             text: Tablas personalizadas
       - text: Análisis inferencial
