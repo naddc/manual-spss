@@ -112,32 +112,32 @@
     "text": "Bienvenido/a\nEste sitio te guiará paso a paso para aprender a procesar bases de datos y realizar análisis en SPSS, siguiendo la estructura utilizada en nuestras prácticas del curso.\nCada sección reproduce las operaciones que normalmente harías en SPSS, acompañadas de explicaciones, ejemplos y capturas de pantalla."
   },
   {
-    "objectID": "chi2.html",
-    "href": "chi2.html",
-    "title": "Prueba chi-cuadrado de independencia",
+    "objectID": "ttest.html",
+    "href": "ttest.html",
+    "title": "Prueba T de Student (muestras independientes)",
     "section": "",
-    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas (nominales u ordinales). Para esto, compara las frecuencias observadas con las frecuencias esperadas.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
+    "text": "La prueba T de Student para muestras independientes permite evaluar si la media de una variable numérica difiere entre dos grupos definidos por una variable categórica dicotómica (de dos categorías).\nPor ejemplo: ¿el promedio del índice de conocimiento sobre reciclaje (ICR) es distinto entre hombres y mujeres?\n\n\n\n\n\n*95% de confianza.\n\n\n\n\n\n\nNoteSupuesto\n\n\n\nLa prueba asume que la variable numérica se distribuye de forma aproximadamente normal. Los dos grupos deben ser independientes: cada caso pertenece a un solo grupo, no a ambos."
   },
   {
-    "objectID": "chi2.html#uso",
-    "href": "chi2.html#uso",
-    "title": "Prueba chi-cuadrado de independencia",
+    "objectID": "ttest.html#uso",
+    "href": "ttest.html#uso",
+    "title": "Prueba T de Student (muestras independientes)",
     "section": "",
-    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas (nominales u ordinales). Para esto, compara las frecuencias observadas con las frecuencias esperadas.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
+    "text": "La prueba T de Student para muestras independientes permite evaluar si la media de una variable numérica difiere entre dos grupos definidos por una variable categórica dicotómica (de dos categorías).\nPor ejemplo: ¿el promedio del índice de conocimiento sobre reciclaje (ICR) es distinto entre hombres y mujeres?\n\n\n\n\n\n*95% de confianza.\n\n\n\n\n\n\nNoteSupuesto\n\n\n\nLa prueba asume que la variable numérica se distribuye de forma aproximadamente normal. Los dos grupos deben ser independientes: cada caso pertenece a un solo grupo, no a ambos."
   },
   {
-    "objectID": "chi2.html#pasos",
-    "href": "chi2.html#pasos",
-    "title": "Prueba chi-cuadrado de independencia",
+    "objectID": "ttest.html#pasos",
+    "href": "ttest.html#pasos",
+    "title": "Prueba T de Student (muestras independientes)",
     "section": "Pasos",
-    "text": "Pasos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nAnalizar → Estadísticos descriptivos → Tablas cruzadas…\nLuego: Estadísticos… → marcar Chi-cuadrado\n\n\n\nVe a la ruta Analizar → Estadísticos descriptivos → Tablas cruzadas… (también puedes generar la tabla con Analizar → Tablas → Tablas personalizadas…).\nColoca una variable en Filas y la otra en Columnas.\nHaz clic en el botón “Estadísticos…”.\nMarca la casilla “Chi-cuadrado” y pulsa “Continuar”.\nPulsa “Aceptar” para generar los resultados."
+    "text": "Pasos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nAnalizar → Comparar medias y proporciones → Prueba T de muestras independientes…\n\n\n\nVe a la ruta Analizar → Comparar medias y proporciones → Prueba T de muestras independientes…\nEn “Variables de prueba”, coloca la variable numérica (por ejemplo, ICR).\nEn “Variable de agrupación”, coloca la variable categórica dicotómica (por ejemplo, sexo).\nHaz clic en “Definir grupos…”, marca “Utilizar valores especificados” y escribe los dos valores que identifican a cada grupo (por ejemplo, Grupo 1: 0 y Grupo 2: 1). Pulsa “Continuar”.\nPulsa “Aceptar”."
   },
   {
-    "objectID": "chi2.html#leyendo-los-resultados",
-    "href": "chi2.html#leyendo-los-resultados",
-    "title": "Prueba chi-cuadrado de independencia",
+    "objectID": "ttest.html#leyendo-los-resultados",
+    "href": "ttest.html#leyendo-los-resultados",
+    "title": "Prueba T de Student (muestras independientes)",
     "section": "Leyendo los resultados",
-    "text": "Leyendo los resultados\nEn la tabla “Pruebas de chi-cuadrado”, fíjate siempre en la fila “Chi-cuadrado de Pearson” y lee el valor de “Significación asintótica (bilateral)”. Ese es tu p-value.\n\n\n\nNivel de confianza\np-value\nDecisión\n\n\n\n\n95%\np ≤ 0.05\nSe rechaza H₀ → hay asociación\n\n\n95%\np &gt; 0.05\nNo se rechaza H₀ → no hay asociación\n\n\n\nEjemplo de interpretación: si cruzas zona de Lima y nivel de conocimiento sobre reciclaje y obtienes una significación de 0.012 (≤ 0.05), rechazas H₀ y concluyes que existe una asociación entre la zona de residencia y el nivel de conocimiento. Si obtienes 0.480 (&gt; 0.05), concluyes que no se encontró asociación entre ambas.\n\n\n\n\n\n\nWarningOJO\n\n\n\n\nAmbas variables deben ser categóricas (nominales u ordinales). Si tienes una variable numérica, primero recodifícala en niveles.\nRevisa la nota al pie de la tabla: si SPSS indica que varias casillas tienen un recuento esperado menor que 5, la prueba pierde validez. En ese caso, agrupa categorías para reducir el número de casillas.\nEl chi-cuadrado indica si hay asociación, no su dirección ni su causa. La interpretación es asociativa, nunca causal."
+    "text": "Leyendo los resultados\nLa lectura tiene dos partes:\n1. Revisa la prueba de Levene (igualdad de varianzas). En la tabla, mira la columna “Sig.” de la Prueba de Levene:\n\nSi Sig. &gt; 0.05 → las varianzas son similares → usa la fila “Se asumen varianzas iguales”.\nSi Sig. ≤ 0.05 → las varianzas son distintas → usa la fila “No se asumen varianzas iguales”.\n\n2. Lee el p-value de la prueba t. En la fila que te indicó Levene, lee la significación bilateral (en versiones nuevas de SPSS aparece como “P de dos factores”; en versiones anteriores, como “Sig. (bilateral)”):\n\n\n\nNivel de confianza\np-value\nDecisión\n\n\n\n\n95%\np ≤ 0.05\nSe rechaza H₀ → las medias son diferentes\n\n\n95%\np &gt; 0.05\nNo se rechaza H₀ → no hay diferencia de medias\n\n\n\n3. Compara las medias. Si hay diferencia significativa, mira la tabla “Estadísticas de grupo” para indicar cuál grupo tiene la media más alta.\nEjemplo de interpretación: si comparas el ICR entre hombres y mujeres y obtienes una significación bilateral de 0.03 (≤ 0.05), concluyes que existe una diferencia significativa entre el promedio de conocimiento de ambos grupos; luego, según la tabla de medias, señalas cuál grupo presenta el promedio más alto.\n\n\n\n\n\n\nWarningOJO\n\n\n\n\nLa variable de agrupación debe tener exactamente dos grupos. Si tienes más de dos (por ejemplo, tres carreras), usa ANOVA, no la T de Student.\nLa prueba indica si las medias difieren, no por qué. La interpretación es asociativa, no causal."
   },
   {
     "objectID": "graficos.html",
@@ -168,32 +168,74 @@
     "text": "3. Barras agrupadas (dos variables)\n\nEn Galería → Barras, arrastra el modelo de barras agrupadas al lienzo.\n\nArrastra la primera variable al eje X (ej. carrera).\n\nArrastra la segunda al cuadro Color del clúster (ej. recicla_actualmente).\n\nEn Propiedades del elemento, cambia el Estadístico a Porcentaje y define la base como Total para cada categoría del eje X, de modo que cada grupo del eje X sume 100% y las barras sean comparables.\n\nPulsa Aceptar.\n\n\n\n\n\n\n\nTipOtros gráficos\n\n\n\nEn la Galería también encontrarás histogramas y diagramas de caja, que requieren variables numéricas (de escala) —no uses escalas de Likert ni variables categóricas en ellos—."
   },
   {
-    "objectID": "ttest.html",
-    "href": "ttest.html",
-    "title": "Prueba T de Student (muestras independientes)",
+    "objectID": "chi2.html",
+    "href": "chi2.html",
+    "title": "Prueba chi-cuadrado de independencia",
     "section": "",
-    "text": "La prueba T de Student para muestras independientes permite evaluar si la media de una variable numérica difiere entre dos grupos definidos por una variable categórica dicotómica (de dos categorías).\nPor ejemplo: ¿el promedio del índice de conocimiento sobre reciclaje (ICR) es distinto entre hombres y mujeres?\n\n\n\n\n\n*95% de confianza.\n\n\n\n\n\n\nNoteSupuesto\n\n\n\nLa prueba asume que la variable numérica se distribuye de forma aproximadamente normal. Los dos grupos deben ser independientes: cada caso pertenece a un solo grupo, no a ambos."
+    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas (nominales u ordinales). Para esto, compara las frecuencias observadas con las frecuencias esperadas.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
   },
   {
-    "objectID": "ttest.html#uso",
-    "href": "ttest.html#uso",
-    "title": "Prueba T de Student (muestras independientes)",
+    "objectID": "chi2.html#uso",
+    "href": "chi2.html#uso",
+    "title": "Prueba chi-cuadrado de independencia",
     "section": "",
-    "text": "La prueba T de Student para muestras independientes permite evaluar si la media de una variable numérica difiere entre dos grupos definidos por una variable categórica dicotómica (de dos categorías).\nPor ejemplo: ¿el promedio del índice de conocimiento sobre reciclaje (ICR) es distinto entre hombres y mujeres?\n\n\n\n\n\n*95% de confianza.\n\n\n\n\n\n\nNoteSupuesto\n\n\n\nLa prueba asume que la variable numérica se distribuye de forma aproximadamente normal. Los dos grupos deben ser independientes: cada caso pertenece a un solo grupo, no a ambos."
+    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas (nominales u ordinales). Para esto, compara las frecuencias observadas con las frecuencias esperadas.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
   },
   {
-    "objectID": "ttest.html#pasos",
-    "href": "ttest.html#pasos",
-    "title": "Prueba T de Student (muestras independientes)",
+    "objectID": "chi2.html#pasos",
+    "href": "chi2.html#pasos",
+    "title": "Prueba chi-cuadrado de independencia",
     "section": "Pasos",
-    "text": "Pasos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nAnalizar → Comparar medias y proporciones → Prueba T de muestras independientes…\n\n\n\nVe a la ruta Analizar → Comparar medias y proporciones → Prueba T de muestras independientes…\nEn “Variables de prueba”, coloca la variable numérica (por ejemplo, ICR).\nEn “Variable de agrupación”, coloca la variable categórica dicotómica (por ejemplo, sexo).\nHaz clic en “Definir grupos…”, marca “Utilizar valores especificados” y escribe los dos valores que identifican a cada grupo (por ejemplo, Grupo 1: 0 y Grupo 2: 1). Pulsa “Continuar”.\nPulsa “Aceptar”."
+    "text": "Pasos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nAnalizar → Estadísticos descriptivos → Tablas cruzadas…\nLuego: Estadísticos… → marcar Chi-cuadrado\n\n\n\nVe a la ruta Analizar → Estadísticos descriptivos → Tablas cruzadas… (también puedes generar la tabla con Analizar → Tablas → Tablas personalizadas…).\nColoca una variable en Filas y la otra en Columnas.\nHaz clic en el botón “Estadísticos…”.\nMarca la casilla “Chi-cuadrado” y pulsa “Continuar”.\nPulsa “Aceptar” para generar los resultados."
   },
   {
-    "objectID": "ttest.html#leyendo-los-resultados",
-    "href": "ttest.html#leyendo-los-resultados",
-    "title": "Prueba T de Student (muestras independientes)",
+    "objectID": "chi2.html#leyendo-los-resultados",
+    "href": "chi2.html#leyendo-los-resultados",
+    "title": "Prueba chi-cuadrado de independencia",
     "section": "Leyendo los resultados",
-    "text": "Leyendo los resultados\nLa lectura tiene dos partes:\n1. Revisa la prueba de Levene (igualdad de varianzas). En la tabla, mira la columna “Sig.” de la Prueba de Levene:\n\nSi Sig. &gt; 0.05 → las varianzas son similares → usa la fila “Se asumen varianzas iguales”.\nSi Sig. ≤ 0.05 → las varianzas son distintas → usa la fila “No se asumen varianzas iguales”.\n\n2. Lee el p-value de la prueba t. En la fila que te indicó Levene, lee la significación bilateral (en versiones nuevas de SPSS aparece como “P de dos factores”; en versiones anteriores, como “Sig. (bilateral)”):\n\n\n\nNivel de confianza\np-value\nDecisión\n\n\n\n\n95%\np ≤ 0.05\nSe rechaza H₀ → las medias son diferentes\n\n\n95%\np &gt; 0.05\nNo se rechaza H₀ → no hay diferencia de medias\n\n\n\n3. Compara las medias. Si hay diferencia significativa, mira la tabla “Estadísticas de grupo” para indicar cuál grupo tiene la media más alta.\nEjemplo de interpretación: si comparas el ICR entre hombres y mujeres y obtienes una significación bilateral de 0.03 (≤ 0.05), concluyes que existe una diferencia significativa entre el promedio de conocimiento de ambos grupos; luego, según la tabla de medias, señalas cuál grupo presenta el promedio más alto.\n\n\n\n\n\n\nWarningOJO\n\n\n\n\nLa variable de agrupación debe tener exactamente dos grupos. Si tienes más de dos (por ejemplo, tres carreras), usa ANOVA, no la T de Student.\nLa prueba indica si las medias difieren, no por qué. La interpretación es asociativa, no causal."
+    "text": "Leyendo los resultados\nEn la tabla “Pruebas de chi-cuadrado”, fíjate siempre en la fila “Chi-cuadrado de Pearson” y lee el valor de “Significación asintótica (bilateral)”. Ese es tu p-value.\n\n\n\nNivel de confianza\np-value\nDecisión\n\n\n\n\n95%\np ≤ 0.05\nSe rechaza H₀ → hay asociación\n\n\n95%\np &gt; 0.05\nNo se rechaza H₀ → no hay asociación\n\n\n\nEjemplo de interpretación: si cruzas zona de Lima y nivel de conocimiento sobre reciclaje y obtienes una significación de 0.012 (≤ 0.05), rechazas H₀ y concluyes que existe una asociación entre la zona de residencia y el nivel de conocimiento. Si obtienes 0.480 (&gt; 0.05), concluyes que no se encontró asociación entre ambas.\n\n\n\n\n\n\nWarningOJO\n\n\n\n\nAmbas variables deben ser categóricas (nominales u ordinales). Si tienes una variable numérica, primero recodifícala en niveles.\nRevisa la nota al pie de la tabla: si SPSS indica que varias casillas tienen un recuento esperado menor que 5, la prueba pierde validez. En ese caso, agrupa categorías para reducir el número de casillas.\nEl chi-cuadrado indica si hay asociación, no su dirección ni su causa. La interpretación es asociativa, nunca causal."
+  },
+  {
+    "objectID": "lab1.html",
+    "href": "lab1.html",
+    "title": "Lab 1: Primer acercamiento a SPSS",
+    "section": "",
+    "text": "TipTL;DR\n\n\n\nAbre la base recortada, revisa cómo está descrita cada variable en Vista de Variables, genera una tabla de frecuencias y pega tus capturas en la presentación de Drive de Paideia."
+  },
+  {
+    "objectID": "lab1.html#paso-1-descargar-el-archivo",
+    "href": "lab1.html#paso-1-descargar-el-archivo",
+    "title": "Lab 1: Primer acercamiento a SPSS",
+    "section": "Paso 1: Descargar el archivo",
+    "text": "Paso 1: Descargar el archivo\nDescarga BD_LimaComoVamos2024_recortada.sav desde Paideia, sección de esta semana. Guárdalo en una carpeta donde lo puedas ubicar fácilmente."
+  },
+  {
+    "objectID": "lab1.html#paso-2-abrir-la-base-de-datos-en-spss",
+    "href": "lab1.html#paso-2-abrir-la-base-de-datos-en-spss",
+    "title": "Lab 1: Primer acercamiento a SPSS",
+    "section": "Paso 2: Abrir la base de datos en SPSS",
+    "text": "Paso 2: Abrir la base de datos en SPSS\nAbre SPSS y carga el archivo descargado (Archivo → Abrir → Datos…). Vas a caer en Vista de Datos: las columnas son variables, las filas son casos (personas encuestadas), y cada celda es el valor de una persona en una variable."
+  },
+  {
+    "objectID": "lab1.html#paso-3-explorar-la-vista-de-variables",
+    "href": "lab1.html#paso-3-explorar-la-vista-de-variables",
+    "title": "Lab 1: Primer acercamiento a SPSS",
+    "section": "Paso 3: Explorar la Vista de Variables",
+    "text": "Paso 3: Explorar la Vista de Variables\nCambia a la pestaña Vista de Variables (abajo a la izquierda). Aquí cada fila describe una variable, no una persona: es la “base de datos de la base de datos”.\nRevisa en Google Slides (enlace en Paideia) la variable asignada a tu grupo de la base y revisa estas cuatro columnas:\n\nNombre: el nombre corto de la variable.\nEtiqueta: la pregunta o descripción completa.\nMedida: si es nominal, ordinal o de escala.\nValores: qué significa cada código numérico (ej. 1 = Hombre, 2 = Mujer).\n\n\n\n\n\n\n\nWarningOJO\n\n\n\nEl código (1, 2, 3…) no tiene un significado matemático en variables nominales u ordinales — es solo una etiqueta. No se puede sacar un promedio de “sexo”."
+  },
+  {
+    "objectID": "lab1.html#paso-4-generar-una-tabla-de-frecuencias",
+    "href": "lab1.html#paso-4-generar-una-tabla-de-frecuencias",
+    "title": "Lab 1: Primer acercamiento a SPSS",
+    "section": "Paso 4: Generar una tabla de frecuencias",
+    "text": "Paso 4: Generar una tabla de frecuencias\nVe a Analizar → Estadísticos descriptivos → Frecuencias, selecciona la misma variable que revisaste en el Paso 3, y genera la tabla."
+  },
+  {
+    "objectID": "lab1.html#paso-5-entregar",
+    "href": "lab1.html#paso-5-entregar",
+    "title": "Lab 1: Primer acercamiento a SPSS",
+    "section": "Paso 5: Entregar",
+    "text": "Paso 5: Entregar\nEn la presentación compartida de Drive (enlace en Paideia, sección de esta semana), llena la diapositiva de tu grupo con:\n\nInformación de tu variable en Vista de Variables (nombre, etiqueta, medida, valores).\nCaptura de la tabla de frecuencias del Paso 4."
   },
   {
     "objectID": "import.html",
@@ -292,47 +334,5 @@
     "title": "Recodificación de variables",
     "section": "3. Definir etiquetas de valores",
     "text": "3. Definir etiquetas de valores\n(para recodificaciones no automáticas o variables numéricas)\nTodas las variables de tipo numérico que representen variables categóricas deben llevar etiquetas de valores. El proceso de recodificación automática ya arroja nuevas variables con etiquetas de valores, pero para que cada número corresponda al texto de la categoría original.\n\n\n\n\n\n\nTipTL;DR\n\n\n\nVista de variables → Columna \"Valores\" → Definir etiquetas\n\n\n\nCambia a la Vista de variables.\n\nEn la columna “Valores” de la nueva variable, haz clic en el botón con los tres puntos […].\n\nEn la ventana que se abre, define cada correspondencia:\n\nValor: número asignado (por ejemplo, 1)\n\nEtiqueta de valor: texto asociado (por ejemplo, “Muy insatisfecho”)\n\n\nPulsa “Añadir” después de cada par valor–etiqueta.\n\nAl finalizar, presiona “Aceptar” y verifica que todas las etiquetas estén registradas correctamente.\n\n\n\n\n\n\n\nNote📘 Usar sintaxis para definir etiquetas\n\n\n\nTambién puedes definir las etiquetas mediante sintaxis SPSS, lo que resulta útil para documentar tus pasos o aplicarlos a varias variables a la vez.\nRuta: Archivo &gt; Nuevo &gt; Sintaxis\nHay dos comandos distintos, no los confundas:\n\nVARIABLE LABELS → pone el nombre descriptivo de la variable (lo que se ve como título en los resultados).\nVALUE LABELS → pone el significado de cada valor numérico (1 = “Nada de entusiasmo”, etc.).\n\n1. Etiquetar la variable con VARIABLE LABELS\nVARIABLE LABELS entusiasmo 'Nivel de entusiasmo declarado'.\nUsamos el comando VARIABLE LABELS, luego el nombre de la variable y, entre comillas (’’), la etiqueta que queremos mostrar. Cerramos con un punto (.).\nSi quieres etiquetar varias variables a la vez, las listas una debajo de otra y cierras con un solo punto al final:\nVARIABLE LABELS \n  entusiasmo 'Nivel de entusiasmo declarado'\n  edad 'Edad del encuestado'\n  zona_lima 'Zona de Lima donde reside'.\n2. Etiquetar los valores con VALUE LABELS\nVALUE LABELS entusiasmo\n  1 'Nada de entusiasmo'\n  2 'Poco entusiasmo'\n  3 'Algo de entusiasmo'\n  4 'Bastante entusiasmo'\n  5 'Mucho entusiasmo'.\nUsamos el comando VALUE LABELS, luego el nombre de la variable, y después los valores numéricos seguidos de la etiqueta que queremos entre comillas (’’). Al final, cerramos con un punto (.).\n💡 Ejecuta el bloque (click en el botón ▶️ verde) para aplicar las etiquetas automáticamente. La sintaxis te permite repetir el mismo procedimiento sin usar menús y mantener registro de cómo definiste tus variables y valores.\nA continuación, un video de ejemplo…\n\n\n\n\nVideo\nAñadir etiquetas con sintaxis"
-  },
-  {
-    "objectID": "lab1.html",
-    "href": "lab1.html",
-    "title": "Lab 1: Primer acercamiento a SPSS",
-    "section": "",
-    "text": "TipTL;DR\n\n\n\nAbre la base recortada, revisa cómo está descrita cada variable en Vista de Variables, genera una tabla de frecuencias y pega tus capturas en la presentación de Drive de Paideia."
-  },
-  {
-    "objectID": "lab1.html#paso-1-descargar-el-archivo",
-    "href": "lab1.html#paso-1-descargar-el-archivo",
-    "title": "Lab 1: Primer acercamiento a SPSS",
-    "section": "Paso 1: Descargar el archivo",
-    "text": "Paso 1: Descargar el archivo\nDescarga BD_LimaComoVamos2024_recortada.sav desde Paideia, sección de esta semana. Guárdalo en una carpeta donde lo puedas ubicar fácilmente."
-  },
-  {
-    "objectID": "lab1.html#paso-2-abrir-la-base-de-datos-en-spss",
-    "href": "lab1.html#paso-2-abrir-la-base-de-datos-en-spss",
-    "title": "Lab 1: Primer acercamiento a SPSS",
-    "section": "Paso 2: Abrir la base de datos en SPSS",
-    "text": "Paso 2: Abrir la base de datos en SPSS\nAbre SPSS y carga el archivo descargado (Archivo → Abrir → Datos…). Vas a caer en Vista de Datos: las columnas son variables, las filas son casos (personas encuestadas), y cada celda es el valor de una persona en una variable."
-  },
-  {
-    "objectID": "lab1.html#paso-3-explorar-la-vista-de-variables",
-    "href": "lab1.html#paso-3-explorar-la-vista-de-variables",
-    "title": "Lab 1: Primer acercamiento a SPSS",
-    "section": "Paso 3: Explorar la Vista de Variables",
-    "text": "Paso 3: Explorar la Vista de Variables\nCambia a la pestaña Vista de Variables (abajo a la izquierda). Aquí cada fila describe una variable, no una persona: es la “base de datos de la base de datos”.\nElige una sola variable de la base y revisa estas cuatro columnas:\n\nNombre: el nombre corto de la variable.\nEtiqueta: la pregunta o descripción completa.\nMedida: si es nominal, ordinal o de escala.\nValores: qué significa cada código numérico (ej. 1 = Hombre, 2 = Mujer).\n\n\n\n\n\n\n\nWarningOJO\n\n\n\nEl código (1, 2, 3…) no tiene un significado matemático en variables nominales u ordinales — es solo una etiqueta. No se puede sacar un promedio de “sexo”."
-  },
-  {
-    "objectID": "lab1.html#paso-4-generar-una-tabla-de-frecuencias",
-    "href": "lab1.html#paso-4-generar-una-tabla-de-frecuencias",
-    "title": "Lab 1: Primer acercamiento a SPSS",
-    "section": "Paso 4: Generar una tabla de frecuencias",
-    "text": "Paso 4: Generar una tabla de frecuencias\nVe a Analizar → Estadísticos descriptivos → Frecuencias, selecciona la misma variable que revisaste en el Paso 3, y genera la tabla."
-  },
-  {
-    "objectID": "lab1.html#paso-5-entregar",
-    "href": "lab1.html#paso-5-entregar",
-    "title": "Lab 1: Primer acercamiento a SPSS",
-    "section": "Paso 5: Entregar",
-    "text": "Paso 5: Entregar\nEn la presentación compartida de Drive (enlace en Paideia, sección de esta semana), llena la diapositiva de tu grupo con:\n\nInformación de tu variable en Vista de Variables (nombre, etiqueta, medida, valores).\nCaptura de la tabla de frecuencias del Paso 4."
   }
 ]
