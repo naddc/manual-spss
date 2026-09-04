@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Calcular variables agrupadas (índices) – Manual de SPSS</title>
+<title>Lab 1: Primer acercamiento a SPSS – Manual de SPSS</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -194,9 +194,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#qué-es-un-índice" id="toc-qué-es-un-índice" class="nav-link active" data-scroll-target="#qué-es-un-índice">1. ¿Qué es un índice?</a></li>
-  <li><a href="#procedimiento" id="toc-procedimiento" class="nav-link" data-scroll-target="#procedimiento">3. Procedimiento</a></li>
-  <li><a href="#opcional-convertir-el-índice-en-niveles" id="toc-opcional-convertir-el-índice-en-niveles" class="nav-link" data-scroll-target="#opcional-convertir-el-índice-en-niveles">4. (Opcional) Convertir el índice en niveles</a></li>
+  <li><a href="#paso-1-descargar-el-archivo" id="toc-paso-1-descargar-el-archivo" class="nav-link active" data-scroll-target="#paso-1-descargar-el-archivo">Paso 1: Descargar el archivo</a></li>
+  <li><a href="#paso-2-abrir-la-base-de-datos-en-spss" id="toc-paso-2-abrir-la-base-de-datos-en-spss" class="nav-link" data-scroll-target="#paso-2-abrir-la-base-de-datos-en-spss">Paso 2: Abrir la base de datos en SPSS</a></li>
+  <li><a href="#paso-3-explorar-la-vista-de-variables" id="toc-paso-3-explorar-la-vista-de-variables" class="nav-link" data-scroll-target="#paso-3-explorar-la-vista-de-variables">Paso 3: Explorar la Vista de Variables</a></li>
+  <li><a href="#paso-4-generar-una-tabla-de-frecuencias" id="toc-paso-4-generar-una-tabla-de-frecuencias" class="nav-link" data-scroll-target="#paso-4-generar-una-tabla-de-frecuencias">Paso 4: Generar una tabla de frecuencias</a></li>
+  <li><a href="#paso-5-entregar" id="toc-paso-5-entregar" class="nav-link" data-scroll-target="#paso-5-entregar">Paso 5: Entregar</a></li>
   </ul>
 </nav>
     </div>
@@ -205,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Calcular variables agrupadas (índices)</h1>
+<h1 class="title">Lab 1: Primer acercamiento a SPSS</h1>
 </div>
 
 
@@ -222,8 +224,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="qué-es-un-índice" class="level2">
-<h2 class="anchored" data-anchor-id="qué-es-un-índice">1. ¿Qué es un índice?</h2>
+<style>
+.carrete-slide img {
+  width: 100%;
+  height: 380px;
+  object-fit: contain;
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 18px;
+  background-size: 55%, 55%;
+}
+</style>
 <div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -234,107 +250,102 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ruta en SPSS: <code>Transformar → Calcular variable…</code><br>
-Expresión: <code>MEAN(i1, i2, i3, i4, i5)</code></p>
+<p>Abre la base recortada, revisa cómo está descrita cada variable en <strong>Vista de Variables</strong>, genera una tabla de frecuencias y pega tus capturas en la presentación de Drive de Paideia.</p>
 </div>
 </div>
-<p>Muchas veces medimos un mismo concepto con <strong>varias preguntas</strong> (ítems), normalmente en escala Likert (1 a 5). Para analizarlo como <strong>una sola variable</strong>, las combinamos en un <strong>índice</strong>.</p>
-<p>Por ejemplo, si mides el <em>conocimiento sobre reciclaje</em> con 5 afirmaciones (<code>i1</code> a <code>i5</code>), puedes crear un <strong>Índice de Conocimiento sobre Reciclaje (<code>ICR</code>)</strong> que resuma esas 5 preguntas en un solo número.</p>
-<div class="callout callout-style-default callout-warning callout-titled" title="OJO: revisa esto antes de calcular">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="paso-1-descargar-el-archivo" class="level2">
+<h2 class="anchored" data-anchor-id="paso-1-descargar-el-archivo">Paso 1: Descargar el archivo</h2>
+<p>Descarga <code>BD_LimaComoVamos2024_recortada.sav</code> desde <strong>Paideia</strong>, sección de esta semana. Guárdalo en una carpeta donde lo puedas ubicar fácilmente.</p>
+</section>
+<section id="paso-2-abrir-la-base-de-datos-en-spss" class="level2">
+<h2 class="anchored" data-anchor-id="paso-2-abrir-la-base-de-datos-en-spss">Paso 2: Abrir la base de datos en SPSS</h2>
+<p>Abre SPSS y carga el archivo descargado (<strong>Archivo → Abrir → Datos…</strong>). Vas a caer en <strong>Vista de Datos</strong>: las columnas son variables, las filas son casos (personas encuestadas), y cada celda es el valor de una persona en una variable.</p>
+<div id="carouselPaso2" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active carrete-slide">
+      <img src="img/lab1/paso2-01.png" alt="Paso 2 - captura 1">
+    </div>
+    <div class="carousel-item carrete-slide">
+      <img src="img/lab1/paso2-02.png" alt="Paso 2 - captura 2">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselPaso2" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselPaso2" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>OJO: revisa esto antes de calcular
-</div>
-</div>
-<div class="callout-body-container callout-body">
+</section>
+<section id="paso-3-explorar-la-vista-de-variables" class="level2">
+<h2 class="anchored" data-anchor-id="paso-3-explorar-la-vista-de-variables">Paso 3: Explorar la Vista de Variables</h2>
+<p>Cambia a la pestaña <strong>Vista de Variables</strong> (abajo a la izquierda). Aquí cada fila describe una variable, no una persona: es la “base de datos de la base de datos”.</p>
+<p>Revisa en Google Slides (enlace en Paideia) la <strong>variable asignada a tu grupo</strong> de la base y revisa estas cuatro columnas:</p>
 <ul>
-<li>Todos los ítems deben estar en la <strong>misma escala</strong> (por ejemplo, todos de 1 a 5).<br>
-</li>
-<li>Todos deben apuntar en la <strong>misma dirección</strong>. Si algún ítem está redactado de forma inversa (donde un valor alto significa lo contrario), <strong>recodifícalo primero</strong> para que un valor alto signifique lo mismo en todos los ítems.</li>
+<li><strong>Nombre</strong>: el nombre corto de la variable.</li>
+<li><strong>Etiqueta</strong>: la pregunta o descripción completa.</li>
+<li><strong>Medida</strong>: si es nominal, ordinal o de escala.</li>
+<li><strong>Valores</strong>: qué significa cada código numérico (ej. 1 = Hombre, 2 = Mujer).</li>
 </ul>
+<div class="callout callout-style-default callout-warning callout-titled" title="OJO">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>OJO
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El código (1, 2, 3…) no tiene un significado matemático en variables nominales u ordinales — es solo una etiqueta. No se puede sacar un promedio de “sexo”.</p>
+</div>
+</div>
+<div id="carouselPaso3" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active carrete-slide">
+      <img src="img/lab1/paso3-01.png" alt="Paso 3 - captura 1">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselPaso3" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselPaso3" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
 </div>
 </section>
-<section id="procedimiento" class="level2">
-<h2 class="anchored" data-anchor-id="procedimiento">3. Procedimiento</h2>
-<p><strong><code>MEAN()</code></strong> calcula el <strong>promedio</strong> de los ítems. El resultado se mantiene en la <strong>misma escala original (1 a 5)</strong>, por lo que es fácil de interpretar.</p>
+<section id="paso-4-generar-una-tabla-de-frecuencias" class="level2">
+<h2 class="anchored" data-anchor-id="paso-4-generar-una-tabla-de-frecuencias">Paso 4: Generar una tabla de frecuencias</h2>
+<p>Ve a <strong>Analizar → Estadísticos descriptivos → Frecuencias</strong>, selecciona la misma variable que revisaste en el Paso 3, y genera la tabla.</p>
+<div id="carouselPaso4" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active carrete-slide">
+      <img src="img/lab1/paso4-01.png" alt="Paso 4 - captura 1">
+    </div>
+    <div class="carousel-item carrete-slide">
+      <img src="img/lab1/paso4-02.png" alt="Paso 4 - captura 2">
+    </div>
+    <div class="carousel-item carrete-slide">
+      <img src="img/lab1/paso4-03.png" alt="Paso 4 - captura 3">
+    </div>
+    <div class="carousel-item carrete-slide">
+      <img src="img/lab1/paso4-04.png" alt="Paso 4 - captura 4">
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselPaso4" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselPaso4" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+</div></section>
+<section id="paso-5-entregar" class="level2">
+<h2 class="anchored" data-anchor-id="paso-5-entregar">Paso 5: Entregar</h2>
+<p>En la presentación compartida de Drive (enlace en Paideia, sección de esta semana), llena la diapositiva de tu grupo con:</p>
 <ol type="1">
-<li>Ve a la ruta <strong><code>Transformar → Calcular variable…</code></strong></li>
-<li>En <strong>“Nombre de variable destino”</strong>, escribe el nombre del índice (por ejemplo, <code>ICR</code>).</li>
-<li>Pulsa <strong>“Tipo y etiqueta…”</strong> y agrega una <strong>etiqueta descriptiva</strong> (por ejemplo, <em>Índice de conocimiento sobre reciclaje</em>).</li>
-<li>En <strong>“Expresión numérica”</strong>, escribe la función adaptando los nombres de tus ítems: <code>MEAN(i1, i2, i3, i4, i5)</code></li>
-<li>Pulsa <strong>“Aceptar”</strong>.</li>
+<li>Información de tu variable en <strong>Vista de Variables</strong> (nombre, etiqueta, medida, valores).</li>
+<li>Captura de la tabla de frecuencias del Paso 4.</li>
 </ol>
-<p>SPSS creará una nueva variable al final de la base. Será de tipo <strong>Numérico</strong> y medida <strong>Escala</strong>.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="¿Por qué MEAN()?">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>¿Por qué MEAN()?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong><code>MEAN()</code></strong> calcula el <strong>promedio</strong> de los ítems. El resultado se mantiene en la <strong>misma escala original (1 a 5)</strong>, por lo que es fácil de interpretar.</p>
-</div>
-</div>
-</section>
-<section id="opcional-convertir-el-índice-en-niveles" class="level2">
-<h2 class="anchored" data-anchor-id="opcional-convertir-el-índice-en-niveles">4. (Opcional) Convertir el índice en niveles</h2>
-<p>Si necesitas una versión <strong>categórica</strong> del índice —por ejemplo, para una tabla cruzada o un chi-cuadrado—, recodifícalo en una variable de niveles (<code>NivelICR</code>):</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Promedio del índice</th>
-<th>Nivel</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1.00 – 2.33</td>
-<td>Bajo</td>
-</tr>
-<tr class="even">
-<td>2.34 – 3.66</td>
-<td>Medio</td>
-</tr>
-<tr class="odd">
-<td>3.67 – 5.00</td>
-<td>Alto</td>
-</tr>
-</tbody>
-</table>
-<p>Usa la ruta <strong><code>Transformar → Recodificar en distintas variables…</code></strong> (ver la sección de <a href="procesamiento.html"><strong>Recodificación</strong></a>). La nueva variable <code>NivelICR</code> debe ser de medida <strong>Ordinal</strong>.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Recuerda">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Recuerda
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Después de recodificar, <strong>define las etiquetas de valores</strong> (1 = “Bajo”, 2 = “Medio”, 3 = “Alto”) para que los números tengan sentido en tus tablas.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="Nota sobre el análisis">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Nota sobre el análisis
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>El índice (<code>ICR</code>, medida Escala) es la variable que usarás en pruebas como la <strong>correlación</strong>; su versión en niveles (<code>NivelICR</code>, medida Ordinal) sirve para <strong>tablas cruzadas</strong> y <strong>chi-cuadrado</strong>. Recuerda que todo el análisis es <strong>asociativo</strong>, no causal.</p>
-</div>
-</div>
 
 
 </section>
