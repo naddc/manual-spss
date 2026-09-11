@@ -112,90 +112,6 @@
     "text": "Bienvenido/a\nEste sitio te guiará paso a paso para aprender a procesar bases de datos y realizar análisis en SPSS, siguiendo la estructura utilizada en nuestras prácticas del curso.\nCada sección reproduce las operaciones que normalmente harías en SPSS, acompañadas de explicaciones, ejemplos y capturas de pantalla."
   },
   {
-    "objectID": "ttest.html",
-    "href": "ttest.html",
-    "title": "Prueba T de Student (muestras independientes)",
-    "section": "",
-    "text": "La prueba T de Student para muestras independientes permite evaluar si la media de una variable numérica difiere entre dos grupos definidos por una variable categórica dicotómica (de dos categorías).\nPor ejemplo: ¿el promedio del índice de conocimiento sobre reciclaje (ICR) es distinto entre hombres y mujeres?\n\n\n\n\n\n*95% de confianza.\n\n\n\n\n\n\nNoteSupuesto\n\n\n\nLa prueba asume que la variable numérica se distribuye de forma aproximadamente normal. Los dos grupos deben ser independientes: cada caso pertenece a un solo grupo, no a ambos."
-  },
-  {
-    "objectID": "ttest.html#uso",
-    "href": "ttest.html#uso",
-    "title": "Prueba T de Student (muestras independientes)",
-    "section": "",
-    "text": "La prueba T de Student para muestras independientes permite evaluar si la media de una variable numérica difiere entre dos grupos definidos por una variable categórica dicotómica (de dos categorías).\nPor ejemplo: ¿el promedio del índice de conocimiento sobre reciclaje (ICR) es distinto entre hombres y mujeres?\n\n\n\n\n\n*95% de confianza.\n\n\n\n\n\n\nNoteSupuesto\n\n\n\nLa prueba asume que la variable numérica se distribuye de forma aproximadamente normal. Los dos grupos deben ser independientes: cada caso pertenece a un solo grupo, no a ambos."
-  },
-  {
-    "objectID": "ttest.html#pasos",
-    "href": "ttest.html#pasos",
-    "title": "Prueba T de Student (muestras independientes)",
-    "section": "Pasos",
-    "text": "Pasos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nAnalizar → Comparar medias y proporciones → Prueba T de muestras independientes…\n\n\n\nVe a la ruta Analizar → Comparar medias y proporciones → Prueba T de muestras independientes…\nEn “Variables de prueba”, coloca la variable numérica (por ejemplo, ICR).\nEn “Variable de agrupación”, coloca la variable categórica dicotómica (por ejemplo, sexo).\nHaz clic en “Definir grupos…”, marca “Utilizar valores especificados” y escribe los dos valores que identifican a cada grupo (por ejemplo, Grupo 1: 0 y Grupo 2: 1). Pulsa “Continuar”.\nPulsa “Aceptar”."
-  },
-  {
-    "objectID": "ttest.html#leyendo-los-resultados",
-    "href": "ttest.html#leyendo-los-resultados",
-    "title": "Prueba T de Student (muestras independientes)",
-    "section": "Leyendo los resultados",
-    "text": "Leyendo los resultados\nLa lectura tiene dos partes:\n1. Revisa la prueba de Levene (igualdad de varianzas). En la tabla, mira la columna “Sig.” de la Prueba de Levene:\n\nSi Sig. &gt; 0.05 → las varianzas son similares → usa la fila “Se asumen varianzas iguales”.\nSi Sig. ≤ 0.05 → las varianzas son distintas → usa la fila “No se asumen varianzas iguales”.\n\n2. Lee el p-value de la prueba t. En la fila que te indicó Levene, lee la significación bilateral (en versiones nuevas de SPSS aparece como “P de dos factores”; en versiones anteriores, como “Sig. (bilateral)”):\n\n\n\nNivel de confianza\np-value\nDecisión\n\n\n\n\n95%\np ≤ 0.05\nSe rechaza H₀ → las medias son diferentes\n\n\n95%\np &gt; 0.05\nNo se rechaza H₀ → no hay diferencia de medias\n\n\n\n3. Compara las medias. Si hay diferencia significativa, mira la tabla “Estadísticas de grupo” para indicar cuál grupo tiene la media más alta.\nEjemplo de interpretación: si comparas el ICR entre hombres y mujeres y obtienes una significación bilateral de 0.03 (≤ 0.05), concluyes que existe una diferencia significativa entre el promedio de conocimiento de ambos grupos; luego, según la tabla de medias, señalas cuál grupo presenta el promedio más alto.\n\n\n\n\n\n\nWarningOJO\n\n\n\n\nLa variable de agrupación debe tener exactamente dos grupos. Si tienes más de dos (por ejemplo, tres carreras), usa ANOVA, no la T de Student.\nLa prueba indica si las medias difieren, no por qué. La interpretación es asociativa, no causal."
-  },
-  {
-    "objectID": "graficos.html",
-    "href": "graficos.html",
-    "title": "Gráficos",
-    "section": "",
-    "text": "El Generador de gráficos es la herramienta principal de SPSS para crear gráficos. Por defecto los gráficos de barras muestran el recuento (frecuencia), pero casi siempre conviene mostrar porcentajes para que las categorías sean comparables."
-  },
-  {
-    "objectID": "graficos.html#abrir-el-generador-de-gráficos",
-    "href": "graficos.html#abrir-el-generador-de-gráficos",
-    "title": "Gráficos",
-    "section": "1. Abrir el Generador de gráficos",
-    "text": "1. Abrir el Generador de gráficos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nGráficos → Generador de gráficos…\n\n\n\nVe a Gráficos → Generador de gráficos…\n\nSi aparece un aviso sobre los niveles de medición, pulsa Aceptar para continuar (o Definir propiedades de variables… si necesitas corregir alguno).\n\nEn la pestaña Galería, elige el tipo de gráfico (por ejemplo, Barras) y arrastra el primer modelo al lienzo de la parte superior.\n\n\n\n\n\n\n\nWarningOJO\n\n\n\nEl Generador de gráficos respeta el nivel de medición de cada variable (nominal, ordinal o escala). Si una variable está mal definida, no te dejará usarla como esperas. Revísalo antes en la Vista de variables."
-  },
-  {
-    "objectID": "graficos.html#gráfico-de-barras-de-una-variable",
-    "href": "graficos.html#gráfico-de-barras-de-una-variable",
-    "title": "Gráficos",
-    "section": "2. Gráfico de barras de una variable",
-    "text": "2. Gráfico de barras de una variable\n\nEn Galería → Barras, arrastra el modelo de barras simples al lienzo.\n\nArrastra tu variable categórica (ej. carrera) al eje X.\n\nPor defecto, el eje Y mostrará el Recuento.\n\nPulsa Aceptar para generar el gráfico.\n\n\n2.1. Cambiar recuento por porcentaje\n\nEn el Generador de gráficos, ubica el panel Propiedades del elemento (a la derecha). Si no aparece, pulsa el botón Propiedades del elemento…\n\nEn Editar propiedades de:, selecciona Barra1.\n\nEn el menú desplegable Estadístico, cambia Recuento por Porcentaje (?).\n\nPulsa Definir parámetro de porcentaje… y elige la base del porcentaje:\n\nTotal general → cada barra es el % sobre todos los casos (lo más común en univariado).\n\nTotal para cada categoría del eje X → cada categoría del eje X suma 100% (útil en barras agrupadas).\n\n\nPulsa Aplicar y luego Aceptar.\n\n\n\n\n\n\n\nWarningOJO\n\n\n\nElegir bien la base del porcentaje es clave: el número cambia por completo según el denominador. Para describir una sola variable usa Total general; para comparar grupos dentro de un gráfico agrupado, usa Total para cada categoría del eje X.\n\n\n\n\n2.2. Mostrar la media u otros estadísticos\nEl mismo menú Estadístico permite mostrar la Media, la Mediana, la Suma, etc., en lugar del recuento, siempre que la variable del eje Y sea numérica (de escala).\nPor ejemplo, para graficar el promedio de horas_rrss_dia según carrera:\n\nArrastra carrera al eje X y horas_rrss_dia al eje Y.\n\nSPSS mostrará automáticamente la Media; cámbiala a Mediana u otro desde Estadístico si lo prefieres.\n\nPulsa Aceptar."
-  },
-  {
-    "objectID": "graficos.html#barras-agrupadas-dos-variables",
-    "href": "graficos.html#barras-agrupadas-dos-variables",
-    "title": "Gráficos",
-    "section": "3. Barras agrupadas (dos variables)",
-    "text": "3. Barras agrupadas (dos variables)\n\nEn Galería → Barras, arrastra el modelo de barras agrupadas al lienzo.\n\nArrastra la primera variable al eje X (ej. carrera).\n\nArrastra la segunda al cuadro Color del clúster (ej. recicla_actualmente).\n\nEn Propiedades del elemento, cambia el Estadístico a Porcentaje y define la base como Total para cada categoría del eje X, de modo que cada grupo del eje X sume 100% y las barras sean comparables.\n\nPulsa Aceptar.\n\n\n\n\n\n\n\nTipOtros gráficos\n\n\n\nEn la Galería también encontrarás histogramas y diagramas de caja, que requieren variables numéricas (de escala) —no uses escalas de Likert ni variables categóricas en ellos—."
-  },
-  {
-    "objectID": "chi2.html",
-    "href": "chi2.html",
-    "title": "Prueba chi-cuadrado de independencia",
-    "section": "",
-    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas (nominales u ordinales). Para esto, compara las frecuencias observadas con las frecuencias esperadas.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
-  },
-  {
-    "objectID": "chi2.html#uso",
-    "href": "chi2.html#uso",
-    "title": "Prueba chi-cuadrado de independencia",
-    "section": "",
-    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas (nominales u ordinales). Para esto, compara las frecuencias observadas con las frecuencias esperadas.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
-  },
-  {
-    "objectID": "chi2.html#pasos",
-    "href": "chi2.html#pasos",
-    "title": "Prueba chi-cuadrado de independencia",
-    "section": "Pasos",
-    "text": "Pasos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nAnalizar → Estadísticos descriptivos → Tablas cruzadas…\nLuego: Estadísticos… → marcar Chi-cuadrado\n\n\n\nVe a la ruta Analizar → Estadísticos descriptivos → Tablas cruzadas… (también puedes generar la tabla con Analizar → Tablas → Tablas personalizadas…).\nColoca una variable en Filas y la otra en Columnas.\nHaz clic en el botón “Estadísticos…”.\nMarca la casilla “Chi-cuadrado” y pulsa “Continuar”.\nPulsa “Aceptar” para generar los resultados."
-  },
-  {
-    "objectID": "chi2.html#leyendo-los-resultados",
-    "href": "chi2.html#leyendo-los-resultados",
-    "title": "Prueba chi-cuadrado de independencia",
-    "section": "Leyendo los resultados",
-    "text": "Leyendo los resultados\nEn la tabla “Pruebas de chi-cuadrado”, fíjate siempre en la fila “Chi-cuadrado de Pearson” y lee el valor de “Significación asintótica (bilateral)”. Ese es tu p-value.\n\n\n\nNivel de confianza\np-value\nDecisión\n\n\n\n\n95%\np ≤ 0.05\nSe rechaza H₀ → hay asociación\n\n\n95%\np &gt; 0.05\nNo se rechaza H₀ → no hay asociación\n\n\n\nEjemplo de interpretación: si cruzas zona de Lima y nivel de conocimiento sobre reciclaje y obtienes una significación de 0.012 (≤ 0.05), rechazas H₀ y concluyes que existe una asociación entre la zona de residencia y el nivel de conocimiento. Si obtienes 0.480 (&gt; 0.05), concluyes que no se encontró asociación entre ambas.\n\n\n\n\n\n\nWarningOJO\n\n\n\n\nAmbas variables deben ser categóricas (nominales u ordinales). Si tienes una variable numérica, primero recodifícala en niveles.\nRevisa la nota al pie de la tabla: si SPSS indica que varias casillas tienen un recuento esperado menor que 5, la prueba pierde validez. En ese caso, agrupa categorías para reducir el número de casillas.\nEl chi-cuadrado indica si hay asociación, no su dirección ni su causa. La interpretación es asociativa, nunca causal."
-  },
-  {
     "objectID": "lab1.html",
     "href": "lab1.html",
     "title": "Lab 1: Primer acercamiento a SPSS",
@@ -236,6 +152,153 @@
     "title": "Lab 1: Primer acercamiento a SPSS",
     "section": "Paso 5: Entregar",
     "text": "Paso 5: Entregar\nEn la presentación compartida de Drive (enlace en Paideia, sección de esta semana), llena la diapositiva de tu grupo con:\n\nInformación de tu variable en Vista de Variables (nombre, etiqueta, medida, valores).\nCaptura de la tabla de frecuencias del Paso 4."
+  },
+  {
+    "objectID": "chi2.html",
+    "href": "chi2.html",
+    "title": "Prueba chi-cuadrado de independencia",
+    "section": "",
+    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas (nominales u ordinales). Para esto, compara las frecuencias observadas con las frecuencias esperadas.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
+  },
+  {
+    "objectID": "chi2.html#uso",
+    "href": "chi2.html#uso",
+    "title": "Prueba chi-cuadrado de independencia",
+    "section": "",
+    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas (nominales u ordinales). Para esto, compara las frecuencias observadas con las frecuencias esperadas.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
+  },
+  {
+    "objectID": "chi2.html#pasos",
+    "href": "chi2.html#pasos",
+    "title": "Prueba chi-cuadrado de independencia",
+    "section": "Pasos",
+    "text": "Pasos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nAnalizar → Estadísticos descriptivos → Tablas cruzadas…\nLuego: Estadísticos… → marcar Chi-cuadrado\n\n\n\nVe a la ruta Analizar → Estadísticos descriptivos → Tablas cruzadas… (también puedes generar la tabla con Analizar → Tablas → Tablas personalizadas…).\nColoca una variable en Filas y la otra en Columnas.\nHaz clic en el botón “Estadísticos…”.\nMarca la casilla “Chi-cuadrado” y pulsa “Continuar”.\nPulsa “Aceptar” para generar los resultados."
+  },
+  {
+    "objectID": "chi2.html#leyendo-los-resultados",
+    "href": "chi2.html#leyendo-los-resultados",
+    "title": "Prueba chi-cuadrado de independencia",
+    "section": "Leyendo los resultados",
+    "text": "Leyendo los resultados\nEn la tabla “Pruebas de chi-cuadrado”, fíjate siempre en la fila “Chi-cuadrado de Pearson” y lee el valor de “Significación asintótica (bilateral)”. Ese es tu p-value.\n\n\n\nNivel de confianza\np-value\nDecisión\n\n\n\n\n95%\np ≤ 0.05\nSe rechaza H₀ → hay asociación\n\n\n95%\np &gt; 0.05\nNo se rechaza H₀ → no hay asociación\n\n\n\nEjemplo de interpretación: si cruzas zona de Lima y nivel de conocimiento sobre reciclaje y obtienes una significación de 0.012 (≤ 0.05), rechazas H₀ y concluyes que existe una asociación entre la zona de residencia y el nivel de conocimiento. Si obtienes 0.480 (&gt; 0.05), concluyes que no se encontró asociación entre ambas.\n\n\n\n\n\n\nWarningOJO\n\n\n\n\nAmbas variables deben ser categóricas (nominales u ordinales). Si tienes una variable numérica, primero recodifícala en niveles.\nRevisa la nota al pie de la tabla: si SPSS indica que varias casillas tienen un recuento esperado menor que 5, la prueba pierde validez. En ese caso, agrupa categorías para reducir el número de casillas.\nEl chi-cuadrado indica si hay asociación, no su dirección ni su causa. La interpretación es asociativa, nunca causal."
+  },
+  {
+    "objectID": "graficos.html",
+    "href": "graficos.html",
+    "title": "Gráficos",
+    "section": "",
+    "text": "El Generador de gráficos es la herramienta principal de SPSS para crear gráficos. Por defecto los gráficos de barras muestran el recuento (frecuencia), pero casi siempre conviene mostrar porcentajes para que las categorías sean comparables."
+  },
+  {
+    "objectID": "graficos.html#abrir-el-generador-de-gráficos",
+    "href": "graficos.html#abrir-el-generador-de-gráficos",
+    "title": "Gráficos",
+    "section": "1. Abrir el Generador de gráficos",
+    "text": "1. Abrir el Generador de gráficos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nGráficos → Generador de gráficos…\n\n\n\nVe a Gráficos → Generador de gráficos…\n\nSi aparece un aviso sobre los niveles de medición, pulsa Aceptar para continuar (o Definir propiedades de variables… si necesitas corregir alguno).\n\nEn la pestaña Galería, elige el tipo de gráfico (por ejemplo, Barras) y arrastra el primer modelo al lienzo de la parte superior.\n\n\n\n\n\n\n\nWarningOJO\n\n\n\nEl Generador de gráficos respeta el nivel de medición de cada variable (nominal, ordinal o escala). Si una variable está mal definida, no te dejará usarla como esperas. Revísalo antes en la Vista de variables."
+  },
+  {
+    "objectID": "graficos.html#gráfico-de-barras-de-una-variable",
+    "href": "graficos.html#gráfico-de-barras-de-una-variable",
+    "title": "Gráficos",
+    "section": "2. Gráfico de barras de una variable",
+    "text": "2. Gráfico de barras de una variable\n\nEn Galería → Barras, arrastra el modelo de barras simples al lienzo.\n\nArrastra tu variable categórica (ej. carrera) al eje X.\n\nPor defecto, el eje Y mostrará el Recuento.\n\nPulsa Aceptar para generar el gráfico.\n\n\n2.1. Cambiar recuento por porcentaje\n\nEn el Generador de gráficos, ubica el panel Propiedades del elemento (a la derecha). Si no aparece, pulsa el botón Propiedades del elemento…\n\nEn Editar propiedades de:, selecciona Barra1.\n\nEn el menú desplegable Estadístico, cambia Recuento por Porcentaje (?).\n\nPulsa Definir parámetro de porcentaje… y elige la base del porcentaje:\n\nTotal general → cada barra es el % sobre todos los casos (lo más común en univariado).\n\nTotal para cada categoría del eje X → cada categoría del eje X suma 100% (útil en barras agrupadas).\n\n\nPulsa Aplicar y luego Aceptar.\n\n\n\n\n\n\n\nWarningOJO\n\n\n\nElegir bien la base del porcentaje es clave: el número cambia por completo según el denominador. Para describir una sola variable usa Total general; para comparar grupos dentro de un gráfico agrupado, usa Total para cada categoría del eje X.\n\n\n\n\n2.2. Mostrar la media u otros estadísticos\nEl mismo menú Estadístico permite mostrar la Media, la Mediana, la Suma, etc., en lugar del recuento, siempre que la variable del eje Y sea numérica (de escala).\nPor ejemplo, para graficar el promedio de horas_rrss_dia según carrera:\n\nArrastra carrera al eje X y horas_rrss_dia al eje Y.\n\nSPSS mostrará automáticamente la Media; cámbiala a Mediana u otro desde Estadístico si lo prefieres.\n\nPulsa Aceptar."
+  },
+  {
+    "objectID": "graficos.html#barras-agrupadas-dos-variables",
+    "href": "graficos.html#barras-agrupadas-dos-variables",
+    "title": "Gráficos",
+    "section": "3. Barras agrupadas (dos variables)",
+    "text": "3. Barras agrupadas (dos variables)\n\nEn Galería → Barras, arrastra el modelo de barras agrupadas al lienzo.\n\nArrastra la primera variable al eje X (ej. carrera).\n\nArrastra la segunda al cuadro Color del clúster (ej. recicla_actualmente).\n\nEn Propiedades del elemento, cambia el Estadístico a Porcentaje y define la base como Total para cada categoría del eje X, de modo que cada grupo del eje X sume 100% y las barras sean comparables.\n\nPulsa Aceptar.\n\n\n\n\n\n\n\nTipOtros gráficos\n\n\n\nEn la Galería también encontrarás histogramas y diagramas de caja, que requieren variables numéricas (de escala) —no uses escalas de Likert ni variables categóricas en ellos—."
+  },
+  {
+    "objectID": "ttest.html",
+    "href": "ttest.html",
+    "title": "Prueba T de Student (muestras independientes)",
+    "section": "",
+    "text": "La prueba T de Student para muestras independientes permite evaluar si la media de una variable numérica difiere entre dos grupos definidos por una variable categórica dicotómica (de dos categorías).\nPor ejemplo: ¿el promedio del índice de conocimiento sobre reciclaje (ICR) es distinto entre hombres y mujeres?\n\n\n\n\n\n*95% de confianza.\n\n\n\n\n\n\nNoteSupuesto\n\n\n\nLa prueba asume que la variable numérica se distribuye de forma aproximadamente normal. Los dos grupos deben ser independientes: cada caso pertenece a un solo grupo, no a ambos."
+  },
+  {
+    "objectID": "ttest.html#uso",
+    "href": "ttest.html#uso",
+    "title": "Prueba T de Student (muestras independientes)",
+    "section": "",
+    "text": "La prueba T de Student para muestras independientes permite evaluar si la media de una variable numérica difiere entre dos grupos definidos por una variable categórica dicotómica (de dos categorías).\nPor ejemplo: ¿el promedio del índice de conocimiento sobre reciclaje (ICR) es distinto entre hombres y mujeres?\n\n\n\n\n\n*95% de confianza.\n\n\n\n\n\n\nNoteSupuesto\n\n\n\nLa prueba asume que la variable numérica se distribuye de forma aproximadamente normal. Los dos grupos deben ser independientes: cada caso pertenece a un solo grupo, no a ambos."
+  },
+  {
+    "objectID": "ttest.html#pasos",
+    "href": "ttest.html#pasos",
+    "title": "Prueba T de Student (muestras independientes)",
+    "section": "Pasos",
+    "text": "Pasos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nAnalizar → Comparar medias y proporciones → Prueba T de muestras independientes…\n\n\n\nVe a la ruta Analizar → Comparar medias y proporciones → Prueba T de muestras independientes…\nEn “Variables de prueba”, coloca la variable numérica (por ejemplo, ICR).\nEn “Variable de agrupación”, coloca la variable categórica dicotómica (por ejemplo, sexo).\nHaz clic en “Definir grupos…”, marca “Utilizar valores especificados” y escribe los dos valores que identifican a cada grupo (por ejemplo, Grupo 1: 0 y Grupo 2: 1). Pulsa “Continuar”.\nPulsa “Aceptar”."
+  },
+  {
+    "objectID": "ttest.html#leyendo-los-resultados",
+    "href": "ttest.html#leyendo-los-resultados",
+    "title": "Prueba T de Student (muestras independientes)",
+    "section": "Leyendo los resultados",
+    "text": "Leyendo los resultados\nLa lectura tiene dos partes:\n1. Revisa la prueba de Levene (igualdad de varianzas). En la tabla, mira la columna “Sig.” de la Prueba de Levene:\n\nSi Sig. &gt; 0.05 → las varianzas son similares → usa la fila “Se asumen varianzas iguales”.\nSi Sig. ≤ 0.05 → las varianzas son distintas → usa la fila “No se asumen varianzas iguales”.\n\n2. Lee el p-value de la prueba t. En la fila que te indicó Levene, lee la significación bilateral (en versiones nuevas de SPSS aparece como “P de dos factores”; en versiones anteriores, como “Sig. (bilateral)”):\n\n\n\nNivel de confianza\np-value\nDecisión\n\n\n\n\n95%\np ≤ 0.05\nSe rechaza H₀ → las medias son diferentes\n\n\n95%\np &gt; 0.05\nNo se rechaza H₀ → no hay diferencia de medias\n\n\n\n3. Compara las medias. Si hay diferencia significativa, mira la tabla “Estadísticas de grupo” para indicar cuál grupo tiene la media más alta.\nEjemplo de interpretación: si comparas el ICR entre hombres y mujeres y obtienes una significación bilateral de 0.03 (≤ 0.05), concluyes que existe una diferencia significativa entre el promedio de conocimiento de ambos grupos; luego, según la tabla de medias, señalas cuál grupo presenta el promedio más alto.\n\n\n\n\n\n\nWarningOJO\n\n\n\n\nLa variable de agrupación debe tener exactamente dos grupos. Si tienes más de dos (por ejemplo, tres carreras), usa ANOVA, no la T de Student.\nLa prueba indica si las medias difieren, no por qué. La interpretación es asociativa, no causal."
+  },
+  {
+    "objectID": "lab2.html",
+    "href": "lab2.html",
+    "title": "Lab 2: Cruzar variables — tablas y gráficos personalizados",
+    "section": "",
+    "text": "TipTL;DR\n\n\n\nCruza las dos variables de tu grupo en una tabla personalizada, elige % de columna, agrega el total como referencia y arma un gráfico de barras con esos mismos porcentajes."
+  },
+  {
+    "objectID": "lab2.html#consigna",
+    "href": "lab2.html#consigna",
+    "title": "Lab 2: Cruzar variables — tablas y gráficos personalizados",
+    "section": "Consigna",
+    "text": "Consigna\nSon un equipo de comunicadores. Una app de taxis los contrata para pensar una campaña sobre la movilidad en Lima, sobre los problemas reales de cómo nos movemos. A tu grupo le tocó un cruce de dos variables."
+  },
+  {
+    "objectID": "lab2.html#paso-1-empieza-por-la-variable-sola",
+    "href": "lab2.html#paso-1-empieza-por-la-variable-sola",
+    "title": "Lab 2: Cruzar variables — tablas y gráficos personalizados",
+    "section": "Paso 1: Empieza por la variable sola",
+    "text": "Paso 1: Empieza por la variable sola\nAntes de cruzar, mira tu variable principal sola con una tabla de frecuencias, como en el Lab 1: Analizar → Estadísticos descriptivos → Frecuencias. Esos datos generales son el punto de partida, pero falta adentrarnos en la información y conocer más."
+  },
+  {
+    "objectID": "lab2.html#paso-2-abre-tablas-personalizadas",
+    "href": "lab2.html#paso-2-abre-tablas-personalizadas",
+    "title": "Lab 2: Cruzar variables — tablas y gráficos personalizados",
+    "section": "Paso 2: Abre Tablas personalizadas",
+    "text": "Paso 2: Abre Tablas personalizadas\nVe a Analizar → Tablas → Tablas personalizadas. Verás que se abre un lienzo y la lista de variables está a la izquierda, con un espacio grande a la derecha para construir la tabla."
+  },
+  {
+    "objectID": "lab2.html#paso-3-coloca-tus-dos-variables",
+    "href": "lab2.html#paso-3-coloca-tus-dos-variables",
+    "title": "Lab 2: Cruzar variables — tablas y gráficos personalizados",
+    "section": "Paso 3: Coloca tus dos variables",
+    "text": "Paso 3: Coloca tus dos variables\nRevisa la diapositiva de tu grupo (Google Slides, enlace en Paideia).\nArrastra al lienzo tus dos variables:\n\nLa variable con la que comparas grupos (sexo, NSE, zona, rango de edad) va en Columnas.\nLa variable que mides dentro de cada grupo (satisfacción, forma de pago, qué incomoda…) va en Filas.\n\n\n\n\n\n\n\nNote¿Cuál va en columnas?\n\n\n\nPor convención, la variable de comparación suele ir arriba, en columnas; la que mides, suele ir en filas."
+  },
+  {
+    "objectID": "lab2.html#paso-4-elige-el-porcentaje-correcto",
+    "href": "lab2.html#paso-4-elige-el-porcentaje-correcto",
+    "title": "Lab 2: Cruzar variables — tablas y gráficos personalizados",
+    "section": "Paso 4: Elige el porcentaje correcto",
+    "text": "Paso 4: Elige el porcentaje correcto\nPor defecto SPSS muestra recuentos (números absolutos) pero necesitamos comparar porcentajes para interpretar adecuadamente las magnitudes.\nSelecciona la variable de columnas en el lienzo y agrega el estadístico de resumen en el botón en la esquina izquierda inferior (“Estadísticas de resumen”). Hay tres opciones:\n\n% de columna — cada columna suma 100%. Cada grupo se vuelve su propio 100%, así comparas entre grupos. Elige esta para comparar entre grupos por la variable de columnas. Dentro del menú, selecciona % de N columnas válidas\n% de fila — cada fila suma 100%. Esta opción nos da la composición interna de cada categoría.\n% de tabla — cada casilla sobre el total general. Se usa poco.\n\n\n\n\n\n\n\nImportantLa regla\n\n\n\nEl 100% va en el grupo que quieres comparar. Si comparas por sexo y el sexo está en columnas, pide % de columna. Así, cada sexo suma 100% y puedes decir “de las mujeres, X%; de los hombres, Y%”.\n\n\nCuando selecciones, haz click en Aplicar a selección y luego Cerrar."
+  },
+  {
+    "objectID": "lab2.html#paso-5-agrega-el-total-como-referencia",
+    "href": "lab2.html#paso-5-agrega-el-total-como-referencia",
+    "title": "Lab 2: Cruzar variables — tablas y gráficos personalizados",
+    "section": "Paso 5: Agrega el total como referencia",
+    "text": "Paso 5: Agrega el total como referencia\nHaz click en la variable de filas y luego en Categorías y totales marca Total. La columna (o fila) de total te da el dato general (el mismo de la variable sola del Paso 1)."
+  },
+  {
+    "objectID": "lab2.html#paso-6-haz-el-gráfico-de-barras",
+    "href": "lab2.html#paso-6-haz-el-gráfico-de-barras",
+    "title": "Lab 2: Cruzar variables — tablas y gráficos personalizados",
+    "section": "Paso 6: Haz el gráfico de barras",
+    "text": "Paso 6: Haz el gráfico de barras\nVe a Gráficos → Generador de gráficos y elige barras agrupadas. Pon la variable de comparación en el eje X y la otra como agrupación.\n\n\n\n\n\n\nWarningOJO\n\n\n\nEl gráfico debe mostrar los mismos porcentajes de columna de tu tabla, no los recuentos. Con porcentajes, las brechas entre grupos saltan a la vista."
+  },
+  {
+    "objectID": "lab2.html#paso-7",
+    "href": "lab2.html#paso-7",
+    "title": "Lab 2: Cruzar variables — tablas y gráficos personalizados",
+    "section": "Paso 7",
+    "text": "Paso 7\nMira tu tabla y tu gráfico y discute en grupo: ¿qué aparece al cruzar que no se veía en la variable sola?\nEn la diapositiva de tu grupo (Drive, enlace en Paideia) pega:\n\nTu tabla personalizada con % de columna y total.\nTu gráfico de barras."
   },
   {
     "objectID": "import.html",
