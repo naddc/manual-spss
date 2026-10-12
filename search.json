@@ -112,6 +112,125 @@
     "text": "Bienvenido/a\nEste sitio te guiará paso a paso para aprender a procesar bases de datos y realizar análisis en SPSS, siguiendo la estructura utilizada en nuestras prácticas del curso.\nCada sección reproduce las operaciones que normalmente harías en SPSS, acompañadas de explicaciones, ejemplos y capturas de pantalla."
   },
   {
+    "objectID": "lab3.html",
+    "href": "lab3.html",
+    "title": "Lab 3: Ejercicios para el parcial",
+    "section": "",
+    "text": "Esta página contiene ejercicios de análisis estadístico con SPSS usando datos reales del INEI."
+  },
+  {
+    "objectID": "lab3.html#consigna",
+    "href": "lab3.html#consigna",
+    "title": "Lab 3: Ejercicios para el parcial",
+    "section": "Consigna",
+    "text": "Consigna\nSon un equipo de comunicadores. La Asociación de Medios Regionales (organización ficticia) los contrata para preparar una campaña que recupere la confianza del público en la prensa, la radio y la televisión. Antes de diseñarla, necesita un diagnóstico: ¿cuánto confía la gente en los medios? ¿Más o menos que en otras instituciones? ¿Hay diferencias entre jóvenes y adultos mayores?\nTrabajarán con datos de la Encuesta Nacional de Hogares (ENAHO) 2025, módulo 85: Gobernabilidad, democracia y transparencia, del INEI.\n\nBases\n\nconfianza_peru.sav: para los ejercicios 2 y 3\n\n\n\n\n\n\n\nWarningOJO\n\n\n\nLa base es una submuestra de práctica de 600 personas de 18 años a más. Los resultados describen a las 600 personas de la base, no al Perú. Por eso, la interpretación debe decir “el 52% de las personas encuestadas…”, no “el 52% de los peruanos…”."
+  },
+  {
+    "objectID": "lab3.html#ejercicio-1-diseñar-una-base-de-datos",
+    "href": "lab3.html#ejercicio-1-diseñar-una-base-de-datos",
+    "title": "Lab 3: Ejercicios para el parcial",
+    "section": "Ejercicio 1: Diseñar una base de datos",
+    "text": "Ejercicio 1: Diseñar una base de datos\n\nAdemás del diagnóstico con datos del INEI, la Asociación de Medios Regionales quiere aplicar su propia encuesta breve sobre cómo se informan las personas y cuánto confían en los medios. Diseña en SPSS la base de datos donde se registrarán las respuestas.\nExplica cómo se estructura tu base: cuál es la unidad de análisis y qué variables recogerías, con su tipo, medida, etiquetas y valores perdidos.\n\n\nPaso 1: Define la unidad de análisis y las variables\nAntes de abrir SPSS, decide a quién representa cada fila (la unidad de análisis) y qué necesita saber la Asociación. Elige entre 8 y 10 variables. Incluye al menos:\n\nun identificador (id);\ndos variables de perfil (por ejemplo, sexo y edad);\nuna variable nominal, una ordinal y una de escala;\nuna pregunta con la opción “No sabe” o “Prefiero no responder”.\n\n\n\nPaso 2: Crea las variables en la Vista de Variables\nAbre SPSS (Archivo → Nuevo → Datos) y ve a la pestaña Vista de Variables. Cada fila es una variable. Completa estas columnas:\n\nNombre: corto, sin espacios ni tildes (ej. conf_prensa).\nTipo: Numérico. Las categorías se guardan como números con etiquetas, no como texto.\nEtiqueta: la pregunta o una descripción clara (ej. Confianza en la prensa escrita).\nValores: el significado de cada código (ej. 1 = Nada, 2 = Poco…). Si tienes dudas, revisa cómo definir etiquetas de valores.\nPerdidos: declara el código de “No sabe” o “Prefiero no responder” en Valores perdidos discretos en la columna “Perdidos”.\nMedida: Nominal, Ordinal o Escala, según la variable.\n\n\n\n\n\n\n\nWarningOJO: ¿por qué importa declarar los perdidos?\n\n\n\nSi el código de “No sabe” (por ejemplo, 5) no está declarado como perdido, SPSS lo trata como si fuera una opción más. Si estás trabajando con una variable de escala, SPSS interpretaría que es la categoría de mayor jerarquía.\n\n\n\n\nPaso 3: Ingresa casos de prueba\nVe a la pestaña Vista de Datos e ingresa cinco casos ficticios: cada fila es una persona encuestada y cada columna, una variable. Activa Ver → Etiquetas de valor, o pulsa el botón  de la barra de herramientas, para comprobar que los códigos muestran su etiqueta.\n\n\nPaso 4: Explica la estructura de tu base\nEscribe una explicación breve: cuál es la unidad de análisis, cuántas variables tiene tu base, y qué tipo y medida tiene cada una y por qué. Luego compárala con el ejemplo de Ver respuestas.\n\n\n\n\n\n\nNoteVer respuestas\n\n\n\n\n\nNo hay una sola respuesta correcta. Cada uno puede elegir sus propias preguntas. Este es un ejemplo de una base simple que cumple con lo pedido. Puedes descargarla: ejemplo_base_medios.sav.\nUnidad de análisis: la persona encuestada. Cada fila es una persona y cada columna, una variable.\n\n\n\n\n\n\n\n\n\n\nNombre\nEtiqueta\nValores\nPerdidos\nMedida\n\n\n\n\nid\nIdentificador de la persona\n1, 2, 3…\n—\nNominal\n\n\nsexo\nSexo\n1 = Hombre, 2 = Mujer, 3 = Otro, 9 = Prefiero no responder\n9\nNominal\n\n\nedad\nEdad en años cumplidos\nnúmero\n—\nEscala\n\n\nmedio_principal\nMedio por el que más se informa\n1 = Televisión, 2 = Radio, 3 = Prensa escrita, 4 = Redes sociales, 5 = Portales de noticias web, 6 = Otro\n—\nNominal\n\n\nhoras_noticias\nHoras al día que dedica a informarse\nnúmero\n—\nEscala\n\n\nconf_prensa\nConfianza en la prensa escrita\n1 = Nada, 2 = Poco, 3 = Suficiente, 4 = Bastante, 5 = No sabe\n5\nOrdinal\n\n\nconf_radiotv\nConfianza en la radio o televisión\nigual que arriba\n5\nOrdinal\n\n\nconf_redes\nConfianza en la información de redes sociales\nigual que arriba\n5\nOrdinal\n\n\nverifica\nFrecuencia con que verifica una noticia antes de compartirla\n1 = Nunca, 2 = Pocas veces, 3 = Muchas veces, 4 = Siempre\n—\nOrdinal\n\n\ncomparte\nCompartió alguna noticia en la última semana\n1 = Sí, 2 = No\n—\nNominal\n\n\n\nTodas las variables son de tipo Numérico.\nEjemplo de explicación de la estructura\n\nLa base registra a cada persona encuestada en una fila (unidad de análisis: la persona) y tiene 10 variables. Las variables de categorías sin orden, como sexo, medio_principal y comparte, son nominales. Las que tienen un orden, como las de confianza y verifica, son ordinales. edad y horas_noticias son de escala porque registran cantidades. En sexo y en las preguntas de confianza, los códigos de “Prefiero no responder” (9) y “No sabe” (5) están declarados como perdidos para que no alteren los porcentajes válidos ni los promedios."
+  },
+  {
+    "objectID": "lab3.html#ejercicio-2-informe-descriptivo",
+    "href": "lab3.html#ejercicio-2-informe-descriptivo",
+    "title": "Lab 3: Ejercicios para el parcial",
+    "section": "Ejercicio 2: Informe descriptivo",
+    "text": "Ejercicio 2: Informe descriptivo\n\nCon confianza_peru.sav, redacta un informe descriptivo para la Asociación de Medios Regionales sobre la confianza en los medios. Usa tablas de frecuencias, tablas bivariadas y gráficos. Preguntas guía:\n\nSi presentaras los resultados a la Asociación, ¿qué aspectos destacarías como fortalezas y cuáles como alertas para los medios?\n¿Qué recomendaciones incluirías al final del informe, basadas en las cifras?\n\nCada afirmación del informe debe llevar su número.\n\n\nPaso 1: Tablas de frecuencias\nVe a Analizar → Estadísticos descriptivos → Frecuencias, pasa conf_prensa y conf_radiotv a la derecha y pulsa Aceptar.\n\n\n\n\n\n\nWarningOJO: Porcentaje vs. Porcentaje válido\n\n\n\nPorcentaje usa como base a las 600 personas, incluidas las que respondieron “No sabe”. Porcentaje válido usa como base solo a quienes dieron una opinión. Para hablar de la confianza de quienes opinaron, usa el porcentaje válido. Revisa también cuántas personas respondieron “No sabe”, pues ese dato también es un hallazgo.\n\n\n\n\nPaso 2: Compara los medios con otras instituciones\n\nVe a Analizar → Estadísticos descriptivos → Descriptivos y pasa las ocho variables de confianza a la derecha.\nPulsa Opciones. En Orden de visualización, marca Medias descendentes. Continuar y Aceptar.\nLa tabla ordena las instituciones de mayor a menor confianza promedio. ¿En qué puesto quedan la radio o televisión y la prensa escrita?\n\n\n\nPaso 3: Tablas bivariadas\nVe a Analizar → Tablas → Tablas personalizadas (ver Tablas personalizadas) y arma dos tablas:\n\nconf_radiotv en Filas y nivel_educ en Columnas.\nconf_prensa en Filas y area en Columnas.\n\nEn las dos, selecciona la variable de filas, pulsa Estadísticos de resumen y elige % de N columnas válidas. Luego, agrega el Total desde Categorías y totales. Así, cada grupo suma 100% (en sentido vertical) y puedes comparar entre grupos.\n\n\n\n\n\n\nTipVer video\n\n\n\n\n\n\n\nVideo\nTabla bivariada en Tablas personalizadas\n\n\n\n\n\n\n\nPaso 4: ¿Qué gráfico sirve para qué?\nElige el gráfico según cuántas variables quieres mostrar y de qué tipo son (ver Gráficos):\n\n\n\n\n\n\n\n\n\nGráfico\nVariables\nPara qué sirve\nEjemplo con esta base\n\n\n\n\nBarras simples\nUna categórica (nominal u ordinal)\nMostrar cómo se reparten las respuestas entre categorías\nConfianza en la radio o televisión\n\n\nBarras apiladas\nDos categóricas\nComparar la composición de cada grupo: cada barra suma 100%\nConfianza en la radio o televisión según nivel educativo\n\n\nHistograma\nUna numérica (escala)\nVer la forma de la distribución: dónde se concentran los casos y qué tan dispersos están\nEdad\n\n\nBoxplot\nUna numérica (escala) según una categórica\nComparar la mediana, la dispersión y los valores atípicos entre grupos\nEdad según confianza en la prensa escrita\n\n\n\n\n\n\n\n\n\nWarningOJO\n\n\n\nEl histograma y el boxplot miden una variable numérica (de escala), como edad. Una pregunta tipo Likert, como conf_radiotv, nunca va como la variable que se mide: para describirla, usa barras. En el boxplot, una Likert sí puede ir en el eje X para formar los grupos, como en “edad según confianza en la prensa escrita”: ahí la variable que se mide sigue siendo edad.\n\n\n\n\nPaso 5: Haz los gráficos\nTodos se hacen en Gráficos → Generador de gráficos, pestaña Galería.\nBarras simples\n\nElige Barras y arrastra Barras simples al lienzo.\nArrastra conf_radiotv al eje X.\nEn Propiedades del elemento, cambia en Estadísticos a Porcentaje y pulsa Aceptar.\n\n\n\n\n\n\n\nTipVer video\n\n\n\n\n\n\n\nVideo\nBarras simples en el Generador de gráficos\n\n\n\n\n\nBarras apiladas\n\nElige Barras y arrastra Barras apiladas al lienzo.\nArrastra nivel_educ al eje X y conf_radiotv al cuadro Pila: establecer color.\nEn Propiedades del elemento, cambia en Estadísticos de Recuento a Porcentaje. Pulsa Establecer parámetros y elige Total para cada categoría del eje X, para que cada barra sume 100%. Continuar y Aplicar.\nSi los colores quedan en orden invertido (Nada arriba y Bastante abajo): en Propiedades del elemento, en Editar propiedades de, selecciona GrupoColor (Barras1). En Categorías, cambia la Dirección del orden a Descendente.\nPulsa Aceptar.\n\n\n\n\n\n\n\nTipVer video\n\n\n\n\n\n\n\nVideo\nBarras apiladas en el Generador de gráficos\n\n\n\n\n\nHistograma\n\nElige Histograma y arrastra Histograma simple al lienzo.\nArrastra edad al eje X. Aceptar.\n\n\n\n\n\n\n\nTipVer video\n\n\n\n\n\n\n\nVideo\nHistograma en el Generador de gráficos\n\n\n\n\n\nBoxplot\n\nElige Diagrama de caja y arrastra Diagrama de caja simple al lienzo.\nArrastra conf_prensa al eje X y edad al eje Y. Aceptar.\n\n\n\n\n\n\n\nTipVer video\n\n\n\n\n\n\n\nVideo\nBoxplot en el Generador de gráficos\n\n\n\n\n\n\n\nPaso 6: Redacta el informe\nOrganízalo en tres partes:\n\nHallazgos principales (tres o cuatro, cada uno con su cifra)\nFortalezas y alertas para los medios\nRecomendaciones para la campaña\n\n\n\n\n\n\n\nWarningOJO\n\n\n\n\nEmplea lenguaje asociativo. Por ejemplo, “quienes tienen educación superior universitaria confían menos”, en lugar de “la educación determina la confianza”.\nDiferencia el objetivo de la campaña (qué cambio busca) del producto (la pieza o el medio que usarás).\nAntes de afirmar algo, revisa cuántos casos hay detrás. Un porcentaje de un grupo con muy pocos casos no sostiene una conclusión.\n\n\n\n\n\n\n\n\n\nNoteVer respuestas\n\n\n\n\n\nEl informe es de redacción libre, pero tus cifras deben coincidir con estas.\nPaso 1. Frecuencias (porcentaje válido)\n\n\n\n\nNada\nPoco\nSuficiente\nBastante\nNo sabe (de 600)\n\n\n\n\nPrensa escrita\n52.0%\n38.1%\n8.4%\n1.5%\n52 (8.7%)\n\n\nRadio o televisión\n36.6%\n47.6%\n13.6%\n2.1%\n35 (5.8%)\n\n\n\nConfían “suficiente” o “bastante”: 9.9% en la prensa escrita y 15.8% en la radio o televisión.\nPaso 2. Ranking por media\n\n\n\nPuesto\nInstitución\nMedia\n\n\n\n\n1\nRENIEC\n2.32\n\n\n2\nRadio o televisión\n1.81\n\n\n3\nPolicía Nacional\n1.69\n\n\n4\nJNE\n1.67\n\n\n5\nMunicipalidad distrital\n1.67\n\n\n6\nPrensa escrita\n1.59\n\n\n7\nPartidos políticos\n1.27\n\n\n8\nCongreso\n1.26\n\n\n\nPaso 3. Tablas bivariadas (% de columna)\nConfianza en la radio o televisión según nivel educativo:\n\n\n\n\n\n\n\n\n\n\n\nHasta primaria (n=176)\nSecundaria (n=225)\nSup. no universitaria (n=62)\nSup. universitaria (n=102)\n\n\n\n\nNada\n40.9%\n34.7%\n40.3%\n31.4%\n\n\nPoco\n40.9%\n49.8%\n43.5%\n56.9%\n\n\nSuficiente\n15.3%\n12.9%\n14.5%\n11.8%\n\n\nBastante\n2.8%\n2.7%\n1.6%\n0.0%\n\n\n\nConfianza en la prensa escrita según área:\n\n\n\n\nUrbano (n=391)\nRural (n=157)\n\n\n\n\nNada\n51.2%\n54.1%\n\n\nPoco\n38.6%\n36.9%\n\n\nSuficiente\n9.5%\n5.7%\n\n\nBastante\n0.8%\n3.2%\n\n\n\nPaso 5. Gráficos\nTus gráficos de SPSS deben mostrar lo mismo que estos, aunque se vean distintos.\n\n\n\n\nAlgunos hallazgos que se pueden señalar…\n\nBarras: “Poco” es la respuesta más frecuente (47.6%) mientras que un pequeño porcentaje confía “bastante” (2.1%).\nBarras apiladas: quienes tienen educación superior universitaria responden más “poco” (56.9%) y menos “nada” (31.4%), pero también menos “suficiente” o “bastante” (11.8%, frente a 18.1% de quienes tienen hasta primaria).\nHistograma: las edades van de 18 a 94 años. La mitad central está entre los 35 y 63 años, y el tramo con más personas es el de 40 a 44. La media es 49 y la mediana, 47. Hay pocos casos de más de 85 años.\nBoxplot: la mediana de edad es parecida en todos los grupos (entre 40 y 47 años). El grupo “Bastante” tiene solo 8 personas, muy pocas para sacar conclusiones.\n\nEjemplo de hallazgo bien redactado\n\nLa radio o televisión es la segunda institución con mayor confianza promedio (1.81 en una escala de 1 a 4), después del RENIEC. Aun así, solo el 15.8% de las personas que opinaron confía “suficiente” o “bastante” en ella."
+  },
+  {
+    "objectID": "lab3.html#ejercicio-3-lectura-de-un-boxplot",
+    "href": "lab3.html#ejercicio-3-lectura-de-un-boxplot",
+    "title": "Lab 3: Ejercicios para el parcial",
+    "section": "Ejercicio 3: Lectura de un boxplot",
+    "text": "Ejercicio 3: Lectura de un boxplot\n\nEl siguiente boxplot muestra la edad de las personas encuestadas según su nivel de confianza en la radio o televisión. A partir del gráfico, responde de manera detallada.\n\n\n\nPaso 1: Lee el gráfico\n\n¿Qué grupo tiene la mediana de edad más alta? ¿Cuál tiene la más baja? Indica los valores aproximados.\nCompara la altura de las cajas. ¿Qué grupo presenta mayor variabilidad en la edad? ¿Cuál es el más homogéneo?\n¿Se observan valores atípicos en algún grupo?\n¿Qué grupo tiene menos casos? ¿Por qué importa al leer su caja?\n\n\n\n\n\n\n\nNoteVer respuestas\n\n\n\n\n\n\nMediana más alta la tiene el grupo que confía Nada (≈48 años). La más baja, el grupo que confía. Bastante (≈40 años). La mediana de edad baja a medida que sube la confianza.\nMayor variabilidad se observa en quienes confían Suficiente, con la caja más alta (de 30 a 64 años). Las más homogéneas son Nada (de 36 a 62 años) y Poco (de 34 a 61 años), casi iguales.\nNo. Ningún grupo tiene puntos fuera de los bigotes.\nBastante, con solo 12 personas. Con tan pocos casos, la caja puede cambiar mucho con una o dos personas más, así que resulta importante leerla con cautela.\n\n\n\n\n\n\nPaso 2: Interpreta\n\n¿Qué relación se observa entre la edad y la confianza en la radio o televisión?\nSi fueras la Asociación de Medios Regionales, ¿a qué público dirigirías la campaña? Justifica con lo que muestra el gráfico.\n\n\n\n\n\n\n\nNoteVer respuestas\n\n\n\n\n\n\nQuienes confían más en la radio o televisión tienden a ser algo más jóvenes. La mediana de edad baja de 48 años (Nada) a 40 años (Bastante). Pero las cajas se superponen mucho y el grupo “Bastante” tiene pocos casos, así que la diferencia es moderada. Se trata de una asociación y no una causa, pues el gráfico no dice que la edad produzca la confianza.\nHay más de una respuesta válida si se justifica con el gráfico. Por ejemplo, las personas mayores, porque se concentran entre quienes no confían “nada”; o las jóvenes, porque muestran algo más de confianza y conviene fortalecerla.\n\n\n\n\n\n\nPaso 3: Reproduce el gráfico en SPSS\n\nVe a Gráficos → Generador de gráficos. En Galería, elige Diagrama de caja y arrastra el Diagrama de caja simple al lienzo.\nArrastra conf_radiotv al eje X y edad al eje Y.\nPulsa Aceptar."
+  },
+  {
+    "objectID": "ttest.html",
+    "href": "ttest.html",
+    "title": "Prueba T de Student (muestras independientes)",
+    "section": "",
+    "text": "La prueba T de Student para muestras independientes permite evaluar si la media de una variable numérica difiere entre dos grupos definidos por una variable categórica dicotómica (de dos categorías).\nPor ejemplo: ¿el promedio del índice de conocimiento sobre reciclaje (ICR) es distinto entre hombres y mujeres?\n\n\n\n\n\n*95% de confianza.\n\n\n\n\n\n\nNoteSupuesto\n\n\n\nLa prueba asume que la variable numérica se distribuye de forma aproximadamente normal. Los dos grupos deben ser independientes: cada caso pertenece a un solo grupo, no a ambos."
+  },
+  {
+    "objectID": "ttest.html#uso",
+    "href": "ttest.html#uso",
+    "title": "Prueba T de Student (muestras independientes)",
+    "section": "",
+    "text": "La prueba T de Student para muestras independientes permite evaluar si la media de una variable numérica difiere entre dos grupos definidos por una variable categórica dicotómica (de dos categorías).\nPor ejemplo: ¿el promedio del índice de conocimiento sobre reciclaje (ICR) es distinto entre hombres y mujeres?\n\n\n\n\n\n*95% de confianza.\n\n\n\n\n\n\nNoteSupuesto\n\n\n\nLa prueba asume que la variable numérica se distribuye de forma aproximadamente normal. Los dos grupos deben ser independientes: cada caso pertenece a un solo grupo, no a ambos."
+  },
+  {
+    "objectID": "ttest.html#pasos",
+    "href": "ttest.html#pasos",
+    "title": "Prueba T de Student (muestras independientes)",
+    "section": "Pasos",
+    "text": "Pasos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nAnalizar → Comparar medias y proporciones → Prueba T de muestras independientes…\n\n\n\nVe a la ruta Analizar → Comparar medias y proporciones → Prueba T de muestras independientes…\nEn “Variables de prueba”, coloca la variable numérica (por ejemplo, ICR).\nEn “Variable de agrupación”, coloca la variable categórica dicotómica (por ejemplo, sexo).\nHaz clic en “Definir grupos…”, marca “Utilizar valores especificados” y escribe los dos valores que identifican a cada grupo (por ejemplo, Grupo 1: 0 y Grupo 2: 1). Pulsa “Continuar”.\nPulsa “Aceptar”."
+  },
+  {
+    "objectID": "ttest.html#leyendo-los-resultados",
+    "href": "ttest.html#leyendo-los-resultados",
+    "title": "Prueba T de Student (muestras independientes)",
+    "section": "Leyendo los resultados",
+    "text": "Leyendo los resultados\nLa lectura tiene dos partes:\n1. Revisa la prueba de Levene (igualdad de varianzas). En la tabla, mira la columna “Sig.” de la Prueba de Levene:\n\nSi Sig. &gt; 0.05 → las varianzas son similares → usa la fila “Se asumen varianzas iguales”.\nSi Sig. ≤ 0.05 → las varianzas son distintas → usa la fila “No se asumen varianzas iguales”.\n\n2. Lee el p-value de la prueba t. En la fila que te indicó Levene, lee la significación bilateral (en versiones nuevas de SPSS aparece como “P de dos factores”; en versiones anteriores, como “Sig. (bilateral)”):\n\n\n\nNivel de confianza\np-value\nDecisión\n\n\n\n\n95%\np ≤ 0.05\nSe rechaza H₀ → las medias son diferentes\n\n\n95%\np &gt; 0.05\nNo se rechaza H₀ → no hay diferencia de medias\n\n\n\n3. Compara las medias. Si hay diferencia significativa, mira la tabla “Estadísticas de grupo” para indicar cuál grupo tiene la media más alta.\nEjemplo de interpretación: si comparas el ICR entre hombres y mujeres y obtienes una significación bilateral de 0.03 (≤ 0.05), concluyes que existe una diferencia significativa entre el promedio de conocimiento de ambos grupos; luego, según la tabla de medias, señalas cuál grupo presenta el promedio más alto.\n\n\n\n\n\n\nWarningOJO\n\n\n\n\nLa variable de agrupación debe tener exactamente dos grupos. Si tienes más de dos (por ejemplo, tres carreras), usa ANOVA, no la T de Student.\nLa prueba indica si las medias difieren, no por qué. La interpretación es asociativa, no causal."
+  },
+  {
+    "objectID": "graficos.html",
+    "href": "graficos.html",
+    "title": "Gráficos",
+    "section": "",
+    "text": "El Generador de gráficos es la herramienta principal de SPSS para crear gráficos. Por defecto los gráficos de barras muestran el recuento (frecuencia), pero casi siempre conviene mostrar porcentajes para que las categorías sean comparables."
+  },
+  {
+    "objectID": "graficos.html#abrir-el-generador-de-gráficos",
+    "href": "graficos.html#abrir-el-generador-de-gráficos",
+    "title": "Gráficos",
+    "section": "1. Abrir el Generador de gráficos",
+    "text": "1. Abrir el Generador de gráficos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nGráficos → Generador de gráficos…\n\n\n\nVe a Gráficos → Generador de gráficos…\n\nSi aparece un aviso sobre los niveles de medición, pulsa Aceptar para continuar (o Definir propiedades de variables… si necesitas corregir alguno).\n\nEn la pestaña Galería, elige el tipo de gráfico (por ejemplo, Barras) y arrastra el primer modelo al lienzo de la parte superior.\n\n\n\n\n\n\n\nWarningOJO\n\n\n\nEl Generador de gráficos respeta el nivel de medición de cada variable (nominal, ordinal o escala). Si una variable está mal definida, no te dejará usarla como esperas. Revísalo antes en la Vista de variables."
+  },
+  {
+    "objectID": "graficos.html#gráfico-de-barras-de-una-variable",
+    "href": "graficos.html#gráfico-de-barras-de-una-variable",
+    "title": "Gráficos",
+    "section": "2. Gráfico de barras de una variable",
+    "text": "2. Gráfico de barras de una variable\n\nEn Galería → Barras, arrastra el modelo de barras simples al lienzo.\n\nArrastra tu variable categórica (ej. carrera) al eje X.\n\nPor defecto, el eje Y mostrará el Recuento.\n\nPulsa Aceptar para generar el gráfico.\n\n\n2.1. Cambiar recuento por porcentaje\n\nEn el Generador de gráficos, ubica el panel Propiedades del elemento (a la derecha). Si no aparece, pulsa el botón Propiedades del elemento…\n\nEn Editar propiedades de:, selecciona Barra1.\n\nEn el menú desplegable Estadístico, cambia Recuento por Porcentaje (?).\n\nPulsa Definir parámetro de porcentaje… y elige la base del porcentaje:\n\nTotal general → cada barra es el % sobre todos los casos (lo más común en univariado).\n\nTotal para cada categoría del eje X → cada categoría del eje X suma 100% (útil en barras agrupadas).\n\n\nPulsa Aplicar y luego Aceptar.\n\n\n\n\n\n\n\nWarningOJO\n\n\n\nElegir bien la base del porcentaje es clave: el número cambia por completo según el denominador. Para describir una sola variable usa Total general; para comparar grupos dentro de un gráfico agrupado, usa Total para cada categoría del eje X.\n\n\n\n\n2.2. Mostrar la media u otros estadísticos\nEl mismo menú Estadístico permite mostrar la Media, la Mediana, la Suma, etc., en lugar del recuento, siempre que la variable del eje Y sea numérica (de escala).\nPor ejemplo, para graficar el promedio de horas_rrss_dia según carrera:\n\nArrastra carrera al eje X y horas_rrss_dia al eje Y.\n\nSPSS mostrará automáticamente la Media; cámbiala a Mediana u otro desde Estadístico si lo prefieres.\n\nPulsa Aceptar."
+  },
+  {
+    "objectID": "graficos.html#barras-agrupadas-dos-variables",
+    "href": "graficos.html#barras-agrupadas-dos-variables",
+    "title": "Gráficos",
+    "section": "3. Barras agrupadas (dos variables)",
+    "text": "3. Barras agrupadas (dos variables)\n\nEn Galería → Barras, arrastra el modelo de barras agrupadas al lienzo.\n\nArrastra la primera variable al eje X (ej. carrera).\n\nArrastra la segunda al cuadro Color del clúster (ej. recicla_actualmente).\n\nEn Propiedades del elemento, cambia el Estadístico a Porcentaje y define la base como Total para cada categoría del eje X, de modo que cada grupo del eje X sume 100% y las barras sean comparables.\n\nPulsa Aceptar.\n\n\n\n\n\n\n\nTipOtros gráficos\n\n\n\nEn la Galería también encontrarás histogramas y diagramas de caja, que requieren variables numéricas (de escala) —no uses escalas de Likert ni variables categóricas en ellos—."
+  },
+  {
+    "objectID": "chi2.html",
+    "href": "chi2.html",
+    "title": "Prueba chi-cuadrado de independencia",
+    "section": "",
+    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas (nominales u ordinales). Para esto, compara las frecuencias observadas con las frecuencias esperadas.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
+  },
+  {
+    "objectID": "chi2.html#uso",
+    "href": "chi2.html#uso",
+    "title": "Prueba chi-cuadrado de independencia",
+    "section": "",
+    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas (nominales u ordinales). Para esto, compara las frecuencias observadas con las frecuencias esperadas.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
+  },
+  {
+    "objectID": "chi2.html#pasos",
+    "href": "chi2.html#pasos",
+    "title": "Prueba chi-cuadrado de independencia",
+    "section": "Pasos",
+    "text": "Pasos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nAnalizar → Estadísticos descriptivos → Tablas cruzadas…\nLuego: Estadísticos… → marcar Chi-cuadrado\n\n\n\nVe a la ruta Analizar → Estadísticos descriptivos → Tablas cruzadas… (también puedes generar la tabla con Analizar → Tablas → Tablas personalizadas…).\nColoca una variable en Filas y la otra en Columnas.\nHaz clic en el botón “Estadísticos…”.\nMarca la casilla “Chi-cuadrado” y pulsa “Continuar”.\nPulsa “Aceptar” para generar los resultados."
+  },
+  {
+    "objectID": "chi2.html#leyendo-los-resultados",
+    "href": "chi2.html#leyendo-los-resultados",
+    "title": "Prueba chi-cuadrado de independencia",
+    "section": "Leyendo los resultados",
+    "text": "Leyendo los resultados\nEn la tabla “Pruebas de chi-cuadrado”, fíjate siempre en la fila “Chi-cuadrado de Pearson” y lee el valor de “Significación asintótica (bilateral)”. Ese es tu p-value.\n\n\n\nNivel de confianza\np-value\nDecisión\n\n\n\n\n95%\np ≤ 0.05\nSe rechaza H₀ → hay asociación\n\n\n95%\np &gt; 0.05\nNo se rechaza H₀ → no hay asociación\n\n\n\nEjemplo de interpretación: si cruzas zona de Lima y nivel de conocimiento sobre reciclaje y obtienes una significación de 0.012 (≤ 0.05), rechazas H₀ y concluyes que existe una asociación entre la zona de residencia y el nivel de conocimiento. Si obtienes 0.480 (&gt; 0.05), concluyes que no se encontró asociación entre ambas.\n\n\n\n\n\n\nWarningOJO\n\n\n\n\nAmbas variables deben ser categóricas (nominales u ordinales). Si tienes una variable numérica, primero recodifícala en niveles.\nRevisa la nota al pie de la tabla: si SPSS indica que varias casillas tienen un recuento esperado menor que 5, la prueba pierde validez. En ese caso, agrupa categorías para reducir el número de casillas.\nEl chi-cuadrado indica si hay asociación, no su dirección ni su causa. La interpretación es asociativa, nunca causal."
+  },
+  {
     "objectID": "lab1.html",
     "href": "lab1.html",
     "title": "Lab 1: Primer acercamiento a SPSS",
@@ -152,90 +271,6 @@
     "title": "Lab 1: Primer acercamiento a SPSS",
     "section": "Paso 5: Entregar",
     "text": "Paso 5: Entregar\nEn la presentación compartida de Drive (enlace en Paideia, sección de esta semana), llena la diapositiva de tu grupo con:\n\nInformación de tu variable en Vista de Variables (nombre, etiqueta, medida, valores).\nCaptura de la tabla de frecuencias del Paso 4."
-  },
-  {
-    "objectID": "chi2.html",
-    "href": "chi2.html",
-    "title": "Prueba chi-cuadrado de independencia",
-    "section": "",
-    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas (nominales u ordinales). Para esto, compara las frecuencias observadas con las frecuencias esperadas.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
-  },
-  {
-    "objectID": "chi2.html#uso",
-    "href": "chi2.html#uso",
-    "title": "Prueba chi-cuadrado de independencia",
-    "section": "",
-    "text": "Esta prueba permite evaluar si existe una asociación estadística entre dos variables categóricas (nominales u ordinales). Para esto, compara las frecuencias observadas con las frecuencias esperadas.\nBajo el supuesto de independencia, si las diferencias son suficientemente grandes, se concluye que las variables están asociadas.\n\n\n\n\n\n*95% de confianza."
-  },
-  {
-    "objectID": "chi2.html#pasos",
-    "href": "chi2.html#pasos",
-    "title": "Prueba chi-cuadrado de independencia",
-    "section": "Pasos",
-    "text": "Pasos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nAnalizar → Estadísticos descriptivos → Tablas cruzadas…\nLuego: Estadísticos… → marcar Chi-cuadrado\n\n\n\nVe a la ruta Analizar → Estadísticos descriptivos → Tablas cruzadas… (también puedes generar la tabla con Analizar → Tablas → Tablas personalizadas…).\nColoca una variable en Filas y la otra en Columnas.\nHaz clic en el botón “Estadísticos…”.\nMarca la casilla “Chi-cuadrado” y pulsa “Continuar”.\nPulsa “Aceptar” para generar los resultados."
-  },
-  {
-    "objectID": "chi2.html#leyendo-los-resultados",
-    "href": "chi2.html#leyendo-los-resultados",
-    "title": "Prueba chi-cuadrado de independencia",
-    "section": "Leyendo los resultados",
-    "text": "Leyendo los resultados\nEn la tabla “Pruebas de chi-cuadrado”, fíjate siempre en la fila “Chi-cuadrado de Pearson” y lee el valor de “Significación asintótica (bilateral)”. Ese es tu p-value.\n\n\n\nNivel de confianza\np-value\nDecisión\n\n\n\n\n95%\np ≤ 0.05\nSe rechaza H₀ → hay asociación\n\n\n95%\np &gt; 0.05\nNo se rechaza H₀ → no hay asociación\n\n\n\nEjemplo de interpretación: si cruzas zona de Lima y nivel de conocimiento sobre reciclaje y obtienes una significación de 0.012 (≤ 0.05), rechazas H₀ y concluyes que existe una asociación entre la zona de residencia y el nivel de conocimiento. Si obtienes 0.480 (&gt; 0.05), concluyes que no se encontró asociación entre ambas.\n\n\n\n\n\n\nWarningOJO\n\n\n\n\nAmbas variables deben ser categóricas (nominales u ordinales). Si tienes una variable numérica, primero recodifícala en niveles.\nRevisa la nota al pie de la tabla: si SPSS indica que varias casillas tienen un recuento esperado menor que 5, la prueba pierde validez. En ese caso, agrupa categorías para reducir el número de casillas.\nEl chi-cuadrado indica si hay asociación, no su dirección ni su causa. La interpretación es asociativa, nunca causal."
-  },
-  {
-    "objectID": "graficos.html",
-    "href": "graficos.html",
-    "title": "Gráficos",
-    "section": "",
-    "text": "El Generador de gráficos es la herramienta principal de SPSS para crear gráficos. Por defecto los gráficos de barras muestran el recuento (frecuencia), pero casi siempre conviene mostrar porcentajes para que las categorías sean comparables."
-  },
-  {
-    "objectID": "graficos.html#abrir-el-generador-de-gráficos",
-    "href": "graficos.html#abrir-el-generador-de-gráficos",
-    "title": "Gráficos",
-    "section": "1. Abrir el Generador de gráficos",
-    "text": "1. Abrir el Generador de gráficos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nGráficos → Generador de gráficos…\n\n\n\nVe a Gráficos → Generador de gráficos…\n\nSi aparece un aviso sobre los niveles de medición, pulsa Aceptar para continuar (o Definir propiedades de variables… si necesitas corregir alguno).\n\nEn la pestaña Galería, elige el tipo de gráfico (por ejemplo, Barras) y arrastra el primer modelo al lienzo de la parte superior.\n\n\n\n\n\n\n\nWarningOJO\n\n\n\nEl Generador de gráficos respeta el nivel de medición de cada variable (nominal, ordinal o escala). Si una variable está mal definida, no te dejará usarla como esperas. Revísalo antes en la Vista de variables."
-  },
-  {
-    "objectID": "graficos.html#gráfico-de-barras-de-una-variable",
-    "href": "graficos.html#gráfico-de-barras-de-una-variable",
-    "title": "Gráficos",
-    "section": "2. Gráfico de barras de una variable",
-    "text": "2. Gráfico de barras de una variable\n\nEn Galería → Barras, arrastra el modelo de barras simples al lienzo.\n\nArrastra tu variable categórica (ej. carrera) al eje X.\n\nPor defecto, el eje Y mostrará el Recuento.\n\nPulsa Aceptar para generar el gráfico.\n\n\n2.1. Cambiar recuento por porcentaje\n\nEn el Generador de gráficos, ubica el panel Propiedades del elemento (a la derecha). Si no aparece, pulsa el botón Propiedades del elemento…\n\nEn Editar propiedades de:, selecciona Barra1.\n\nEn el menú desplegable Estadístico, cambia Recuento por Porcentaje (?).\n\nPulsa Definir parámetro de porcentaje… y elige la base del porcentaje:\n\nTotal general → cada barra es el % sobre todos los casos (lo más común en univariado).\n\nTotal para cada categoría del eje X → cada categoría del eje X suma 100% (útil en barras agrupadas).\n\n\nPulsa Aplicar y luego Aceptar.\n\n\n\n\n\n\n\nWarningOJO\n\n\n\nElegir bien la base del porcentaje es clave: el número cambia por completo según el denominador. Para describir una sola variable usa Total general; para comparar grupos dentro de un gráfico agrupado, usa Total para cada categoría del eje X.\n\n\n\n\n2.2. Mostrar la media u otros estadísticos\nEl mismo menú Estadístico permite mostrar la Media, la Mediana, la Suma, etc., en lugar del recuento, siempre que la variable del eje Y sea numérica (de escala).\nPor ejemplo, para graficar el promedio de horas_rrss_dia según carrera:\n\nArrastra carrera al eje X y horas_rrss_dia al eje Y.\n\nSPSS mostrará automáticamente la Media; cámbiala a Mediana u otro desde Estadístico si lo prefieres.\n\nPulsa Aceptar."
-  },
-  {
-    "objectID": "graficos.html#barras-agrupadas-dos-variables",
-    "href": "graficos.html#barras-agrupadas-dos-variables",
-    "title": "Gráficos",
-    "section": "3. Barras agrupadas (dos variables)",
-    "text": "3. Barras agrupadas (dos variables)\n\nEn Galería → Barras, arrastra el modelo de barras agrupadas al lienzo.\n\nArrastra la primera variable al eje X (ej. carrera).\n\nArrastra la segunda al cuadro Color del clúster (ej. recicla_actualmente).\n\nEn Propiedades del elemento, cambia el Estadístico a Porcentaje y define la base como Total para cada categoría del eje X, de modo que cada grupo del eje X sume 100% y las barras sean comparables.\n\nPulsa Aceptar.\n\n\n\n\n\n\n\nTipOtros gráficos\n\n\n\nEn la Galería también encontrarás histogramas y diagramas de caja, que requieren variables numéricas (de escala) —no uses escalas de Likert ni variables categóricas en ellos—."
-  },
-  {
-    "objectID": "ttest.html",
-    "href": "ttest.html",
-    "title": "Prueba T de Student (muestras independientes)",
-    "section": "",
-    "text": "La prueba T de Student para muestras independientes permite evaluar si la media de una variable numérica difiere entre dos grupos definidos por una variable categórica dicotómica (de dos categorías).\nPor ejemplo: ¿el promedio del índice de conocimiento sobre reciclaje (ICR) es distinto entre hombres y mujeres?\n\n\n\n\n\n*95% de confianza.\n\n\n\n\n\n\nNoteSupuesto\n\n\n\nLa prueba asume que la variable numérica se distribuye de forma aproximadamente normal. Los dos grupos deben ser independientes: cada caso pertenece a un solo grupo, no a ambos."
-  },
-  {
-    "objectID": "ttest.html#uso",
-    "href": "ttest.html#uso",
-    "title": "Prueba T de Student (muestras independientes)",
-    "section": "",
-    "text": "La prueba T de Student para muestras independientes permite evaluar si la media de una variable numérica difiere entre dos grupos definidos por una variable categórica dicotómica (de dos categorías).\nPor ejemplo: ¿el promedio del índice de conocimiento sobre reciclaje (ICR) es distinto entre hombres y mujeres?\n\n\n\n\n\n*95% de confianza.\n\n\n\n\n\n\nNoteSupuesto\n\n\n\nLa prueba asume que la variable numérica se distribuye de forma aproximadamente normal. Los dos grupos deben ser independientes: cada caso pertenece a un solo grupo, no a ambos."
-  },
-  {
-    "objectID": "ttest.html#pasos",
-    "href": "ttest.html#pasos",
-    "title": "Prueba T de Student (muestras independientes)",
-    "section": "Pasos",
-    "text": "Pasos\n\n\n\n\n\n\nTipTL;DR\n\n\n\nAnalizar → Comparar medias y proporciones → Prueba T de muestras independientes…\n\n\n\nVe a la ruta Analizar → Comparar medias y proporciones → Prueba T de muestras independientes…\nEn “Variables de prueba”, coloca la variable numérica (por ejemplo, ICR).\nEn “Variable de agrupación”, coloca la variable categórica dicotómica (por ejemplo, sexo).\nHaz clic en “Definir grupos…”, marca “Utilizar valores especificados” y escribe los dos valores que identifican a cada grupo (por ejemplo, Grupo 1: 0 y Grupo 2: 1). Pulsa “Continuar”.\nPulsa “Aceptar”."
-  },
-  {
-    "objectID": "ttest.html#leyendo-los-resultados",
-    "href": "ttest.html#leyendo-los-resultados",
-    "title": "Prueba T de Student (muestras independientes)",
-    "section": "Leyendo los resultados",
-    "text": "Leyendo los resultados\nLa lectura tiene dos partes:\n1. Revisa la prueba de Levene (igualdad de varianzas). En la tabla, mira la columna “Sig.” de la Prueba de Levene:\n\nSi Sig. &gt; 0.05 → las varianzas son similares → usa la fila “Se asumen varianzas iguales”.\nSi Sig. ≤ 0.05 → las varianzas son distintas → usa la fila “No se asumen varianzas iguales”.\n\n2. Lee el p-value de la prueba t. En la fila que te indicó Levene, lee la significación bilateral (en versiones nuevas de SPSS aparece como “P de dos factores”; en versiones anteriores, como “Sig. (bilateral)”):\n\n\n\nNivel de confianza\np-value\nDecisión\n\n\n\n\n95%\np ≤ 0.05\nSe rechaza H₀ → las medias son diferentes\n\n\n95%\np &gt; 0.05\nNo se rechaza H₀ → no hay diferencia de medias\n\n\n\n3. Compara las medias. Si hay diferencia significativa, mira la tabla “Estadísticas de grupo” para indicar cuál grupo tiene la media más alta.\nEjemplo de interpretación: si comparas el ICR entre hombres y mujeres y obtienes una significación bilateral de 0.03 (≤ 0.05), concluyes que existe una diferencia significativa entre el promedio de conocimiento de ambos grupos; luego, según la tabla de medias, señalas cuál grupo presenta el promedio más alto.\n\n\n\n\n\n\nWarningOJO\n\n\n\n\nLa variable de agrupación debe tener exactamente dos grupos. Si tienes más de dos (por ejemplo, tres carreras), usa ANOVA, no la T de Student.\nLa prueba indica si las medias difieren, no por qué. La interpretación es asociativa, no causal."
   },
   {
     "objectID": "lab2.html",
