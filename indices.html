@@ -96,25 +96,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-laboratorios" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Laboratorios</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-laboratorios">    
-        <li>
-    <a class="dropdown-item" href="./lab1.html">
- <span class="dropdown-text">Lab 1</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./lab2.html">
- <span class="dropdown-text">Lab 2</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./lab3.html">
- <span class="dropdown-text">Lab 3: Práctica para el parcial</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-procesamiento-de-bases" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Procesamiento de bases</span>
     </a>
@@ -186,6 +167,25 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-laboratorios" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Laboratorios</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-laboratorios">    
+        <li>
+    <a class="dropdown-item" href="./lab1.html">
+ <span class="dropdown-text">Lab 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lab2.html">
+ <span class="dropdown-text">Lab 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lab3.html">
+ <span class="dropdown-text">Lab 3</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -203,8 +203,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#qué-es-un-índice" id="toc-qué-es-un-índice" class="nav-link active" data-scroll-target="#qué-es-un-índice">1. ¿Qué es un índice?</a></li>
-  <li><a href="#procedimiento" id="toc-procedimiento" class="nav-link" data-scroll-target="#procedimiento">3. Procedimiento</a></li>
-  <li><a href="#opcional-convertir-el-índice-en-niveles" id="toc-opcional-convertir-el-índice-en-niveles" class="nav-link" data-scroll-target="#opcional-convertir-el-índice-en-niveles">4. (Opcional) Convertir el índice en niveles</a></li>
+  <li><a href="#procedimiento" id="toc-procedimiento" class="nav-link" data-scroll-target="#procedimiento">2. Procedimiento</a></li>
+  <li><a href="#convertir-el-índice-en-niveles" id="toc-convertir-el-índice-en-niveles" class="nav-link" data-scroll-target="#convertir-el-índice-en-niveles">3. Convertir el índice en niveles</a></li>
   </ul>
 </nav>
     </div>
@@ -232,20 +232,6 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="qué-es-un-índice" class="level2">
 <h2 class="anchored" data-anchor-id="qué-es-un-índice">1. ¿Qué es un índice?</h2>
-<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>TL;DR
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Ruta en SPSS: <code>Transformar → Calcular variable…</code><br>
-Expresión: <code>MEAN(i1, i2, i3, i4, i5)</code></p>
-</div>
-</div>
 <p>Muchas veces medimos un mismo concepto con <strong>varias preguntas</strong> (ítems), normalmente en escala Likert (1 a 5). Para analizarlo como <strong>una sola variable</strong>, las combinamos en un <strong>índice</strong>.</p>
 <p>Por ejemplo, si mides el <em>conocimiento sobre reciclaje</em> con 5 afirmaciones (<code>i1</code> a <code>i5</code>), puedes crear un <strong>Índice de Conocimiento sobre Reciclaje (<code>ICR</code>)</strong> que resuma esas 5 preguntas en un solo número.</p>
 <div class="callout callout-style-default callout-warning callout-titled" title="OJO: revisa esto antes de calcular">
@@ -267,8 +253,21 @@ Expresión: <code>MEAN(i1, i2, i3, i4, i5)</code></p>
 </div>
 </section>
 <section id="procedimiento" class="level2">
-<h2 class="anchored" data-anchor-id="procedimiento">3. Procedimiento</h2>
-<p><strong><code>MEAN()</code></strong> calcula el <strong>promedio</strong> de los ítems. El resultado se mantiene en la <strong>misma escala original (1 a 5)</strong>, por lo que es fácil de interpretar.</p>
+<h2 class="anchored" data-anchor-id="procedimiento">2. Procedimiento</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ruta en SPSS: <code>Transformar → Calcular variable…</code><br>
+Expresión: <code>MEAN(i1, i2, i3, i4, i5)</code></p>
+</div>
+</div>
 <ol type="1">
 <li>Ve a la ruta <strong><code>Transformar → Calcular variable…</code></strong></li>
 <li>En <strong>“Nombre de variable destino”</strong>, escribe el nombre del índice (por ejemplo, <code>ICR</code>).</li>
@@ -291,8 +290,8 @@ Expresión: <code>MEAN(i1, i2, i3, i4, i5)</code></p>
 </div>
 </div>
 </section>
-<section id="opcional-convertir-el-índice-en-niveles" class="level2">
-<h2 class="anchored" data-anchor-id="opcional-convertir-el-índice-en-niveles">4. (Opcional) Convertir el índice en niveles</h2>
+<section id="convertir-el-índice-en-niveles" class="level2">
+<h2 class="anchored" data-anchor-id="convertir-el-índice-en-niveles">3. Convertir el índice en niveles</h2>
 <p>Si necesitas una versión <strong>categórica</strong> del índice —por ejemplo, para una tabla cruzada o un chi-cuadrado—, recodifícalo en una variable de niveles (<code>NivelICR</code>):</p>
 <table class="caption-top table">
 <thead>

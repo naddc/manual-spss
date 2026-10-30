@@ -96,25 +96,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-laboratorios" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Laboratorios</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-laboratorios">    
-        <li>
-    <a class="dropdown-item" href="./lab1.html">
- <span class="dropdown-text">Lab 1</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./lab2.html">
- <span class="dropdown-text">Lab 2</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./lab3.html">
- <span class="dropdown-text">Lab 3: Práctica para el parcial</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-procesamiento-de-bases" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Procesamiento de bases</span>
     </a>
@@ -186,6 +167,25 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-laboratorios" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Laboratorios</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-laboratorios">    
+        <li>
+    <a class="dropdown-item" href="./lab1.html">
+ <span class="dropdown-text">Lab 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lab2.html">
+ <span class="dropdown-text">Lab 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lab3.html">
+ <span class="dropdown-text">Lab 3</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -212,7 +212,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#uso-1" id="toc-uso-1" class="nav-link" data-scroll-target="#uso-1">Uso</a></li>
   <li><a href="#pasos-1" id="toc-pasos-1" class="nav-link" data-scroll-target="#pasos-1">Pasos</a></li>
   </ul></li>
-  <li><a href="#definir-etiquetas-de-valores" id="toc-definir-etiquetas-de-valores" class="nav-link" data-scroll-target="#definir-etiquetas-de-valores">3. Definir etiquetas de valores</a></li>
+  <li><a href="#recodificar-una-variable-numérica-en-rangos" id="toc-recodificar-una-variable-numérica-en-rangos" class="nav-link" data-scroll-target="#recodificar-una-variable-numérica-en-rangos">3. Recodificar una variable numérica en rangos</a>
+  <ul class="collapse">
+  <li><a href="#uso-2" id="toc-uso-2" class="nav-link" data-scroll-target="#uso-2">Uso</a></li>
+  <li><a href="#pasos-2" id="toc-pasos-2" class="nav-link" data-scroll-target="#pasos-2">Pasos</a></li>
+  </ul></li>
+  <li><a href="#definir-etiquetas-de-valores" id="toc-definir-etiquetas-de-valores" class="nav-link" data-scroll-target="#definir-etiquetas-de-valores">4. Definir etiquetas de valores</a></li>
   </ul>
 </nav>
     </div>
@@ -272,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li>Revisa la opción <strong>“Ordenar por valor”</strong>:
 <ul>
-<li><em>De menor a mayor</em> → SPSS asignará los números según el <strong>orden alfabético</strong> de las respuestas (por ejemplo: “A veces” = 1, “Siempre” = 3).<br>
+<li><em>De menor a mayor</em> → SPSS asignará los números según el <strong>orden alfabético</strong> de las respuestas (por ejemplo: “A veces” = 1, “Siempre” = 2).<br>
 </li>
 <li><em>De mayor a menor</em> → invertirá ese orden.<br>
 </li>
@@ -364,10 +369,92 @@ para aplicar el mismo patrón en un solo paso.<br>
 </div>
 </section>
 </section>
+<section id="recodificar-una-variable-numérica-en-rangos" class="level2">
+<h2 class="anchored" data-anchor-id="recodificar-una-variable-numérica-en-rangos">3. Recodificar una variable numérica en rangos</h2>
+<section id="uso-2" class="level3">
+<h3 class="anchored" data-anchor-id="uso-2">Uso</h3>
+<p>Sirve para convertir una variable <strong>numérica</strong> (por ejemplo, <code>edad</code>) en una variable <strong>categórica</strong> con rangos (grupos de edad). Es útil cuando quieres presentar la variable en una tabla de frecuencias o cruzarla en una tabla cruzada o un chi-cuadrado.</p>
+</section>
+<section id="pasos-2" class="level3">
+<h3 class="anchored" data-anchor-id="pasos-2">Pasos</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ruta en SPSS: <code>Transformar &gt; Recodificar en distintas variables… &gt; Valores antiguos y nuevos… &gt; Rango</code></p>
+</div>
+</div>
+<ol type="1">
+<li>Ve a la ruta <strong><code>Transformar &gt; Recodificar en distintas variables…</code></strong>.</li>
+<li>Selecciona la variable numérica (por ejemplo, <code>edad</code>) y muévela con la <strong>flecha</strong>.</li>
+<li>En la parte inferior, escribe el <strong>nombre de la nueva variable</strong> (por ejemplo, <code>grupo_edad</code>) y una <strong>etiqueta</strong> (por ejemplo, <em>Grupo de edad</em>). Pulsa <strong>“Cambiar”</strong>.</li>
+<li>Pulsa <strong>“Valores antiguos y nuevos…”</strong>.</li>
+<li>Define cada rango en el lado izquierdo (<strong>Valor antiguo</strong>) y asígnale un número en el lado derecho (<strong>Valor nuevo</strong>). Pulsa <strong>“Añadir”</strong> después de cada rango. Por ejemplo:</li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Valor antiguo</th>
+<th>Opción en SPSS</th>
+<th>Valor nuevo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hasta 18</td>
+<td><strong>Rango, INFERIOR hasta valor:</strong> 18</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>19 a 21</td>
+<td><strong>Rango:</strong> 19 <strong>hasta</strong> 21</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>22 a 24</td>
+<td><strong>Rango:</strong> 22 <strong>hasta</strong> 24</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>25 a más</td>
+<td><strong>Rango, valor hasta SUPERIOR:</strong> 25</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<ol start="6" type="1">
+<li>Pulsa <strong>“Continuar”</strong> y luego <strong>“Aceptar”</strong>.</li>
+<li>En la <strong>Vista de variables</strong>, define las <strong>etiquetas de valores</strong> de la nueva variable (1 = “18 años o menos”, 2 = “19 a 21 años”, 3 = “22 a 24 años”, 4 = “25 años a más”) y asigna la medida <strong>Ordinal</strong>.</li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled" title="OJO">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>OJO
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Los rangos deben cubrir <strong>todos los valores</strong> de la variable, sin huecos ni superposiciones. Revisa con una tabla de frecuencias que ningún caso haya quedado como perdido por error.</li>
+<li>Si la variable tiene <strong>decimales</strong>, evita huecos entre rangos: usa 0 hasta 2, 2.01 hasta 4, etc.</li>
+<li>Conserva la variable original: la necesitarás para calcular promedios, medianas o pruebas como la T de Student.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
 <section id="definir-etiquetas-de-valores" class="level2">
-<h2 class="anchored" data-anchor-id="definir-etiquetas-de-valores">3. Definir etiquetas de valores</h2>
+<h2 class="anchored" data-anchor-id="definir-etiquetas-de-valores">4. Definir etiquetas de valores</h2>
 <p>(para recodificaciones no automáticas o variables numéricas)</p>
-<p>Todas las variables de tipo numérico que representen variables categóricas deben llevar <em>etiquetas de valores</em>. El proceso de recodificación automática ya arroja nuevas variables con etiquetas de valores, pero para que cada número corresponda al texto de la categoría original.</p>
+<p>Todas las variables de tipo numérico que representen variables categóricas deben llevar <em>etiquetas de valores</em>. El proceso de recodificación automática ya arroja nuevas variables con etiquetas de valores, pero la recodificación en distintas variables no: ahí debes definirlas tú para que cada número corresponda al texto de la categoría original.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="TL;DR">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
